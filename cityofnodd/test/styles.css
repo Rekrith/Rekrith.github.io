@@ -1,0 +1,99 @@
+body {
+  margin:0;
+  padding:0;
+}
+html {
+	background: url("https://static.wixstatic.com/media/ebefb2_a5897854a86349d1b6fadb5ad79146fb~mv2_d_4000_3000_s_4_2.jpg/v1/fill/w_480,h_360,al_c,q_80,usm_0.66_1.00_0.01,blur_2/ebefb2_a5897854a86349d1b6fadb5ad79146fb~mv2_d_4000_3000_s_4_2.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+img[usemap] {
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}
+
+/*So the City of Nodd map needs to be inside a relative-positioned container so that the hovering things over it (tooltips, windows) can 'float' over it.*/
+.mapContainer {
+	position: relative;
+}
+.tipContainer {
+	position: absolute;
+	z-index: 1000; /*This is the hovering thing's z-index, set to an absurdly high value so it always draws on top.*/
+}
+
+.popups {
+	visibility: hidden;
+	height:0px;
+	overflow:hidden;
+}
+
+/*Map Hovers*/
+.tippy-box[data-theme~='Nodd'] {
+	background-color: transparent;
+}
+.hover {
+	position: relative;
+}
+
+.poiClick:focus {
+	outline-width: 0px; /*Without this, clicking on the POI pins makes this weird black and white border appear around them when you click on them. It's very frustrating!*/
+}
+.mapClick:focus {
+	outline-width: 0px;
+}
+.mapClick:hover {
+	stroke: #2bd87f;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+}
+.modal-content {
+  display: none;
+  position: relative;
+  margin: auto;
+  width: 100vh;
+  height:80vh;
+  top: 10vh;
+  z-index: 999;
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background-color: black;
+  opacity: 0.8;
+}
+.weatherContainer {
+	position: absolute;
+	height: 15vh;
+	width: 8vw;
+	left: 90vw;
+	top: 15vh;
+	pointer-events:none;
+}
+.weatherImg {
+	height: 15vh;
+	width: auto;
+	pointer-events: none;
+	background-color: rgba(0,122,122,0.5);
+	border-radius: 5px;
+}
+#poiWindow {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	z-index: 999;
+	left: 88vw;
+	top: 75vh;
+}

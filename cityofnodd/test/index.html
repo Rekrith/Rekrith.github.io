@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<title>The City of Nodd - Home</title> <!--The page title in the browser tab-->
+		<link rel="icon" href="https://nodd-arca.net/test/Site_Assets/icon.png"> <!--The icon in the browser tab!-->
+		<link rel="stylesheet" href="styles.css"> <!--Linking the stylesheets (that contain all the 'How to display this stuff' information)-->
+		<link rel="stylesheet" href="egobracer.css"> <!--Egobracer.css is for the top and bottom menus, to make it easier to put them into other pages.-->
+	</head>
+	<body>
+		<div class="bg"> <!--This is just a container that holds the background picture. Styles.css has all the information!-->
+		</div>
+		
+		<!--**********************************************-->
+		<!--The main map! It's an interactable (S)calable (V)ector (G)raphic (SVG).-->
+		<!--It has some opening information about how web browsers use SVGs (the links), then it has style settings.-->
+		<!--The important part is the Viewbox. The Viewbox is kinda like the actual window we get to see. It has the format "x position, y position, width, height". It's a little confusing unfortunately, but I can link you some tutorials on them if you would like.-->
+		<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;left:50%;top:0%;transform:translate(-50%,0%);overflow:none;width:100%;height:100%;" preserveAspectRatio="xMidYMid meet" viewBox="100 75 200 150" id="mapContainer">
+			<!--Inside the SVG, we can define areas, images, and general 'stuff'. First, we define the map background and give it a width and height double that of the Viewbox (so it's zoomed in). We give it the id 'mapImg' so we can refer to it programmatically.-->
+			<image width="400" height="300" xlink:href="Site_Assets/map_placeholder_2.jpg" id="mapImg" /> 
+			<!--Next, we define a bunch of polygons that are the 'wedges'. We tell it to, on mouseup (lifting your finger from the mouse button), call a Javascript function defined below in the <script> area called 'openWedge()', and ALSO one called 'wedge()'. The points are all x,y coordinates inside the Viewbox that I've manually defined.-->
+			<!--The style "pointer-events:all" says that ANY mouse activity inside it should do things. Normally transparent pixels don't count.-->
+			<polygon class="mapClick" onmouseup="openWedge();wedge('morph-wedge');" points="74,150,195,150,136,46,111,64,91,91,78,120" style="fill:none;pointer-events:all;" />
+			<polygon class="mapClick" onmouseup="openWedge();wedge('viv-wedge');" points="136,46,195,150,251,46,220,33,195,31,169,33" style="fill:none;pointer-events:all;" />
+			<polygon class="mapClick" onmouseup="openWedge();wedge('vorn-wedge');" points="195,150,74,150,78,180,91,213,111,236,136,255" style="fill:none;pointer-events:all;" />
+			<polygon class="mapClick" onmouseup="openWedge();wedge('umb-wedge');" points="195,150,251,255,220,268,195,270,169,268,136,255" style="fill:none;pointer-events:all;" />
+			<polygon class="mapClick" onmouseup="openWedge();wedge('omn-wedge');" points="195,150,251,255,277,236,298,213,309,180,313,150" style="fill:none;pointer-events:all;" />
+			<polygon class="mapClick" onmouseup="openWedge();wedge('psi-wedge');" points="195,150,251,46,277,64,298,91,309,120,313,150" style="fill:none;pointer-events:all;" />
+		</svg></div>
+		
+		<!--**********************************************-->
+		<!--The weather widget.-->
+		<div class="weatherContainer">
+			<!--To do!-->
+			<img src="Site_Assets/Weather_Icons/mephitoad_rain.png" class="weatherImg" />
+		</div>
+		<!--**********************************************-->
+		
+		<!--**********************************************-->
+		<!--The top menu-->
+		<div class="topMenuClass" id="topMenu"> <!--First we make a 'container' DIV (everything's divs!)-->
+			<!--Then we add the background top menu stuff. We give them styles that make them appear at 29% of the width of the scren, 58%, and 87% of the screen width. That should be enough to cover the top of the screen, always.-->
+			<img src="Site_Assets/ui_topmenu_left.gif" style="width:auto;height:8vw;pointer-events:none;">
+			<img src="Site_Assets/topmenu_right.png" style="width:auto;height:4.7vw;left:29vw;position:absolute;pointer-events:none;">
+			<img src="Site_Assets/topmenu_right.png" style="width:auto;height:4.7vw;left:58vw;position:absolute;pointer-events:none;">
+			<img src="Site_Assets/topmenu_right.png" style="width:auto;height:4.7vw;left:87vw;position:absolute;pointer-events:none;">
+			<!--Then we can add the buttons. The a href tag says which URL they go to - a # means it goes nowhere yet.-->
+			<a href="#"><img src="Site_Assets/menu_explore_default.png" class="topBut" id="exploreBut"></a>
+			<a href="#"><img src="Site_Assets/menu_about_default.png" class="topBut" id="aboutBut"></a>
+			<a href="#"><img src="Site_Assets/menu_news_default.png" class="topBut" id="newsBut"></a>
+			<a href="https://www.cityofnodd.com/faq"><img src="Site_Assets/menu_faq_default.png" class="topBut" id="faqBut"></a>
+			<a href="https://www.cityofnodd.com/gallery"><img src="Site_Assets/menu_media_default.png" class="topBut" id="mediaBut"></a>
+			<a href="http://nodd-arca.net/invite.html"><img src="Site_Assets/menu_discord_default.png" class="topBut" id="discordBut"></a>
+			<a href="https://subscribestar.adult/cityofnodd" target="_blank"><img src="Site_Assets/menu_subscribe_default.png" class="topBut" id="subscribeBut"></a>
+			<a href="#"><img src="Site_Assets/menu_store_default.png" class="topBut" id="storeBut"></a>
+		</div>
+		<!--**********************************************-->
+		
+		<!--**********************************************-->
+		<!--The bottom Arcanet menu-->
+		<div class="egobracer" id="Arcanet"> <img id="egoBracerBut" src="Site_Assets/ui_egobracer.gif"></img> 
+		<!-- This makes a container of the type 'egobracer' (so it inherits all the instructions from the .egobracer section in egobracer.css) and calls it Arcanet so we can talk about THIS ELEMENT individually. Then, it makes an image called egoBracerBut - it inherits everything from the egobracer.css file under #egoBracerBut. -->
+			<nav class="egoShell"> <!--I confess, I'm still figuring out what 'nav' functionally means, but it seems to work here.-->
+				<img src="Site_Assets/menu_tray.png" style="height:5vw;width:45vw;"> <!--This is the slidy part of the bottom menu. It's about half the page wide - more than that and it looks oddly stretched and unpleasant.-->
+				<!--Next we add the big Arcanet links - world and magic and so. &emsp; is computer code for a big space - HTML ignores multiple spaces normally, so you have to specifically tell it 'big space here, please'.-->
+				<div class="arcanetLinksTop"><a href="https://www.cityofnodd.com/world">World</a>&emsp;&emsp;&emsp;<a href="https://www.cityofnodd.com/magic">Magic</a>&emsp;&emsp;&emsp;<a href="https://www.cityofnodd.com/council">The Council</a>&emsp;&emsp;&emsp;<a href="https://www.cityofnodd.com/history">History</a></div>
+				<!--Then we have the bottom links. They're different in style (different font, sizes, etc) so it has a new class.-->
+				<div class="arcanetLinksBot"><a href="https://www.cityofnodd.com/sapients">Species</a> • <a href="https://www.cityofnodd.com/houses">Houses</a> • <a href="https://www.cityofnodd.com/characters">Citizens</a> • <a href="https://www.cityofnodd.com/locations">Locations</a> • <a href="#">Plants</a> • <a href="https://www.cityofnodd.com/consumables">Consumables</a> • <a href="https://www.cityofnodd.com/artifacts">Artifacts</a> • <a href="https://www.cityofnodd.com/spells">Spellbook</a> • <a href="https://www.cityofnodd.com/events">Events</a></div>
+			</nav>
+		</div>
+		<!--**********************************************-->
+		
+		<!--**********************************************-->
+		<!--Here we store the wedge lightbox popups for the different map sections. They're hidden by default!-->
+		<!--A 'lightbox' is a type of modal, which is a webpage element that only appears sometimes as far as I understand it. Modals include things like pop-up image galleries, usually.-->
+		<div id="wedge" class="modal"> <!--We make just ONE wedge 'shell', and then inside that we make a bunch of inner parts that are all toggleable.-->
+			<div class="close" onclick="closeWedge()"> <!--First, a dimmed background. We tell it that onclick it calls the Javascript function "closeWedge()" such that you can click outside the map zoom and close the modal lightbox.-->
+			</div>
+			<div id="poiWindow"> <!--This is a little anchor that sits off to the side. When someone clicks a pin, the tooltip 'attaches' to this little thing here. It's invisible, so it looks like the tooltips are floating. Magic!-->
+			</div>
+			<!--I'll only explain one of these, since they're all the same but for different wedges.-->
+			<div class="modal-content" id="morph-wedge"> <!--We give it an ID so we can refer to this one specifically.-->
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300"> <!--This wedge is, itself, another SVG with its own viewbox.-->
+				<image width="400" height="300" xlink:href="Site_Assets/map_morphoria.jpg" x="0" y="0" /> <!--We add the wedge map you drew. <3-->
+				<image class="poiPin" id="inductionPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="92" y="216" pointer-events="visible" /> <!--Then we add the pins. We give it the 'poiPin' class, which has some css attached, and an ID so that we can refer to it in Javascript. We give it a standard width and height, and then give it some x and y coordinates. The coordinates I've manually worked out for each one - this defines where in the map they pop up!-->
+				<!--If we wanted to move a pin from, say, Morphoria to Omnillian below, we'd just cut and paste this <image class="poiPin" ... line to the desired wedge. They're very self-contained!-->
+				<image class="poiPin" id="outsideinnPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="119" y="194" pointer-events="visible" /> 
+				</svg>
+			</div>
+			<div class="modal-content" id="omn-wedge">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
+				<image width="400" height="300" xlink:href="Site_Assets/map_omnillian.jpg" x="0" y="0" /> 
+				</svg>
+			</div>
+			<div class="modal-content" id="psi-wedge">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
+				<image width="400" height="300" xlink:href="Site_Assets/map_psilysium.jpg" x="0" y="0" /> 
+				<image class="poiPin" id="darkhazePin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="179" y="117" pointer-events="visible" /> 
+				</svg>
+			</div>
+			<div class="modal-content" id="umb-wedge">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
+				<image width="400" height="300" xlink:href="Site_Assets/map_umbrasia.jpg" x="0" y="0" /> 
+				<image class="poiPin" id="hearthhuntPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="211" y="185" pointer-events="visible" /> 
+				</svg>
+			</div>
+			<div class="modal-content" id="viv-wedge">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
+				<image width="400" height="300" xlink:href="Site_Assets/map_viviria.jpg" x="0" y="0" /> 
+				<image class="poiPin" id="grudPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="145" y="93" pointer-events="visible" /> 
+				<image class="poiPin" id="eggpluckPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="146" y="136" pointer-events="visible" /> 
+				<image class="poiPin" id="sluckyPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="168" y="74" pointer-events="visible" /> 
+				<image class="poiPin" id="tuffetPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="227" y="182" pointer-events="visible" /> 
+				<image class="poiPin" id="overgrownalleyPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="162" y="174" pointer-events="visible" /> 
+				<image class="poiPin" id="pundlepoxPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="204" y="160" pointer-events="visible" /> 
+				</svg>
+			</div>
+			<div class="modal-content" id="vorn-wedge">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
+				<image width="400" height="300" xlink:href="Site_Assets/map_vorn.jpg" x="0" y="0" /> 
+				<image class="poiPin" id="cirquePin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="221" y="98" pointer-events="visible" /> 
+				</svg>
+			</div>
+		</div>
+		
+		<!--**********************************************-->
+		
+		<!--**********************************************-->
+		<!--Here, we store all of our lovely popups for PoIs that our amazing tippy jQuery plugin can summon up.-->
+		<div class="popups"> 
+			<div class="hover" id="cirquePOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/cirque.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Cirque du Sadique</b><br>Dare you brave Mordecai Balkor's famously grisly event?</div>
+				<a id="POIlink" href="https://www.cityofnodd.com/cirque" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+		
+			<div class="hover" id="darkhazePOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/darkhaze.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Darkhaze Smokeshop</b><br>
+				There appears to be a small shop selling smoke pipes and hookahs.</div>
+				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="eggpluckPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/eggpluck.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Eggpluck's Discount Familiars</b><br>Locals say that this is a store one can find some companionship.</div>
+				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="grudPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/grud.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Grud's Grub</b><br>Supposedly, this is a place one can get some food...</div>
+				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="hearthhuntPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/hearthhunt.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>HearthHunt</b><br>
+				In the depths of the Neverlight phase, Citizens begin to seek treasures and prizes in the <i>HearthHunt</i>...</div>
+				<a id="POIlink" href="https://www.cityofnodd.com/hearthhunt" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="inductionPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/induction.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Induction</b><br>
+				Chosen Ones who appear beyond the City gates first find themselves being uniquely 'welcomed' here...</div>
+				<a id="POIlink" href="https://www.cityofnodd.com/induction" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="outsideinnPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/outside_inn.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>The Outside Inn</b><br>Those new to the City often take refuge in the Outside Inn for their first sleep.</div>
+				<a id="POIlink" href="https://www.cityofnodd.com/outside-inn" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="overgrownalleyPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/alley.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Overgrown Alley</b><br>Could this be a shortcut home?</div>
+				<a id="POIlink" href="https://www.cityofnodd.com/infested-nurk" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="pundlepoxPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/pundlepox.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Pundlepox Gardens</b><br>The sign claims that this is some kind of botanical garden.</div>
+				<a id="POIlink" href="https://www.cityofnodd.com/pundlepox" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="sluckyPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/slucky.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Slucky's Sloach Shack</b><br>The best sloach-based food around. ...Whatever a 'sloach' is.</div>
+				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+			<div class="hover" id="tuffetPOI">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
+				<img id="POIimg" src="PoI_Window_Assets/tuffet.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Tender Tuffets</b><br>Apparently this is a place one can buy furniture for their home.</div>
+				<a id="POIlink" href="https://www.cityofnodd.com/tuffets" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
+			</div>
+			
+		</div>
+		<!--**********************************************-->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<!--This includes the jQuery library (jQuery is a subset of javascript) Google hosts it for people to use for free without having to manually include it on websites. The website won't load properly if Google crashes, but I think Google is about one of the safest 'never going down' websites out there. Nodd will crash before it does. We could, however, manually host jQuery so it's not a worry.-->
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script src="https://unpkg.com/tippy.js@6"></script>
+		<script> //Now we start the jQuery script 'zone' where all the scripts live that power a site. We also use // for comments now since we're in a Javascript zone.
+	  
+			$('#egoBracerBut').on('click', function(e) { //In the element named specifically "egoBracerBut", when someone clicks it, run this code.
+				$('.egoShell').toggleClass('egoButton_active'); //Find the things of the type .egoShell, and either add (or remove if they already have it) all the settings in the .css file for ".egoButton_active".
+			});
+			
+			
+			$('img').on('dragstart', function(event) { event.preventDefault(); }); //If someone tries to drag an image somewhere else, just don't do the image dragging thing. We like our images to stay in place!
+			
+			/*********************This operates the map panning and scrolling and zooming.*********************/
+			const mapContainer = document.getElementById("mapContainer");
+			const mapImage = document.getElementById("mapImg");
+			const imgSize = {w:mapImage.clientWidth,h:mapImage.clientHeight};
+			var scale = 0.1; //10%
+			var minScale = 0.5;
+			var maxScale = 3;
+			var curScale = 1; //What's our current scale compared to the original?
+			var isPanning = false;
+			var startPoint = {x:0,y:0};
+			var endPoint = {x:0,y:0};
+			var scrollLock = false;
+			var mwidth = 200;
+			var mheight = 150;
+			var viewBox = {x:100,y:75,w:mwidth,h:mheight};
+			
+			mapContainer.onmousedown = function(e){
+				e.preventDefault();
+				isPanning = true;
+				startPoint = {x:e.x,y:e.y};
+			}
+			mapContainer.onmousemove = function(e){
+				e.preventDefault();
+			    if (isPanning){
+				  scrollLock = true;
+				  endPoint = {x:e.x,y:e.y};
+				  var dx = (startPoint.x - endPoint.x)*mwidth/(mapContainer.clientWidth);
+				  var dy = (startPoint.y - endPoint.y)*mheight/(mapContainer.clientHeight);
+				  var movedViewBox = {x:viewBox.x+dx,y:viewBox.y+dy,w:viewBox.w,h:viewBox.h};
+				  mapContainer.setAttribute('viewBox', `${movedViewBox.x} ${movedViewBox.y} ${movedViewBox.w} ${movedViewBox.h}`);
+			    }
+			}
+			mapContainer.onmouseup = function(e){
+				e.preventDefault();
+			    if (isPanning){ 
+				  endPoint = {x:e.x,y:e.y};
+				  var dx = (startPoint.x - endPoint.x)*mwidth/(mapContainer.clientWidth);
+				  var dy = (startPoint.y - endPoint.y)*mheight/(mapContainer.clientHeight);
+				  viewBox = {x:viewBox.x+dx,y:viewBox.y+dy,w:viewBox.w,h:viewBox.h};
+				  mapContainer.setAttribute('viewBox', `${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`);
+			    }
+			    isPanning = false;
+				scrollLock = false;
+			}
+			mapContainer.onwheel = function(e) {
+				e.preventDefault();
+				curScale += -Math.sign(e.deltaY)*scale;
+				if (curScale < minScale) curScale = minScale;
+				if (curScale > maxScale) curScale = maxScale;
+				var dw = -mwidth*Math.sign(e.deltaY)*scale;
+				var dh = -mheight*Math.sign(e.deltaY)*scale;
+				var dx = (e.offsetX*mwidth/mapContainer.clientWidth)*(Math.sign(e.deltaY)*-scale);//mapContainer.clientWidth;
+				var dy = (e.offsetY*mheight/mapContainer.clientHeight)*(Math.sign(e.deltaY)*-scale);
+				viewBox = {x:viewBox.x+dx,y:viewBox.y+dy,w:viewBox.w-dw,h:viewBox.h-dh};
+				if (viewBox.w < 200*minScale) {
+					viewBox.w = 200*minScale;
+					viewBox.h = 150*minScale;
+					viewBox.x = viewBox.x - dx;
+					viewBox.y = viewBox.y - dy;
+				}
+				if (viewBox.w > 200*maxScale) {
+					viewBox.w = 200*maxScale;
+					viewBox.h = 150*maxScale;
+					viewBox.x = viewBox.x - dx;
+					viewBox.y = viewBox.y - dy;
+				}
+				mapContainer.setAttribute('viewBox', `${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`);
+				mwidth = viewBox.w;
+				mheight = viewBox.h;
+			}
+			
+			
+			/******************************************/
+			
+			/*********************These are our lightbox wedge-popup codes.*********************/
+			// Open the Modal
+			function openWedge() {
+				if (scrollLock == false) {
+					$("#wedge").fadeIn("slow");
+				}
+			}
+
+			// Close the Modal
+			function closeWedge() {
+			  $("#wedge").fadeOut("slow");
+			  $("#morph-wedge").fadeOut("slow");
+			  $("#psi-wedge").fadeOut("slow");
+			  $("#vorn-wedge").fadeOut("slow");
+			  $("#umb-wedge").fadeOut("slow");
+			  $("#omn-wedge").fadeOut("slow");
+			  $("#viv-wedge").fadeOut("slow");
+			  tippy.hideAll();
+			}
+			
+			function wedge(x) {
+				if (scrollLock == false) {
+					document.getElementById(x).style.display = "block";
+				}
+			}
+			
+			$(document).ready(function(){
+				$(document).bind('keydown', function(e) { 
+					if (e.which == 27) {
+						closeWedge();
+					}
+				}); 
+			});
+			
+			
+			
+			/*********************These are our tooltip codes.*********************/
+			tippy('#poiWindow', { 
+				theme: 'Nodd', //Set the tooltip theme to our custom made one.
+				placement: 'top', 
+				delay: [250, 100], //It takes 0.25 seconds to appear, and disappears after 0.1s of the mouse leaving.
+				interactiveBorder: 30, //There's a buffer around the tooltip where it won't vanish, so it doesn't turn off while the mouse is moving to it.
+				interactive: true, //We can click inside the tooltip.
+				inertia: true, //The tooltip has a little bounce to it.
+				arrow: false, //There's no arrow pointing to the tooltip.
+				content: cirquePOI.innerHTML, //The tooltip displays what's in the cirquePOI <div> element.
+				allowHTML: true, //The tooltip can have HTML in it.
+				trigger: "click",
+				triggerTarget: document.getElementById("cirquePin"),
+				appendTo: document.body //Place the tooltip on the page specifically, since it can't attach to the svg map.
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true, 
+				inertia: true, 
+				arrow: false, 
+				content: darkhazePOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("darkhazePin"),
+				appendTo: document.body 
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true, 
+				inertia: true, 
+				arrow: false, 
+				content: eggpluckPOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("eggpluckPin"),
+				appendTo: document.body 
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true,  
+				inertia: true, 
+				arrow: false, 
+				content: grudPOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("grudPin"),
+				appendTo: document.body 
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', //Set the tooltip theme to our custom made one.
+				placement: 'top', 
+				delay: [250, 100], //It takes 0.25 seconds to appear, and disappears after 0.1s of the mouse leaving.
+				interactiveBorder: 30, //There's a buffer around the tooltip where it won't vanish, so it doesn't turn off while the mouse is moving to it.
+				interactive: true, //We can click inside the tooltip.
+				inertia: true, //The tooltip has a little bounce to it.
+				arrow: false, //There's no arrow pointing to the tooltip.
+				content: hearthhuntPOI.innerHTML, //The tooltip displays what's in the cirquePOI <div> element.
+				allowHTML: true, //The tooltip can have HTML in it.
+				trigger: "click",
+				triggerTarget: document.getElementById("hearthhuntPin"),
+				appendTo: document.body //Place the tooltip on the page specifically, since it can't attach to the svg map.
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true, 
+				inertia: true,
+				arrow: false, 
+				content: inductionPOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("inductionPin"),
+				appendTo: document.body
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true,  
+				inertia: true, 
+				arrow: false, 
+				content: outsideinnPOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("outsideinnPin"),
+				appendTo: document.body 
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true, 
+				inertia: true, 
+				arrow: false, 
+				content: overgrownalleyPOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("overgrownalleyPin"),
+				appendTo: document.body 
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true, 
+				inertia: true, 
+				arrow: false, 
+				content: pundlepoxPOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("pundlepoxPin"),
+				appendTo: document.body 
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true, 
+				inertia: true, 
+				arrow: false, 
+				content: sluckyPOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("sluckyPin"),
+				appendTo: document.body 
+			});
+			tippy('#poiWindow', { 
+				theme: 'Nodd', 
+				placement: 'top', 
+				delay: [250, 100], 
+				interactiveBorder: 30, 
+				interactive: true, 
+				inertia: true, 
+				arrow: false, 
+				content: tuffetPOI.innerHTML, 
+				allowHTML: true, 
+				trigger: "click",
+				triggerTarget: document.getElementById("tuffetPin"),
+				appendTo: document.body 
+			});
+			
+			/************This makes it so that when the mouse hovers over a pin, it turns pink.***********/
+			$('.poiPin').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_pin_click.png');
+			});
+			$('.poiPin').mousedown(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_pin_visited.png');
+			});
+			$('.poiPin').mouseup(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_pin_click.png');
+			});
+			$('.poiPin').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_pin_new.png');
+			});
+			
+			
+			/*******************Preload our images (borrowed code)**********************/
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image();
+					images[i].src = preload.arguments[i];
+				}
+			}
+			preload(
+				"Site_Assets/map_pin_visited.png",
+				"Site_Assets/map_pin_click.png",
+				"Site_Assets/map_pin_new.png",
+				"PoI_Window_Assets/cirque.png",
+				"Site_Assets/menu_media_hover.png",
+				"Site_Assets/menu_media_clicked.png",
+				"Site_Assets/menu_media_default.png",
+				"Site_Assets/menu_explore_hover.png",
+				"Site_Assets/menu_explore_clicked.png",
+				"Site_Assets/menu_explore_default.png",
+				"Site_Assets/menu_about_hover.png",
+				"Site_Assets/menu_about_clicked.png",
+				"Site_Assets/menu_about_default.png",
+				"Site_Assets/menu_news_hover.png",
+				"Site_Assets/menu_news_clicked.png",
+				"Site_Assets/menu_news_default.png",
+				"Site_Assets/menu_faq_hover.png",
+				"Site_Assets/menu_faq_clicked.png",
+				"Site_Assets/menu_faq_default.png",
+				"Site_Assets/menu_discord_hover.png",
+				"Site_Assets/menu_discord_clicked.png",
+				"Site_Assets/menu_discord_default.png",
+				"Site_Assets/menu_subscribe_hover.png",
+				"Site_Assets/menu_subscribe_clicked.png",
+				"Site_Assets/menu_subscribe_default.png",
+				"Site_Assets/menu_store_hover.png",
+				"Site_Assets/menu_store_clicked.png",
+				"Site_Assets/menu_store_default.png",
+				"Site_Assets/ui_egobracer.gif"
+			);
+		</script>
+	</body>
+</html>

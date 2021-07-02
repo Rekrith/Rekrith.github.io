@@ -1,0 +1,255 @@
+
+
+
+/* NAMED THINGS */
+
+
+#egoBracerBut {
+	height: 6vw;
+	background-size: cover;
+	border: none;
+	z-index: 3;
+	bottom: 0px;
+	pointer-events:auto;
+}
+#faqImg{
+	width: 121px;
+	height: 61px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#faqImg:hover {
+	content:url(Site_Assets/menu_faq_hover.png);
+}
+#faqImg:active {
+	content:url(Site_Assets/menu_faq_clicked.png);
+}
+#discordImg{
+	width: 140px;
+	height: 42px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#discordImg:hover {
+	content:url(Site_Assets/menu_discord_hover.png);
+}
+#discordImg:active {
+	content:url(Site_Assets/menu_discord_clicked.png);
+}
+#aboutBut {
+	height: 2.5vw;
+	position: absolute;
+	left: 22vw;
+	top: 0.5vw;
+}
+#aboutBut:hover {
+	content:url(Site_Assets/menu_about_hover.png);
+}
+#aboutBut:active {
+	content:url(Site_Assets/menu_about_clicked.png);
+}
+#discordBut {
+	height: 2.5vw;
+	position: absolute;
+	left: 56vw;
+	top: 0.5vw;
+}
+#discordBut:hover {
+	content:url(Site_Assets/menu_discord_hover.png);
+}
+#discordBut:active {
+	content:url(Site_Assets/menu_discord_clicked.png);
+}
+#exploreBut {
+	height: 2.5vw;
+	position: absolute;
+	left: 12vw;
+	top: 0.5vw;
+}
+#exploreBut:hover {
+	content:url(Site_Assets/menu_explore_hover.png);
+}
+#exploreBut:active {
+	content:url(Site_Assets/menu_explore_clicked.png);
+}
+#faqBut {
+	height: 2.5vw;
+	position: absolute;
+	left: 39vw;
+	top: 0.5vw;
+}
+#faqBut:hover {
+	content:url(Site_Assets/menu_faq_hover.png);
+}
+#faqBut:active {
+	content:url(Site_Assets/menu_faq_clicked.png);
+}
+#mediaBut {
+	height: 2.5vw;
+	position: absolute;
+	left: 47vw;
+	top: 0.5vw;
+}
+#mediaBut:hover {
+	content:url(Site_Assets/menu_media_hover.png);
+}
+#mediaBut:active {
+	content:url(Site_Assets/menu_media_clicked.png);
+}
+#newsBut {
+	height: 2.5vw;
+	position: absolute;
+	left: 31vw;
+	top: 0.5vw;
+}
+#newsBut:hover {
+	content:url(Site_Assets/menu_news_hover.png);
+}
+#newsBut:active {
+	content:url(Site_Assets/menu_news_clicked.png);
+}
+#storeBut {
+	height: 2.5vw;
+	position: absolute;
+	left: 79vw;
+	top: 0.5vw;
+}
+#storeBut:hover {
+	content:url(Site_Assets/menu_store_hover.png);
+}
+#storeBut:active {
+	content:url(Site_Assets/menu_store_clicked.png);
+}
+#subscribeBut {
+	height: 2.5vw;
+	position: absolute;
+	left: 68vw;
+	top: 0.5vw;
+}
+#subscribeBut:hover {
+	content:url(Site_Assets/menu_subscribe_hover.png);
+}
+#subscribeBut:active {
+	content:url(Site_Assets/menu_subscribe_clicked.png);
+}
+
+
+
+
+
+
+.egobracer { /*Apply to everything with the class="egobracer" in the HTML*/
+  display: flex; /*Unsure - seems to be 'this type can change/be animated'.*/
+  justify-content: left; 
+  align-items: left;
+  overflow: visible; /*If things go outside the borders of the container, display them anyway! Let them roam free.*/
+  position: fixed; /*This means its position is fixed on the page and will stay in position, scrolling with the window (as opposed to eventually scrolling out of view)*/
+  bottom: 0px;
+  height: 6vw;
+  pointer-events:none;
+}
+
+.egoShell {
+  z-index: 0;
+  bottom: 0px;
+  height: 5vw;
+  width: 50vw;
+  margin-top: 0.75vw; /*We can define the spacing for specific sides, too.*/
+  padding-top: 0vw;
+  padding-bottom: 0vw;
+  padding-left: 5vw;
+  padding-right: 2vw;
+  margin-right: 2vw;
+  position: relative;
+  border-top-right-radius:6vw; /*This makes a kind of curved corner. It's visually nice.*/
+  border-bottom-right-radius:6vw; /*But to make an entire side, you need two corners!*/
+  /*--| animation |--*/
+  transition: 0.5s; /*If any anymations happen like Transforms, they take 0.5s*/
+  transform-origin: left center; /*They also are defined relative to the object's left centre.*/
+  transform: translateX(-200%); /*By default, wherever it WOULD be, it then gets moved a huge amount to the left (and off-screen).*/
+  opacity: 0; /*It's also invisible.*/
+  pointer-events:none;
+}
+
+.egoButton_active {
+  transform: translateX(-8vw); /*When we apply this tag to the .egoShell class, it will slide (over transition number of seconds) to be -40px offset to the left (instead of, say, -200%)*/
+  opacity: 1; /*We'll also make it visible again!*/
+  pointer-events:auto;
+}
+
+@font-face {
+  font-family: yarin;
+  src: url(Site_Assets/yarin-reg.ttf);
+}
+@font-face {
+  font-family: yarin-bld;
+  src: url(Site_Assets/yarin-bold.ttf);
+}
+
+.arcanetLinksTop {
+	display: inline-block;
+	position: absolute;
+	left: 10vw;
+	top: 1vw;
+	color: #2DC991;
+	font-family: yarin-bld;
+	font-size: 1.25vw;
+}
+.arcanetLinksTop a:link{
+	color: #2DC991;
+	text-decoration: none;
+}
+.arcanetLinksTop a:visited{
+	color: #2DC991;
+	text-decoration: none;
+}
+.arcanetLinksTop a:hover{
+	text-shadow: 0 0 5px #009933;
+	text-decoration: none;
+}
+.arcanetLinksTop a:active{
+	color: #365344;
+	text-shadow: 0 0 0px #000000;
+	text-decoration: none;
+}
+
+.arcanetLinksBot {
+	display: inline-block;
+	position: absolute;
+	left: 10vw;
+	top: 3vw;
+	color: #1CB880;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 0.75vw;
+}
+.arcanetLinksBot a:link{
+	color: #1CB880;
+	text-decoration: none;
+}
+.arcanetLinksBot a:visited{
+	color: #1CB880;
+	text-decoration: none;
+}
+.arcanetLinksBot a:hover{
+	text-shadow: 0 0 5px #009933;
+	text-decoration: none;
+}
+.arcanetLinksBot a:active{
+	color: #365344;
+	text-shadow: 0 0 0px #000000;
+	text-decoration: none;
+}
+
+.topMenuClass {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	pointer-events: none;
+}
+.topBut {
+	pointer-events:auto;
+}
