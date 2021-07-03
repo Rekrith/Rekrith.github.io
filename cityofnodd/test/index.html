@@ -15,17 +15,19 @@
 		<!--The main map! It's an interactable (S)calable (V)ector (G)raphic (SVG).-->
 		<!--It has some opening information about how web browsers use SVGs (the links), then it has style settings.-->
 		<!--The important part is the Viewbox. The Viewbox is kinda like the actual window we get to see. It has the format "x position, y position, width, height". It's a little confusing unfortunately, but I can link you some tutorials on them if you would like.-->
-		<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;left:50%;top:0%;transform:translate(-50%,0%);overflow:none;width:100%;height:100%;" preserveAspectRatio="xMidYMid meet" viewBox="100 75 200 150" id="mapContainer">
+		<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;left:50%;top:0%;transform:translate(-50%,0%);overflow:none;width:100%;height:100%;" preserveAspectRatio="xMidYMid meet" viewBox="000 0 200 150" id="mapContainer">
 			<!--Inside the SVG, we can define areas, images, and general 'stuff'. First, we define the map background and give it a width and height double that of the Viewbox (so it's zoomed in). We give it the id 'mapImg' so we can refer to it programmatically.-->
-			<image width="400" height="300" xlink:href="Site_Assets/map_placeholder_2.jpg" id="mapImg" /> 
+			<image width="200" height="150" xlink:href="Site_Assets/map_icons/map_iso_small.jpg" id="mapImg" /> 
 			<!--Next, we define a bunch of polygons that are the 'wedges'. We tell it to, on mouseup (lifting your finger from the mouse button), call a Javascript function defined below in the <script> area called 'openWedge()', and ALSO one called 'wedge()'. The points are all x,y coordinates inside the Viewbox that I've manually defined.-->
 			<!--The style "pointer-events:all" says that ANY mouse activity inside it should do things. Normally transparent pixels don't count.-->
-			<polygon class="mapClick" onmouseup="openWedge();wedge('morph-wedge');" points="74,150,195,150,136,46,111,64,91,91,78,120" style="fill:none;pointer-events:all;" />
-			<polygon class="mapClick" onmouseup="openWedge();wedge('viv-wedge');" points="136,46,195,150,251,46,220,33,195,31,169,33" style="fill:none;pointer-events:all;" />
-			<polygon class="mapClick" onmouseup="openWedge();wedge('vorn-wedge');" points="195,150,74,150,78,180,91,213,111,236,136,255" style="fill:none;pointer-events:all;" />
-			<polygon class="mapClick" onmouseup="openWedge();wedge('umb-wedge');" points="195,150,251,255,220,268,195,270,169,268,136,255" style="fill:none;pointer-events:all;" />
-			<polygon class="mapClick" onmouseup="openWedge();wedge('omn-wedge');" points="195,150,251,255,277,236,298,213,309,180,313,150" style="fill:none;pointer-events:all;" />
-			<polygon class="mapClick" onmouseup="openWedge();wedge('psi-wedge');" points="195,150,251,46,277,64,298,91,309,120,313,150" style="fill:none;pointer-events:all;" />
+			<image id="vorn" width="9" height="27" xlink:href="Site_Assets/map_icons/vorn_citadel_small.png" x="96" y="16" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
+			<image id="viviria" width="10" height="25" xlink:href="Site_Assets/map_icons/viviria_citadel_small.png" x="61" y="30" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
+			<image id="omnillian" width="15" height="26" xlink:href="Site_Assets/map_icons/omnillian_citadel_small.png" x="129" y="28" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
+			<image id="morphoria" width="17" height="28" xlink:href="Site_Assets/map_icons/morphoria_citadel_small.png" x="51" y="54" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
+			<image id="umbrasia" width="13" height="29" xlink:href="Site_Assets/map_icons/umbrasia_citadel_small.png" x="133" y="52" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
+			<image id="spire" width="14" height="34" xlink:href="Site_Assets/map_icons/council_spire_small.png" x="95" y="33" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
+			<image id="psilysium" width="16" height="31" xlink:href="Site_Assets/map_icons/psilysium_citadel_small.png" x="94" y="65" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
+			
 		</svg></div>
 		
 		<!--**********************************************-->
@@ -229,8 +231,8 @@
 			const mapImage = document.getElementById("mapImg");
 			const imgSize = {w:mapImage.clientWidth,h:mapImage.clientHeight};
 			var scale = 0.1; //10%
-			var minScale = 0.5;
-			var maxScale = 3;
+			var minScale = 0.25;
+			var maxScale = 2.5;
 			var curScale = 1; //What's our current scale compared to the original?
 			var isPanning = false;
 			var startPoint = {x:0,y:0};
@@ -238,7 +240,7 @@
 			var scrollLock = false;
 			var mwidth = 200;
 			var mheight = 150;
-			var viewBox = {x:100,y:75,w:mwidth,h:mheight};
+			var viewBox = {x:0,y:0,w:mwidth,h:mheight};
 			
 			mapContainer.onmousedown = function(e){
 				e.preventDefault();
@@ -293,6 +295,7 @@
 				mapContainer.setAttribute('viewBox', `${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}`);
 				mwidth = viewBox.w;
 				mheight = viewBox.h;
+				//if (curScale 
 			}
 			
 			
@@ -490,18 +493,55 @@
 				appendTo: document.body 
 			});
 			
-			/************This makes it so that when the mouse hovers over a pin, it turns pink.***********/
-			$('.poiPin').mouseenter(function() {
-				this.setAttribute("xlink:href", 'Site_Assets/map_pin_click.png');
+			/************This makes it so that when the mouse hovers over a hotspot, it glows.***********/
+			/*Morphoria*/
+			$('#morphoria').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/morphoria_citadel_small_glow.png');
 			});
-			$('.poiPin').mousedown(function() {
-				this.setAttribute("xlink:href", 'Site_Assets/map_pin_visited.png');
+			$('#morphoria').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/morphoria_citadel_small.png');
 			});
-			$('.poiPin').mouseup(function() {
-				this.setAttribute("xlink:href", 'Site_Assets/map_pin_click.png');
+			/*Omnillian*/
+			$('#omnillian').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/omnillian_citadel_small_glow.png');
 			});
-			$('.poiPin').mouseleave(function() {
-				this.setAttribute("xlink:href", 'Site_Assets/map_pin_new.png');
+			$('#omnillian').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/omnillian_citadel_small.png');
+			});
+			/*Psilysium*/
+			$('#psilysium').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/psilysium_citadel_small_glow.png');
+			});
+			$('#psilysium').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/psilysium_citadel_small.png');
+			});
+			/*Spire*/
+			$('#spire').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/council_spire_small_glow.png');
+			});
+			$('#spire').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/council_spire_small.png');
+			});
+			/*Umbrasia*/
+			$('#umbrasia').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/umbrasia_citadel_small_glow.png');
+			});
+			$('#umbrasia').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/umbrasia_citadel_small.png');
+			});
+			/*Viviria*/
+			$('#viviria').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/viviria_citadel_small_glow.png');
+			});
+			$('#viviria').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/viviria_citadel_small.png');
+			});
+			/*Vorn*/
+			$('#vorn').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/vorn_citadel_small_glow.png');
+			});
+			$('#vorn').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/vorn_citadel_small.png');
 			});
 			
 			
@@ -542,7 +582,14 @@
 				"Site_Assets/menu_store_hover.png",
 				"Site_Assets/menu_store_clicked.png",
 				"Site_Assets/menu_store_default.png",
-				"Site_Assets/ui_egobracer.gif"
+				"Site_Assets/ui_egobracer.gif",
+				"Site_Assets/map_icons/vorn_citadel_small_glow.png",
+				"Site_Assets/map_icons/viviria_citadel_small_glow.png",
+				"Site_Assets/map_icons/morphoria_citadel_small_glow.png",
+				"Site_Assets/map_icons/umbrasia_citadel_small_glow.png",
+				"Site_Assets/map_icons/omnillian_citadel_small_glow.png",
+				"Site_Assets/map_icons/psilysium_citadel_small_glow.png",
+				"Site_Assets/map_icons/council_spire_small_glow.png"
 			);
 		</script>
 	</body>
