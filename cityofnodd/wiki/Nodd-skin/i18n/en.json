@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"nodd-desc": "Nodd skin for the City of Nodd",
+	"nodd-whatlinkshere": "Links",
+	"nodd-refresh": "Refresh",
+	"nodd-jump-to-navigation": "Jump to navigation",
+	"nodd-jump-to-search": "Jump to search",
+	"nodd-menu-left-label": "Project",
+	"nodd-menu-right-label": "Navigation",
+	"nodd-menu-left": "\n* aboutpage|about\n* recentchanges-url|recentchanges",
+	"nodd-menu-right": "\n* nodd-index-url|nodd-index\n* randompage-url|randompage",
+	"nodd-index": "Index",
+	"nodd-index-url": "Special:AllPages"
+}

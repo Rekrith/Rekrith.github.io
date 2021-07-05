@@ -15,18 +15,22 @@
 		<!--The main map! It's an interactable (S)calable (V)ector (G)raphic (SVG).-->
 		<!--It has some opening information about how web browsers use SVGs (the links), then it has style settings.-->
 		<!--The important part is the Viewbox. The Viewbox is kinda like the actual window we get to see. It has the format "x position, y position, width, height". It's a little confusing unfortunately, but I can link you some tutorials on them if you would like.-->
-		<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;left:50%;top:0%;transform:translate(-50%,0%);overflow:none;width:100%;height:100%;" preserveAspectRatio="xMidYMid meet" viewBox="000 0 200 150" id="mapContainer">
+		<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;left:50%;top:0%;transform:translate(-50%,0%);overflow:none;width:100%;height:100%;" preserveAspectRatio="xMidYMid meet" viewBox="225 180 100 75" id="mapContainer">
 			<!--Inside the SVG, we can define areas, images, and general 'stuff'. First, we define the map background and give it a width and height double that of the Viewbox (so it's zoomed in). We give it the id 'mapImg' so we can refer to it programmatically.-->
-			<image width="200" height="150" xlink:href="Site_Assets/map_icons/map_iso_small.jpg" id="mapImg" /> 
-			<!--Next, we define a bunch of polygons that are the 'wedges'. We tell it to, on mouseup (lifting your finger from the mouse button), call a Javascript function defined below in the <script> area called 'openWedge()', and ALSO one called 'wedge()'. The points are all x,y coordinates inside the Viewbox that I've manually defined.-->
+			<image width="400" height="300" xlink:href="Site_Assets/map_icons/map_iso_small.jpg" id="mapImg" /> 
+			<!--Next, we define a bunch of polygons that are the 'wedges'. We tell it to, on mouseup (lifting your finger from the mouse button), call a Javascript function defined below in the <script> area called 'openPoi()', and ALSO one called 'setPOI()'. The points are all x,y coordinates inside the Viewbox that I've manually defined.-->
 			<!--The style "pointer-events:all" says that ANY mouse activity inside it should do things. Normally transparent pixels don't count.-->
-			<image id="vorn" width="9" height="27" xlink:href="Site_Assets/map_icons/vorn_citadel_small.png" x="96" y="16" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
-			<image id="viviria" width="10" height="25" xlink:href="Site_Assets/map_icons/viviria_citadel_small.png" x="61" y="30" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
-			<image id="omnillian" width="15" height="26" xlink:href="Site_Assets/map_icons/omnillian_citadel_small.png" x="129" y="28" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
-			<image id="morphoria" width="17" height="28" xlink:href="Site_Assets/map_icons/morphoria_citadel_small.png" x="51" y="54" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
-			<image id="umbrasia" width="13" height="29" xlink:href="Site_Assets/map_icons/umbrasia_citadel_small.png" x="133" y="52" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
-			<image id="spire" width="14" height="34" xlink:href="Site_Assets/map_icons/council_spire_small.png" x="95" y="33" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
-			<image id="psilysium" width="16" height="31" xlink:href="Site_Assets/map_icons/psilysium_citadel_small.png" x="94" y="65" pointer-events="visiblePainted" onmouseup="openWedge();wedge('viv-wedge');" />
+			<image id="vorn" width="14" height="42" xlink:href="Site_Assets/map_icons/vorn_citadel_small.png" x="194" y="46" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'vorn');" />
+			<image id="viviria" width="16" height="40" xlink:href="Site_Assets/map_icons/viviria_citadel_small.png" x="126" y="68" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'viviria');" />
+			<image id="pundlepox" width="12" height="12" xlink:href="Site_Assets/map_icons/pundlepox_small.png" x="162" y="92" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'pundlepox');" />
+			<image id="omnillian" width="20" height="36" xlink:href="Site_Assets/map_icons/omnillian_citadel_small.png" x="264" y="72" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'omnillian');" />
+			<image id="morphoria" width="26" height="44" xlink:href="Site_Assets/map_icons/morphoria_citadel_small.png" x="106" y="120" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'morphoria');" />
+			<image id="umbrasia" width="20" height="44" xlink:href="Site_Assets/map_icons/umbrasia_citadel_small.png" x="270" y="116" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'umbrasia');" />
+			<image id="spire" width="22" height="56" xlink:href="Site_Assets/map_icons/council_spire_small.png" x="192" y="76" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'viv-wedge');" />
+			<image id="psilysium" width="24" height="48" xlink:href="Site_Assets/map_icons/psilysium_citadel_small.png" x="192" y="142" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'psilysium');" />
+			<image id="outside-inn" width="12" height="11" xlink:href="Site_Assets/map_icons/outside_inn_small.png" x="290" y="195" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'outside-inn');" />
+			<image id="eggpluck" width="9" height="8" xlink:href="Site_Assets/map_icons/misc_shop_small.png" x="266" y="207" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'eggpluck');" />
+			<text id="induction" onmouseup="openPoi();setPOI(1, 'induction');" x="310" y="341" width="11" height="10" fill="#2DC991" transform="skewX(-5) skewY(-20)">Induction</text>
 			
 		</svg></div>
 		
@@ -76,12 +80,13 @@
 		<!--Here we store the wedge lightbox popups for the different map sections. They're hidden by default!-->
 		<!--A 'lightbox' is a type of modal, which is a webpage element that only appears sometimes as far as I understand it. Modals include things like pop-up image galleries, usually.-->
 		<div id="wedge" class="modal"> <!--We make just ONE wedge 'shell', and then inside that we make a bunch of inner parts that are all toggleable.-->
-			<div class="close" onclick="closeWedge()"> <!--First, a dimmed background. We tell it that onclick it calls the Javascript function "closeWedge()" such that you can click outside the map zoom and close the modal lightbox.-->
+			<div class="close" onclick="closePoi()"> <!--First, a dimmed background. We tell it that onclick it calls the Javascript function "closeWedge()" such that you can click outside the map zoom and close the modal lightbox.-->
 			</div>
-			<div id="poiWindow"> <!--This is a little anchor that sits off to the side. When someone clicks a pin, the tooltip 'attaches' to this little thing here. It's invisible, so it looks like the tooltips are floating. Magic!-->
-			</div>
+			<a class="prev" onclick="nextPOI(-1)">&#10094;</a>
+			<a class="next" onclick="nextPOI(1)">&#10095;</a>
+			
 			<!--I'll only explain one of these, since they're all the same but for different wedges.-->
-			<div class="modal-content" id="morph-wedge"> <!--We give it an ID so we can refer to this one specifically.-->
+			<div class="morphPOIs"> <!--We give it an ID so we can refer to this one specifically.-->
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300"> <!--This wedge is, itself, another SVG with its own viewbox.-->
 				<image width="400" height="300" xlink:href="Site_Assets/map_morphoria.jpg" x="0" y="0" /> <!--We add the wedge map you drew. <3-->
 				<image class="poiPin" id="inductionPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="92" y="216" pointer-events="visible" /> <!--Then we add the pins. We give it the 'poiPin' class, which has some css attached, and an ID so that we can refer to it in Javascript. We give it a standard width and height, and then give it some x and y coordinates. The coordinates I've manually worked out for each one - this defines where in the map they pop up!-->
@@ -89,26 +94,26 @@
 				<image class="poiPin" id="outsideinnPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="119" y="194" pointer-events="visible" /> 
 				</svg>
 			</div>
-			<div class="modal-content" id="omn-wedge">
+			<div class="empty">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
 				<image width="400" height="300" xlink:href="Site_Assets/map_omnillian.jpg" x="0" y="0" /> 
 				</svg>
 			</div>
-			<div class="modal-content" id="psi-wedge">
+			<div class="psiPOIs" id="psi-wedge">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
 				<image width="400" height="300" xlink:href="Site_Assets/map_psilysium.jpg" x="0" y="0" /> 
 				<image class="poiPin" id="darkhazePin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="179" y="117" pointer-events="visible" /> 
 				</svg>
 			</div>
-			<div class="modal-content" id="umb-wedge">
+			<div class="umbPOIs" id="umb-wedge">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
 				<image width="400" height="300" xlink:href="Site_Assets/map_umbrasia.jpg" x="0" y="0" /> 
 				<image class="poiPin" id="hearthhuntPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="211" y="185" pointer-events="visible" /> 
 				</svg>
 			</div>
-			<div class="modal-content" id="viv-wedge">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
-				<image width="400" height="300" xlink:href="Site_Assets/map_viviria.jpg" x="0" y="0" /> 
+			<div class="vivPOIs" id="viv-wedge" style="display:none;">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;z-index: 3000;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 200 150">
+				<image width="200" height="150" xlink:href="Site_Assets/map_viviria.jpg" x="0" y="0" /> 
 				<image class="poiPin" id="grudPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="145" y="93" pointer-events="visible" /> 
 				<image class="poiPin" id="eggpluckPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="146" y="136" pointer-events="visible" /> 
 				<image class="poiPin" id="sluckyPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="168" y="74" pointer-events="visible" /> 
@@ -117,102 +122,21 @@
 				<image class="poiPin" id="pundlepoxPin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="204" y="160" pointer-events="visible" /> 
 				</svg>
 			</div>
-			<div class="modal-content" id="vorn-wedge">
+			<div class="vornPOIs" id="vorn-wedge">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
 				<image width="400" height="300" xlink:href="Site_Assets/map_vorn.jpg" x="0" y="0" /> 
 				<image class="poiPin" id="cirquePin" width="15" height="24" xlink:href="Site_Assets/map_pin_new.png" x="221" y="98" pointer-events="visible" /> 
 				</svg>
 			</div>
+			<div class="vivPOIs" id="eggpluckPOI" style="z-index: 2000;">
+				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2000;">
+				<img id="POIimg" src="PoI_Window_Assets/eggpluck.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:2001;">
+				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:2003"><b>Eggpluck's Discount Familiars</b><br>Locals say that this is a store one can find some companionship.</div>
+				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:2003"></a>
+			</div>
 		</div>
-		
-		<!--**********************************************-->
-		
-		<!--**********************************************-->
-		<!--Here, we store all of our lovely popups for PoIs that our amazing tippy jQuery plugin can summon up.-->
-		<div class="popups"> 
-			<div class="hover" id="cirquePOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/cirque.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Cirque du Sadique</b><br>Dare you brave Mordecai Balkor's famously grisly event?</div>
-				<a id="POIlink" href="https://www.cityofnodd.com/cirque" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-		
-			<div class="hover" id="darkhazePOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/darkhaze.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Darkhaze Smokeshop</b><br>
-				There appears to be a small shop selling smoke pipes and hookahs.</div>
-				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="eggpluckPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/eggpluck.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Eggpluck's Discount Familiars</b><br>Locals say that this is a store one can find some companionship.</div>
-				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="grudPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/grud.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Grud's Grub</b><br>Supposedly, this is a place one can get some food...</div>
-				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="hearthhuntPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/hearthhunt.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>HearthHunt</b><br>
-				In the depths of the Neverlight phase, Citizens begin to seek treasures and prizes in the <i>HearthHunt</i>...</div>
-				<a id="POIlink" href="https://www.cityofnodd.com/hearthhunt" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="inductionPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/induction.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Induction</b><br>
-				Chosen Ones who appear beyond the City gates first find themselves being uniquely 'welcomed' here...</div>
-				<a id="POIlink" href="https://www.cityofnodd.com/induction" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="outsideinnPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/outside_inn.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>The Outside Inn</b><br>Those new to the City often take refuge in the Outside Inn for their first sleep.</div>
-				<a id="POIlink" href="https://www.cityofnodd.com/outside-inn" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="overgrownalleyPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/alley.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Overgrown Alley</b><br>Could this be a shortcut home?</div>
-				<a id="POIlink" href="https://www.cityofnodd.com/infested-nurk" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="pundlepoxPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/pundlepox.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Pundlepox Gardens</b><br>The sign claims that this is some kind of botanical garden.</div>
-				<a id="POIlink" href="https://www.cityofnodd.com/pundlepox" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="sluckyPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/slucky.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Slucky's Sloach Shack</b><br>The best sloach-based food around. ...Whatever a 'sloach' is.</div>
-				<a id="POIlink" href="#" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-			<div class="hover" id="tuffetPOI">
-				<img id="POIframe" src="PoI_Window_Assets/poi_window.png" style="position:relative;top:0px;left:0px;width:100%;max-width:20vw;height:auto;z-index:2;">
-				<img id="POIimg" src="PoI_Window_Assets/tuffet.png" style="position:absolute;top:7%;left:7.5%;width:85%;max-width:17.5vw;height:auto;z-index:1;">
-				<div id="POItext" style="position:absolute;top:55%;left:15%;font-size:calc(4px + 0.6vw);text-indent:0px;text-align:left;max-width:14vw;z-index:3"><b>Tender Tuffets</b><br>Apparently this is a place one can buy furniture for their home.</div>
-				<a id="POIlink" href="https://www.cityofnodd.com/tuffets" target="_blank"><img id="POIgobutton" src="PoI_Window_Assets/poi_explore.png" style="position:absolute;bottom:10%;right:12%;width:100%;max-width:5vw;height:auto;z-index:3"></a>
-			</div>
-			
-		</div>
-		<!--**********************************************-->
-		
+	
+				
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<!--This includes the jQuery library (jQuery is a subset of javascript) Google hosts it for people to use for free without having to manually include it on websites. The website won't load properly if Google crashes, but I think Google is about one of the safest 'never going down' websites out there. Nodd will crash before it does. We could, however, manually host jQuery so it's not a worry.-->
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -231,16 +155,18 @@
 			const mapImage = document.getElementById("mapImg");
 			const imgSize = {w:mapImage.clientWidth,h:mapImage.clientHeight};
 			var scale = 0.1; //10%
-			var minScale = 0.25;
+			var minScale = 0.5;
 			var maxScale = 2.5;
 			var curScale = 1; //What's our current scale compared to the original?
 			var isPanning = false;
 			var startPoint = {x:0,y:0};
 			var endPoint = {x:0,y:0};
 			var scrollLock = false;
-			var mwidth = 200;
-			var mheight = 150;
-			var viewBox = {x:0,y:0,w:mwidth,h:mheight};
+			var mwidth = 100;
+			var mheight = 75;
+			var viewBox = {x:225,y:180,w:mwidth,h:mheight};
+			var pois;
+			var poiID = 1;
 			
 			mapContainer.onmousedown = function(e){
 				e.preventDefault();
@@ -280,15 +206,15 @@
 				var dx = (e.offsetX*mwidth/mapContainer.clientWidth)*(Math.sign(e.deltaY)*-scale);//mapContainer.clientWidth;
 				var dy = (e.offsetY*mheight/mapContainer.clientHeight)*(Math.sign(e.deltaY)*-scale);
 				viewBox = {x:viewBox.x+dx,y:viewBox.y+dy,w:viewBox.w-dw,h:viewBox.h-dh};
-				if (viewBox.w < 200*minScale) {
-					viewBox.w = 200*minScale;
-					viewBox.h = 150*minScale;
+				if (viewBox.w < 100*minScale) {
+					viewBox.w = 100*minScale;
+					viewBox.h = 75*minScale;
 					viewBox.x = viewBox.x - dx;
 					viewBox.y = viewBox.y - dy;
 				}
-				if (viewBox.w > 200*maxScale) {
-					viewBox.w = 200*maxScale;
-					viewBox.h = 150*maxScale;
+				if (viewBox.w > 100*maxScale) {
+					viewBox.w = 100*maxScale;
+					viewBox.h = 75*maxScale;
 					viewBox.x = viewBox.x - dx;
 					viewBox.y = viewBox.y - dy;
 				}
@@ -303,197 +229,88 @@
 			
 			/*********************These are our lightbox wedge-popup codes.*********************/
 			// Open the Modal
-			function openWedge() {
+			function openPoi() {
 				if (scrollLock == false) {
+					poiID = 1;
 					$("#wedge").fadeIn("slow");
 				}
 			}
 
 			// Close the Modal
-			function closeWedge() {
-			  $("#wedge").fadeOut("slow");
-			  $("#morph-wedge").fadeOut("slow");
-			  $("#psi-wedge").fadeOut("slow");
-			  $("#vorn-wedge").fadeOut("slow");
-			  $("#umb-wedge").fadeOut("slow");
-			  $("#omn-wedge").fadeOut("slow");
-			  $("#viv-wedge").fadeOut("slow");
-			  tippy.hideAll();
+			function closePoi() {
+				$("#wedge").fadeOut("slow");
+				for (var i = 0; i < pois.length; i++) {
+					pois[i].style.display = "none";
+				}
 			}
 			
-			function wedge(x) {
+			var lastLoc = "induction"; //Give this a default value
+			
+			function nextPOI(n) {
+				setPOI(poiID += n, lastLoc); //We don't change the 'area' we're in when updating the poi we're scrolling through.
+			}
+			
+			function setPOI(x, loc = lastLoc) { //Default to "no change in area".
 				if (scrollLock == false) {
-					document.getElementById(x).style.display = "block";
+					lastLoc = loc; //Update the "no change in area" to the new value, if it changed.
+					var i;
+					switch (loc) { //Figure out which 'pool' of locations to draw from
+						case "morphoria":
+							pois = document.getElementsByClassName("morphPOIs");
+							break;
+						case "omnillian":
+							pois = document.getElementsByClassName("omnPOIs");
+							break;
+						case "psilysium":
+							pois = document.getElementsByClassName("psiPOIs");
+							break;
+						case "umbrasia":
+							pois = document.getElementsByClassName("umbPOIs");
+							break;
+						case "vorn":
+							pois = document.getElementsByClassName("vornPOIs");
+							break;
+						case "viviria":
+							pois = document.getElementsByClassName("vivPOIs");
+							break;
+						default:
+							pois = document.getElementsByClassName("empty");
+					}
+					console.log(loc);
+					if (x > pois.length) {poiID = 1}
+					if (x < 1) {poiID = pois.length}
+					for (i = 0; i < pois.length; i++) {
+						pois[i].style.display = "none";
+					}
+					pois[poiID-1].style.display = "block";
 				}
 			}
 			
 			$(document).ready(function(){
 				$(document).bind('keydown', function(e) { 
 					if (e.which == 27) {
-						closeWedge();
+						closePoi();
 					}
 				}); 
 			});
 			
 			
 			
-			/*********************These are our tooltip codes.*********************/
-			tippy('#poiWindow', { 
-				theme: 'Nodd', //Set the tooltip theme to our custom made one.
-				placement: 'top', 
-				delay: [250, 100], //It takes 0.25 seconds to appear, and disappears after 0.1s of the mouse leaving.
-				interactiveBorder: 30, //There's a buffer around the tooltip where it won't vanish, so it doesn't turn off while the mouse is moving to it.
-				interactive: true, //We can click inside the tooltip.
-				inertia: true, //The tooltip has a little bounce to it.
-				arrow: false, //There's no arrow pointing to the tooltip.
-				content: cirquePOI.innerHTML, //The tooltip displays what's in the cirquePOI <div> element.
-				allowHTML: true, //The tooltip can have HTML in it.
-				trigger: "click",
-				triggerTarget: document.getElementById("cirquePin"),
-				appendTo: document.body //Place the tooltip on the page specifically, since it can't attach to the svg map.
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true, 
-				inertia: true, 
-				arrow: false, 
-				content: darkhazePOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("darkhazePin"),
-				appendTo: document.body 
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true, 
-				inertia: true, 
-				arrow: false, 
-				content: eggpluckPOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("eggpluckPin"),
-				appendTo: document.body 
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true,  
-				inertia: true, 
-				arrow: false, 
-				content: grudPOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("grudPin"),
-				appendTo: document.body 
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', //Set the tooltip theme to our custom made one.
-				placement: 'top', 
-				delay: [250, 100], //It takes 0.25 seconds to appear, and disappears after 0.1s of the mouse leaving.
-				interactiveBorder: 30, //There's a buffer around the tooltip where it won't vanish, so it doesn't turn off while the mouse is moving to it.
-				interactive: true, //We can click inside the tooltip.
-				inertia: true, //The tooltip has a little bounce to it.
-				arrow: false, //There's no arrow pointing to the tooltip.
-				content: hearthhuntPOI.innerHTML, //The tooltip displays what's in the cirquePOI <div> element.
-				allowHTML: true, //The tooltip can have HTML in it.
-				trigger: "click",
-				triggerTarget: document.getElementById("hearthhuntPin"),
-				appendTo: document.body //Place the tooltip on the page specifically, since it can't attach to the svg map.
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true, 
-				inertia: true,
-				arrow: false, 
-				content: inductionPOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("inductionPin"),
-				appendTo: document.body
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true,  
-				inertia: true, 
-				arrow: false, 
-				content: outsideinnPOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("outsideinnPin"),
-				appendTo: document.body 
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true, 
-				inertia: true, 
-				arrow: false, 
-				content: overgrownalleyPOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("overgrownalleyPin"),
-				appendTo: document.body 
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true, 
-				inertia: true, 
-				arrow: false, 
-				content: pundlepoxPOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("pundlepoxPin"),
-				appendTo: document.body 
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true, 
-				inertia: true, 
-				arrow: false, 
-				content: sluckyPOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("sluckyPin"),
-				appendTo: document.body 
-			});
-			tippy('#poiWindow', { 
-				theme: 'Nodd', 
-				placement: 'top', 
-				delay: [250, 100], 
-				interactiveBorder: 30, 
-				interactive: true, 
-				inertia: true, 
-				arrow: false, 
-				content: tuffetPOI.innerHTML, 
-				allowHTML: true, 
-				trigger: "click",
-				triggerTarget: document.getElementById("tuffetPin"),
-				appendTo: document.body 
-			});
-			
 			/************This makes it so that when the mouse hovers over a hotspot, it glows.***********/
+			/*Eggpluck's Discount Familiars*/
+			$('#eggpluck').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_shop_small_glow.png');
+			});
+			$('#eggpluck').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_shop_small.png');
+			});
+			/*Induction*/
+			$('#induction').mouseenter(function() {
+				this.setAttribute("fill", '#d4d971');
+			});
+			$('#induction').mouseleave(function() {
+				this.setAttribute("fill", '#2DC991');
+			});
 			/*Morphoria*/
 			$('#morphoria').mouseenter(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/morphoria_citadel_small_glow.png');
@@ -508,12 +325,26 @@
 			$('#omnillian').mouseleave(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/omnillian_citadel_small.png');
 			});
+			/*Outside Inn*/
+			$('#outside-inn').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/outside_inn_small_glow.png');
+			});
+			$('#outside-inn').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/outside_inn_small.png');
+			});
 			/*Psilysium*/
 			$('#psilysium').mouseenter(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/psilysium_citadel_small_glow.png');
 			});
 			$('#psilysium').mouseleave(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/psilysium_citadel_small.png');
+			});
+			/*Pundlepox*/
+			$('#pundlepox').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/pundlepox_small_glow.png');
+			});
+			$('#pundlepox').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/pundlepox_small.png');
 			});
 			/*Spire*/
 			$('#spire').mouseenter(function() {
@@ -589,7 +420,10 @@
 				"Site_Assets/map_icons/umbrasia_citadel_small_glow.png",
 				"Site_Assets/map_icons/omnillian_citadel_small_glow.png",
 				"Site_Assets/map_icons/psilysium_citadel_small_glow.png",
-				"Site_Assets/map_icons/council_spire_small_glow.png"
+				"Site_Assets/map_icons/council_spire_small_glow.png",
+				"Site_Assets/map_icons/outside_inn_small_glow.png",
+				"Site_Assets/map_icons/misc_shop_small_glow.png",
+				"Site_Assets/map_icons/pundlepox_small_glow.png"
 			);
 		</script>
 	</body>

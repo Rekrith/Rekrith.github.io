@@ -29,16 +29,6 @@ img[usemap] {
 }
 
 /*Map Hovers*/
-.tippy-box[data-theme~='Nodd'] {
-	background-color: transparent;
-}
-.hover {
-	position: relative;
-}
-
-.poiClick:focus {
-	outline-width: 0px; /*Without this, clicking on the POI pins makes this weird black and white border appear around them when you click on them. It's very frustrating!*/
-}
 .mapClick:focus {
 	outline-width: 0px;
 }
@@ -88,6 +78,67 @@ img[usemap] {
 	pointer-events: none;
 	background-color: rgba(0,122,122,0.5);
 	border-radius: 5px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 999;
+}
+.prev {
+	left: 15vw;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 15vw;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.umbPOIs,
+.vivPOIs,
+.vornPOIs,
+.psiPOIs,
+.morphPOIs,
+.omnPOIs {
+	display: none;
+}
+
+@font-face {
+  font-family: yarin;
+  src: url(Site_Assets/yarin-reg.ttf);
+}
+@font-face {
+  font-family: yarin-bld;
+  src: url(Site_Assets/yarin-bold.ttf);
+}
+#induction {
+	color: #2DC991;
+	font-family: yarin-bld;
+	cursor: default;
+	font-size: 5px;
+	stroke:#000000;
+	stroke-width:0.15px;
+	stroke-linecap:butt;
+	stroke-linejoin:miter;
+	stroke-opacity:1;
 }
 #poiWindow {
 	position: absolute;
