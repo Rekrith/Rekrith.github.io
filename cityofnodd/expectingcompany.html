@@ -622,7 +622,7 @@ $tsn[=(set: $timer to 3s)You shakily sit up, then stagger to your feet.
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 6s)You take a step back towards the heavy laboratory door, then nearly wet yourself as the weight of your egged pregnancy shifts inside of you. You go cross-eyed and hiss out, tail lashing behind you.
 
-(after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)You take a few moments to acclimatise to your new weight, then stagger your way back to the door. You pull Meek through it, feeling lucky to have escaped.(set: $tentacles to true)(set: $pregnant to &quot;tentacle&quot;)
+(after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)You take a few moments to acclimatise to your new weight, then stagger your way back to the door. You pull Meek through it, feeling lucky to have escaped.(set: $tentacles to true)(if: $pregnant is &quot;meek&quot;)[(set: $pregnant to &quot;meekboth&quot;)](else:)[(set: $pregnant to &quot;tentacle&quot;)]
 
 
 (after: time + $timer, 2s)[=$tsn[=[[&gt; The main room-&gt;&gt; Open the main door]]</tw-passagedata><tw-passagedata pid="41" name="&gt; Struggle!" tags="hide-footer" position="1074,1937" size="100,100">$title[Old Laboratory - Pit]
