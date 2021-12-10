@@ -1,4 +1,49 @@
-<!DOCTYPE html>
+<?php
+	//Connect to the database...
+	$conn = mysqli_connect('108.163.243.218', 'noddarca_noddarca', '!Council!Business!Only!', 'noddarca_statistics');
+	
+	if(!$conn){
+		echo 'Connection error: ' . mysqli_connect_error();
+	}
+	
+	//Give the user an 'ID' (cookie) so we can save/remove their love/cum/deaths instead of just increasing the count every time they mash that button.
+	if (!isset($_COOKIE["nodd_clientID"])) {
+		$clientID = random_int(1, 99999999);
+		setcookie("nodd_clientID", $clientID, time() + (2 * 365 * 24 * 60 * 60));
+		echo 'Cookie set!';
+	} else {
+		//Oh! They already have a cookie.
+		$clientID = $_COOKIE["nodd_clientID"];
+		echo 'Already got a cookie!';
+	}
+	
+	//Get cum count
+	$sql = "SELECT location, userID FROM count_cum";
+	$result = mysqli_query($conn, $sql);
+	$cumData = array();
+	while($row=mysqli_fetch_assoc($result)){
+		$cumData[] = array("location"=>$row["location"], "clientID"=>$row["userID"]);
+	}
+	//Get death count
+	$sql = "SELECT location, userID FROM count_death";
+	$result = mysqli_query($conn, $sql);
+	$deathData = array();
+	while($row=mysqli_fetch_assoc($result)){
+		$deathData[] = array("location"=>$row["location"], "clientID"=>$row["userID"]);
+	}
+	//Get love count
+	$sql = "SELECT location, userID FROM count_love";
+	$result = mysqli_query($conn, $sql);
+	$loveData = array();
+	while($row=mysqli_fetch_assoc($result)){
+		$loveData[] = array("location"=>$row["location"], "clientID"=>$row["userID"]);
+	}
+	//Free the result from the memory
+	mysqli_free_result($result);
+	//close the connection
+	mysqli_close($conn);
+
+?>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
@@ -20,17 +65,33 @@
 			<image width="400" height="300" xlink:href="Site_Assets/map_icons/map_iso_small.png" id="mapImg" /> 
 			<!--Next, we define a bunch of polygons that are the 'wedges'. We tell it to, on mouseup (lifting your finger from the mouse button), call a Javascript function defined below in the <script> area called 'openPoi()', and ALSO one called 'setPOI()'. The points are all x,y coordinates inside the Viewbox that I've manually defined.-->
 			<!--The style "pointer-events:all" says that ANY mouse activity inside it should do things. Normally transparent pixels don't count.-->
-			<image id="vorn" cursor="pointer" width="14" height="42" xlink:href="Site_Assets/map_icons/vorn_citadel_small.png" x="194" y="46" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'vorn');" />
-			<image id="viviria" cursor="pointer" width="16" height="40" xlink:href="Site_Assets/map_icons/viviria_citadel_small.png" x="126" y="68" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'viviria');" />
-			<image id="pundlepox" cursor="pointer" width="12" height="12" xlink:href="Site_Assets/map_icons/pundlepox_small.png" x="162" y="92" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'pundlepox');" />
-			<image id="omnillian" cursor="pointer" width="20" height="36" xlink:href="Site_Assets/map_icons/omnillian_citadel_small.png" x="264" y="72" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'omnillian');" />
-			<image id="morphoria" cursor="pointer" width="26" height="44" xlink:href="Site_Assets/map_icons/morphoria_citadel_small.png" x="106" y="120" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'morphoria');" />
-			<image id="umbrasia" cursor="pointer" width="20" height="44" xlink:href="Site_Assets/map_icons/umbrasia_citadel_small.png" x="270" y="116" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'umbrasia');" />
-			<image id="spire" cursor="pointer" width="22" height="56" xlink:href="Site_Assets/map_icons/council_spire_small.png" x="192" y="76" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'viv-wedge');" />
-			<image id="psilysium" cursor="pointer" width="24" height="48" xlink:href="Site_Assets/map_icons/psilysium_citadel_small.png" x="192" y="142" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'psilysium');" />
-			<image id="outside-inn" cursor="pointer" width="12" height="11" xlink:href="Site_Assets/map_icons/outside_inn_small.png" x="290" y="195" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'outside-inn');" />
-			<image id="eggpluck" cursor="pointer" width="9" height="8" xlink:href="Site_Assets/map_icons/misc_shop_small.png" x="266" y="207" pointer-events="visiblePainted" onmouseup="openPoi();setPOI(1, 'viviria');" />
-			<text id="induction" cursor="pointer" onmouseup="openPoi();setPOI(1, 'induction');" x="310" y="341" width="11" height="10" fill="#2DC991" transform="skewX(-5) skewY(-20)">Induction</text>
+			<image id="vorn" cursor="pointer" width="14" height="42" xlink:href="Site_Assets/map_icons/vorn_citadel_small.png" x="194" y="46" pointer-events="none"  />
+			
+			<image id="viviria" cursor="pointer" width="16" height="40" xlink:href="Site_Assets/map_icons/viviria_citadel_small.png" x="126" y="68" pointer-events="none" />
+			
+			<image id="pundlepox" cursor="pointer" width="12" height="12" xlink:href="Site_Assets/map_icons/pundlepox_small.png" x="162" y="92" pointer-events="visiblePainted" onmouseup="setLoc('pundlepox');setPOI(2, 'viviria');openPoi();" />
+			
+			<image id="omnillian" cursor="pointer" width="20" height="36" xlink:href="Site_Assets/map_icons/omnillian_citadel_small.png" x="264" y="72" pointer-events="none" />
+			
+			<image id="morphoria" cursor="pointer" width="26" height="44" xlink:href="Site_Assets/map_icons/morphoria_citadel_small.png" x="106" y="120" pointer-events="none" />
+			
+			<image id="umbrasia" cursor="pointer" width="20" height="44" xlink:href="Site_Assets/map_icons/umbrasia_citadel_small.png" x="270" y="116" pointer-events="none" />
+			
+			<image id="spire" cursor="pointer" width="22" height="56" xlink:href="Site_Assets/map_icons/council_spire_small.png" x="192" y="76" pointer-events="none" />
+			
+			<image id="psilysium" cursor="pointer" width="24" height="48" xlink:href="Site_Assets/map_icons/psilysium_citadel_small.png" x="192" y="142" pointer-events="none"  />
+			
+			<image id="eggpluck" cursor="pointer" width="9" height="8" xlink:href="Site_Assets/map_icons/misc_shop_small.png" x="266" y="207" pointer-events="visiblePainted" onmouseup="setLoc('eggpluck');setPOI(1, 'eggpluck');openPoi();" />
+			
+			<image id="grudGrub" cursor="pointer" width="9" height="8" xlink:href="Site_Assets/map_icons/misc_food_small.png" x="84" y="103" pointer-events="visiblePainted" onmouseup="setLoc('grudGrub');setPOI(1, 'viviria');openPoi();" />
+			
+			<text id="induction" cursor="pointer" onmouseup="setLoc('induction');setPOI(1, 'induction');openPoi();" x="310" y="341" width="11" height="10" fill="#2DC991" transform="skewX(-5) skewY(-20)">Induction</text>
+			
+			<image id="outside-inn" cursor="pointer" width="12" height="11" xlink:href="Site_Assets/map_icons/outside_inn_small.png" x="290" y="195" pointer-events="visiblePainted" onmouseup="setLoc('outside-inn');setPOI(1, 'outside-inn');openPoi();" />
+			
+			<image id="slucky" cursor="pointer" width="9" height="8" xlink:href="Site_Assets/map_icons/misc_food_small.png" x="112" y="88" pointer-events="visiblePainted" onmouseup="setLoc('sluckysloach');setPOI(3, 'viviria');openPoi();" />
+			
+			<image id="tuffets" cursor="pointer" width="9" height="8" xlink:href="Site_Assets/map_icons/misc_shop_small.png" x="152" y="72" pointer-events="visiblePainted" onmouseup="setLoc('tendertuffets');setPOI(4, 'viviria');openPoi();" />
 			
 		</svg></div>
 		
@@ -42,39 +103,7 @@
 		</div>
 		<!--**********************************************-->
 		
-		<!--**********************************************-->
-		<!--The top menu-->
-		<div class="topMenuClass" id="topMenu"> <!--First we make a 'container' DIV (everything's divs!)-->
-			<!--Then we add the background top menu stuff. We give them styles that make them appear at 29% of the width of the scren, 58%, and 87% of the screen width. That should be enough to cover the top of the screen, always.-->
-			<img src="Site_Assets/ui_topmenu_left.gif" style="width:auto;height:8vw;pointer-events:none;">
-			<img src="Site_Assets/topmenu_right.png" style="width:auto;height:4.7vw;left:29vw;position:absolute;pointer-events:none;">
-			<img src="Site_Assets/topmenu_right.png" style="width:auto;height:4.7vw;left:58vw;position:absolute;pointer-events:none;">
-			<img src="Site_Assets/topmenu_right.png" style="width:auto;height:4.7vw;left:87vw;position:absolute;pointer-events:none;">
-			<!--Then we can add the buttons. The a href tag says which URL they go to - a # means it goes nowhere yet.-->
-			<a href="#"><img src="Site_Assets/menu_explore_default.png" class="topBut" id="exploreBut"></a>
-			<a href="#"><img src="Site_Assets/menu_about_default.png" class="topBut" id="aboutBut"></a>
-			<a href="#"><img src="Site_Assets/menu_news_default.png" class="topBut" id="newsBut"></a>
-			<a href="https://www.cityofnodd.com/faq"><img src="Site_Assets/menu_faq_default.png" class="topBut" id="faqBut"></a>
-			<a href="https://www.cityofnodd.com/gallery"><img src="Site_Assets/menu_media_default.png" class="topBut" id="mediaBut"></a>
-			<a href="http://nodd-arca.net/invite.html"><img src="Site_Assets/menu_discord_default.png" class="topBut" id="discordBut"></a>
-			<a href="https://subscribestar.adult/cityofnodd" target="_blank"><img src="Site_Assets/menu_subscribe_default.png" class="topBut" id="subscribeBut"></a>
-			<a href="#"><img src="Site_Assets/menu_store_default.png" class="topBut" id="storeBut"></a>
-		</div>
-		<!--**********************************************-->
-		
-		<!--**********************************************-->
-		<!--The bottom Arcanet menu-->
-		<div class="egobracer" id="Arcanet"> <img id="egoBracerBut" src="Site_Assets/ui_egobracer.gif"></img> 
-		<!-- This makes a container of the type 'egobracer' (so it inherits all the instructions from the .egobracer section in egobracer.css) and calls it Arcanet so we can talk about THIS ELEMENT individually. Then, it makes an image called egoBracerBut - it inherits everything from the egobracer.css file under #egoBracerBut. -->
-			<nav class="egoShell"> <!--I confess, I'm still figuring out what 'nav' functionally means, but it seems to work here.-->
-				<img src="Site_Assets/menu_tray.png" style="height:5vw;width:45vw;"> <!--This is the slidy part of the bottom menu. It's about half the page wide - more than that and it looks oddly stretched and unpleasant.-->
-				<!--Next we add the big Arcanet links - world and magic and so. &emsp; is computer code for a big space - HTML ignores multiple spaces normally, so you have to specifically tell it 'big space here, please'.-->
-				<div class="arcanetLinksTop"><a href="https://www.cityofnodd.com/world">World</a>&emsp;&emsp;&emsp;<a href="https://www.cityofnodd.com/magic">Magic</a>&emsp;&emsp;&emsp;<a href="https://www.cityofnodd.com/council">The Council</a>&emsp;&emsp;&emsp;<a href="https://www.cityofnodd.com/history">History</a></div>
-				<!--Then we have the bottom links. They're different in style (different font, sizes, etc) so it has a new class.-->
-				<div class="arcanetLinksBot"><a href="https://www.cityofnodd.com/sapients">Species</a> • <a href="https://www.cityofnodd.com/houses">Houses</a> • <a href="https://www.cityofnodd.com/characters">Citizens</a> • <a href="https://www.cityofnodd.com/locations">Locations</a> • <a href="#">Plants</a> • <a href="https://www.cityofnodd.com/consumables">Consumables</a> • <a href="https://www.cityofnodd.com/artifacts">Artifacts</a> • <a href="https://www.cityofnodd.com/spells">Spellbook</a> • <a href="https://www.cityofnodd.com/events">Events</a></div>
-			</nav>
-		</div>
-		<!--**********************************************-->
+		<?php include('headfoot.php'); ?>
 		
 		<!--**********************************************-->
 		<!--Here we store the wedge lightbox popups for the different map sections. They're hidden by default!-->
@@ -83,112 +112,11 @@
 			<div class="close" onclick="closePoi()"> <!--First, a dimmed background. We tell it that onclick it calls the Javascript function "closeWedge()" such that you can click outside the map zoom and close the modal lightbox.-->
 			</div>
 			
-			
-			<div class="inductionPOIs" id="inductionPOI" style="z-index: 2000;">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,0%);overflow:none;height:auto;max-height:100vh;width:auto;z-index:99999;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
-					<image width="400" height="300" xlink:href="Site_Assets/POIs/poi_window_frame.png" x="0" y="0" pointer-events="visible" />
-					
-					<image width="115" xlink:href="Site_Assets/POIs/induction.png" x="65" y="97" />
-					<a xlink:href="https://www.cityofnodd.com/induction" target="_blank"><image class="explore" cursor="pointer" height="35" xlink:href="Site_Assets/POIs/poi_window_explore.png" x="236.5" y="216" /></a>
-					<text id="textTitle" x="200" y="67" width="30" height="20" fill="#2DC991" font-family="yarin-bld" text-anchor="middle" font-size="14px">Induction</text>
-					<text id="textCW" x="60" y="205" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Content Warnings:</text>
-					<text id="textCW2" x="60" y="213" width="120" height="30" fill="#ffffff" font-family="arial" font-size="5px">Rough/Medical Play</text>
-					<text id="textLength" x="60" y="225" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Length: S</text>
-					<text id="textCollectibles" x="60" y="237" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Collectibles: 1</text>
-					
-					<text id="textDesc" x="215" y="105" fill="#ffffff" font-family="arial" font-size="5px">
-					<tspan x="215" dy="00">From the dreary gates of this mysterious City, you find</tspan>
-					<tspan x="215" dy="08">yourself being ushered into a strange and enigmatic</tspan>
-					<tspan x="215" dy="08">process referred to only as </tspan><tspan font-style="italic">Induction.</tspan>
-					<tspan x="215" dy="12">What awaits you in this strange City?</tspan>
-					<tspan x="215" dy="12">What will you find beyond the City gates?</tspan>
-					<tspan x="215" dy="12">The only way forwards is through this imposing process...</tspan>
-					<tspan x="215" dy="08">Back only leads towards an infinite, inky darkness.</tspan>
-					<tspan x="215" dy="12">But then... All tales have a beginning.</tspan>
-					</text>
-					
-					<image onclick="nextPOI(-1)" class="slideLeft" cursor="pointer" width="40" opacity="0" xlink:href="Site_Assets/POIs/poi_arrow_left.png" x="0" y="132" />
-					<image onclick="nextPOI(1)" class="slideRight" cursor="pointer" width="40" opacity="0" xlink:href="Site_Assets/POIs/poi_arrow_right.png" x="360" y="132" />
-					<image onclick="countLCD('like')" class="countLike" cursor="pointer" height="18" xlink:href="Site_Assets/POIs/poi_window_like.png" x="300" y="63" />
-					<image onclick="countLCD('cum')" class="countCum" cursor="pointer" height="20" xlink:href="Site_Assets/POIs/poi_window_cum.png" x="321" y="61" />
-					<image onclick="countLCD('death')" class="countDeath" cursor="pointer" height="20" xlink:href="Site_Assets/POIs/poi_window_death.png" x="340" y="61" />
-					<text class="numLikes" x="315" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text class="numCum" x="334" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text class="numDeath" x="353" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text onclick="closePoi()" cursor="pointer" x="373" y="54" width="20" height="10" fill="#2DC991" font-family="yarin-bld" text-anchor="middle" font-size="10px">X</text>
-				</svg>
-			</div>
-			<div class="outsideInnPOIs">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,0%);overflow:none;height:auto;max-height:100vh;width:auto;z-index:99999;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
-					<image width="400" height="300" xlink:href="Site_Assets/POIs/poi_window_frame.png" x="0" y="0" pointer-events="visible" />
-					
-					<image width="115" xlink:href="Site_Assets/POIs/outside_inn.png" x="65" y="97" />
-					<a xlink:href="https://www.cityofnodd.com/outside-inn" target="_blank"><image class="explore" cursor="pointer" height="35" xlink:href="Site_Assets/POIs/poi_window_explore.png" x="236.5" y="216" /></a>
-					<text id="textTitle" x="200" y="67" width="30" height="20" fill="#2DC991" font-family="yarin-bld" text-anchor="middle">The Outside Inn</text>
-					<text id="textCW" x="60" y="205" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Content Warnings:</text>
-					<text id="textCW2" x="60" y="213" width="120" height="30" fill="#ffffff" font-family="arial" font-size="5px">Non-con; watersports</text>
-					<text id="textLength" x="60" y="225" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Length: S</text>
-					<text id="textCollectibles" x="60" y="237" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Collectibles: 10</text>
-					
-					<text id="textDesc" x="215" y="105" fill="#ffffff" font-family="arial" font-size="5px">
-					<tspan x="215" dy="00">The Outside Inn is a small tavern near the outer gates of</tspan>
-					<tspan x="215" dy="08">Nodd, established to help welcome in outsiders after the</tspan>
-					<tspan x="215" dy="08">induction procedure.</tspan>
-					<tspan x="215" dy="12">It features a bar, tables, a restroom, and several private</tspan>
-					<tspan x="215" dy="08">inn rooms. Each inn room features a bed, bathroom, and</tspan>
-					<tspan x="215" dy="08">refrigerator. The atmosphere is mostly non-violent.</tspan>
-					<tspan x="215" dy="12">The inn is run by a relatively friendly chimera, and many</tspan>
-					<tspan x="215" dy="08">outsiders find the Inn a safe haven upon first arriving in</tspan>
-					<tspan x="215" dy="08">the City.</tspan>
-					</text>
-					
-					<image onclick="nextPOI(-1)" class="slideLeft" cursor="pointer" width="40" opacity="0" xlink:href="Site_Assets/POIs/poi_arrow_left.png" x="0" y="132" />
-					<image onclick="nextPOI(1)" class="slideRight" cursor="pointer" width="40" opacity="0" xlink:href="Site_Assets/POIs/poi_arrow_right.png" x="360" y="132" />
-					<image onclick="countLCD('like')" class="countLike" cursor="pointer" height="18" xlink:href="Site_Assets/POIs/poi_window_like.png" x="300" y="63" />
-					<image onclick="countLCD('cum')" class="countCum" cursor="pointer" height="20" xlink:href="Site_Assets/POIs/poi_window_cum.png" x="321" y="61" />
-					<image onclick="countLCD('death')" class="countDeath" cursor="pointer" height="20" xlink:href="Site_Assets/POIs/poi_window_death.png" x="340" y="61" />
-					<text class="numLikes" x="315" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text class="numCum" x="334" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text class="numDeath" x="353" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text onclick="closePoi()" cursor="pointer" x="373" y="54" width="20" height="10" fill="#2DC991" font-family="yarin-bld" text-anchor="middle" font-size="10px">X</text>
-				</svg>
-			</div>
+			<?php include('locations.php'); ?>
+						
 			<div class="empty">
 				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,-50%);overflow:none;height:100%;width:auto;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
 				
-				</svg>
-			</div>
-			<div class="vivPOIs" id="eggpluckPOI" style="z-index: 2000;">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:relative;left:50%;top:50%;transform:translate(-50%,0%);overflow:none;height:auto;max-height:100vh;width:auto;z-index:99999;" preserveAspectRatio="xMidYMid meet"  viewBox="0 00 400 300">
-					<image width="400" height="300" xlink:href="Site_Assets/POIs/poi_window_frame.png" x="0" y="0" pointer-events="visible" />
-					
-					<image width="115" xlink:href="Site_Assets/POIs/eggplucks.png" x="65" y="97" />
-					<a xlink:href="https://www.cityofnodd.com/darkling-row" target="_blank"><image class="explore" cursor="pointer" height="35" xlink:href="Site_Assets/POIs/poi_window_explore.png" x="236.5" y="216" /></a>
-					<text id="textTitle" x="200" y="67" width="30" height="20" fill="#2DC991" font-family="yarin-bld" text-anchor="middle" font-size="14px">Eggpluck's Discount Familiars</text>
-					<text id="textCW" x="60" y="205" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Content Warnings:</text>
-					<text id="textCW2" x="60" y="213" width="120" height="30" fill="#ffffff" font-family="arial" font-size="5px">None</text>
-					<text id="textLength" x="60" y="225" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Length: S</text>
-					<text id="textCollectibles" x="60" y="237" width="120" height="30" fill="#ffffff" font-family="arial" font-size="8px">Collectibles: 3</text>
-					
-					<text id="textDesc" x="215" y="105" fill="#ffffff" font-family="arial" font-size="5px">
-					<tspan x="215" dy="00">In the backstreets of the City, not too far from Darkling Row,</tspan>
-					<tspan x="215" dy="08">a charming establishment touting itself as</tspan> <tspan font-style="italic">Eggpluck's</tspan>
-					<tspan x="215" dy="08" font-style="italic">Discount Familiars</tspan> <tspan>seems to be offering a number of</tspan>
-					<tspan x="215" dy="08">curious creatures for sale.</tspan>
-					<tspan x="215" dy="12">The shop's proprietor, a nurk named Eggpluck, offers only</tspan>
-					<tspan x="215" dy="08">the best* and greatest* familiars.</tspan>
-					<tspan x="215" dy="12">You think you can hear quiet shrieking from within.</tspan>
-					</text>
-					
-					<image onclick="nextPOI(-1)" class="slideLeft" cursor="pointer" width="40" opacity="0" xlink:href="Site_Assets/POIs/poi_arrow_left.png" x="0" y="132" />
-					<image onclick="nextPOI(1)" class="slideRight" cursor="pointer" width="40" opacity="0" xlink:href="Site_Assets/POIs/poi_arrow_right.png" x="360" y="132" />
-					<image onclick="countLCD('like')" class="countLike" cursor="pointer" height="18" xlink:href="Site_Assets/POIs/poi_window_like.png" x="300" y="63" />
-					<image onclick="countLCD('cum')" class="countCum" cursor="pointer" height="20" xlink:href="Site_Assets/POIs/poi_window_cum.png" x="321" y="61" />
-					<image onclick="countLCD('death')" class="countDeath" cursor="pointer" height="20" xlink:href="Site_Assets/POIs/poi_window_death.png" x="340" y="61" />
-					<text class="numLikes" x="315" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text class="numCum" x="334" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text class="numDeath" x="353" y="79" fill="#ffffff" font-family="arial" font-size="5px" pointer-events="none">0</text>
-					<text onclick="closePoi()" cursor="pointer" x="373" y="54" width="20" height="10" fill="#2DC991" font-family="yarin-bld" text-anchor="middle" font-size="10px">X</text>
 				</svg>
 			</div>
 		</div>
@@ -206,6 +134,11 @@
 			
 			
 			$('img').on('dragstart', function(event) { event.preventDefault(); }); //If someone tries to drag an image somewhere else, just don't do the image dragging thing. We like our images to stay in place!
+			
+			//Now we load in all the loves/cums/deaths.
+			var allDeaths = <?php echo json_encode($deathData); ?>;
+			var allCums = <?php echo json_encode($cumData); ?>;
+			var allLoves = <?php echo json_encode($loveData); ?>;
 			
 			/*********************This operates the map panning and scrolling and zooming.*********************/
 			const mapContainer = document.getElementById("mapContainer");
@@ -225,6 +158,7 @@
 			var trueMaxHor = maxHor;
 			var pois;
 			var poiID = 1;
+			var currentLoc = "";
 			
 			mapContainer.onmousedown = function(e){
 				e.preventDefault();
@@ -308,7 +242,6 @@
 			// Open the Modal
 			function openPoi() {
 				if (scrollLock == false) {
-					poiID = 1;
 					$("#wedge").fadeIn("slow");
 				}
 			}
@@ -325,6 +258,14 @@
 			
 			function nextPOI(n) {
 				setPOI(poiID += n, lastLoc); //We don't change the 'area' we're in when updating the poi we're scrolling through.
+			}
+			
+			function setLoc(loc) {
+				currentLoc = loc;
+			}
+			
+			function audioClick() {
+				new Audio("Site_Assets/POIs/buttonclick.wav").play();
 			}
 			
 			function setPOI(x, loc = lastLoc) { //Default to "no change in area".
@@ -349,21 +290,28 @@
 							break;
 						case "viviria":
 							pois = document.getElementsByClassName("vivPOIs");
+							console.log(pois);
 							break;
 						case "outside-inn":
 							pois = document.getElementsByClassName("outsideInnPOIs");
-							//TODO - read like/cum/death values here, so they show up accurately when it's opened, not when updated!
+							break;
+						case "eggpluck":
+							pois = document.getElementsByClassName("eggpluckPOIs");
+							break;
+						case "induction":
+							pois = document.getElementsByClassName("inductionPOIs");
 							break;
 						default:
 							pois = document.getElementsByClassName("empty");
 					}
-					console.log(loc);
 					if (x > pois.length) {poiID = 1}
-					if (x < 1) {poiID = pois.length}
+					else if (x < 1) {poiID = pois.length}
+					else {poiID = x};
 					for (i = 0; i < pois.length; i++) {
 						pois[i].style.display = "none";
 					}
 					pois[poiID-1].style.display = "block";
+					getLCD(currentLoc);
 				}
 			}
 			
@@ -375,17 +323,136 @@
 				}); 
 			});
 			
+			var countCum = 0;
+			var countLove = 0;
+			var countDeath = 0;
+			var locCums = [];
+			var locLoves = [];
+			var locDeaths = [];
+			
+			/************Here we have our code that *reads* our loves, cums and deaths!***********/
+			function getLCD(location) {
+				locCums = [];
+				locLoves = [];
+				locDeaths = [];
+				countCum = countLove = countDeath = 0; //Reset them all!
+				for (i=0; i<allCums.length; i++) {
+					if (allCums[i].location == location) {
+						countCum++;
+						locCums.push(allCums[i]);
+					}
+				}
+				$(".numCum").text(countCum);
+				for (i=0; i<allDeaths.length; i++) {
+					if (allDeaths[i].location == location) {
+						countDeath++;
+						locDeaths.push(allDeaths[i]);
+					}
+				}
+				$(".numDeath").text(countDeath);
+				for (i=0; i<allLoves.length; i++) {
+					if (allLoves[i].location == location) {
+						countLove++;
+						locLoves.push(allLoves[i]);
+					}
+				}
+				$(".numLikes").text(countLove);
+			}
+			
 			/************Here we have our code that increments likes, cum, and deaths (naturally).***********/
 			function countLCD(type) {
+				var userIP = '<?php echo $clientID; ?>';
 				switch (type) {
 					case "cum":
-						if ($(".numCum").text() == "1") { $(".numCum").text("0"); } else { $(".numCum").text("1"); }
+						if (locCums.some(el => el.clientID === userIP)) { //We found the user's randomly generated cookie ID already in this list! They have already creamed themselves to this one.
+							//Uncum (kinky)
+							countCum--; //Subtract one!
+							$(".numCum").text(countCum);
+							//Then push it to the database on the website.
+							$.ajax({
+							url: 'LCD.php',
+							type: 'POST',
+							data: {'type': "cum", 'loc': currentLoc, 'user': userIP, 'addRem': "rem"}
+							});
+							//Lastly, scrub it from our local page storage in the allCums database!
+							for (i = allCums.length-1; i>=0; i--) {
+								if (allCums[i].clientID === userIP && allCums[i].location === currentLoc) allCums.splice(i, 1);
+							}
+							for (i = locCums.length-1; i>=0; i--) {
+								if (locCums[i].clientID === userIP) locCums.splice(i, 1);
+							}
+						} else {
+							//They just came.
+							countCum++; //Add one!
+							$(".numCum").text(countCum);
+							//Add it to the database...
+							$.ajax({
+							url: 'LCD.php',
+							type: 'POST',
+							data: {'type': "cum", 'loc': currentLoc, 'user': userIP, 'addRem': "add"}
+							});
+							//And add it to our local array, too!
+							allCums.push({location: currentLoc, clientID: userIP});
+							locCums.push({location: currentLoc, clientID: userIP});
+						}
 					break;
 					case "like":
-						if ($(".numLikes").text() == "1") { $(".numLikes").text("0"); } else { $(".numLikes").text("1"); }
+						if (locLoves.some(el => el.clientID === userIP)) { //We found the user's randomly generated cookie ID already in this list! They loved it already.
+							//Unlove
+							countLove--; //Subtract one!
+							$(".numLikes").text(countLove);
+							$.ajax({
+							url: 'LCD.php',
+							type: 'POST',
+							data: {'type': "love", 'loc': currentLoc, 'user': userIP, 'addRem': "rem"}
+							});
+							for (i = allLoves.length-1; i>=0; i--) {
+								if (allLoves[i].clientID === userIP && allLoves[i].location === currentLoc) allLoves.splice(i, 1);
+							}
+							for (i = locLoves.length-1; i>=0; i--) {
+								if (locLoves[i].clientID === userIP) locLoves.splice(i, 1);
+							}
+						} else {
+							//They just loved it.
+							countLove++; //Add one!
+							$(".numLikes").text(countLove);
+							$.ajax({
+							url: 'LCD.php',
+							type: 'POST',
+							data: {'type': "love", 'loc': currentLoc, 'user': userIP, 'addRem': "add"}
+							});
+							allLoves.push({location: currentLoc, clientID: userIP});
+							locLoves.push({location: currentLoc, clientID: userIP});
+						}
 					break;
 					case "death":
-						if ($(".numDeath").text() == "1") { $(".numDeath").text("0"); } else { $(".numDeath").text("1"); }
+						if (locDeaths.some(el => el.clientID == userIP)) { //We found the user's randomly generated cookie ID already in this list! They have already died.
+							//Come back to life!
+							countDeath--; //Subtract one!
+							$(".numDeath").text(countDeath);
+							$.ajax({
+							url: 'LCD.php',
+							type: 'POST',
+							data: {'type': "death", 'loc': currentLoc, 'user': userIP, 'addRem': "rem"}
+							});
+							for (i = allDeaths.length-1; i>=0; i--) {
+								if (allDeaths[i].clientID === userIP && allDeaths[i].location === currentLoc) allDeaths.splice(i, 1);
+							}
+							for (i = locDeaths.length-1; i>=0; i--) {
+								if (locDeaths[i].clientID === userIP) locDeaths.splice(i, 1);
+							}
+						} else {
+							//They just died.
+							countDeath++; //Add one!
+							$(".numDeath").text(countDeath);
+							$.ajax({
+							url: 'LCD.php',
+							type: 'POST',
+							data: {'type': "death", 'loc': currentLoc, 'user': userIP, 'addRem': "add"}
+							});
+							allDeaths.push({location: currentLoc, clientID: userIP});
+							locDeaths.push({location: currentLoc, clientID: userIP});
+						}
 					break;
 					default:
 					break;
@@ -426,6 +493,13 @@
 			$('.countDeath').mouseleave(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/POIs/poi_window_death.png');
 			});
+			/*The close button...*/
+			$('.closeButton').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/POIs/poi_x_hover.png');
+			});
+			$('.closeButton').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/POIs/poi_x.png');
+			});
 			/*Lastly, the Explore button.*/
 			$('.explore').mouseenter(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/POIs/poi_window_explore2.png');
@@ -442,6 +516,13 @@
 			});
 			$('#eggpluck').mouseleave(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_shop_small.png');
+			});
+			/*Grud's Grub*/
+			$('#grudGrub').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_food_small_glow.png');
+			});
+			$('#grudGrub').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_food_small.png');
 			});
 			/*Induction*/
 			$('#induction').mouseenter(function() {
@@ -485,12 +566,26 @@
 			$('#pundlepox').mouseleave(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/pundlepox_small.png');
 			});
+			/*Slucky's*/
+			$('#slucky').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_food_small_glow.png');
+			});
+			$('#slucky').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_food_small.png');
+			});
 			/*Spire*/
 			$('#spire').mouseenter(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/council_spire_small_glow.png');
 			});
 			$('#spire').mouseleave(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/council_spire_small.png');
+			});
+			/*Tender Tuffets*/
+			$('#tuffets').mouseenter(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_shop_small_glow.png');
+			});
+			$('#tuffets').mouseleave(function() {
+				this.setAttribute("xlink:href", 'Site_Assets/map_icons/misc_shop_small.png');
 			});
 			/*Umbrasia*/
 			$('#umbrasia').mouseenter(function() {
@@ -513,10 +608,6 @@
 			$('#vorn').mouseleave(function() {
 				this.setAttribute("xlink:href", 'Site_Assets/map_icons/vorn_citadel_small.png');
 			});
-			
-			
-			/*******************Save our like/cum/death counts to a local JSON file***********************/
-			//TODO
 			
 			
 			/*******************Preload our images (borrowed code)**********************/
@@ -578,7 +669,9 @@
 				"Site_Assets/POIs/poi_window_cum_glow.png",
 				"Site_Assets/POIs/poi_window_death_glow.png",
 				"Site_Assets/POIs/poi_window_like_glow.png",
-				"Site_Assets/POIs/poi_window_explore2.png"
+				"Site_Assets/POIs/poi_window_explore2.png",
+				"Site_Assets/POIs/poi_x.png",
+				"Site_Assets/POIs/poi_x_hover.png"
 			);
 		</script>
 	</body>
