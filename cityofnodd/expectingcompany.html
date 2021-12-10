@@ -258,7 +258,7 @@ $tsn[(link: &quot;&gt; Return.&quot;)[(set: $pause to false)(go-to: (history:)&#
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 7s)Eventually you manage to calm yourself down and shakily clean yourself off - at least as clean as you were before - and then rise to your feet. Meek stands up, too, his cheeks clearly pink beneath his white fur, and he nods twice to indicate that he&#39;s ready, too.
 
-(after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)You definitely feel at least a little better.(set: $lust to it - (random: 5,8))
+(after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)You definitely feel at least a little better.(set: $lust to 5)
 
 
 (after: time + $timer, 2s)[=$tsn[=$tsn[(link: &quot;&gt; Return.&quot;)[(set: $pause to false)(go-to: (history:)&#39;s last)]]](else:)[$tsn[=(set: $timer to 10s)You&#39;re desperate. Your whole body is aching with a roiling, heart-pounding (text-style: &quot;smear&quot;)[need] and you can hardly think straight. With your cock (if: $clothed is true)[straining against your clothing](else:)[pulsing hard in the open] and your fluffy slit trickling down the inside of your thigh, there&#39;s no hiding how needy you are right now.
@@ -287,7 +287,7 @@ $tsn[(link: &quot;&gt; Return.&quot;)[(set: $pause to false)(go-to: (history:)&#
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)You&#39;ll need to find somewhere safe and, while maybe not *private*, at least somewhere you aren&#39;t liable to be jumped!
 
 
-(after: time + $timer, 2s)[=$tsn[=$tsn[(link: &quot;&gt; Return.&quot;)[(set: $pause to false)(go-to: (history:)&#39;s last)]]]</tw-passagedata><tw-passagedata pid="16" name="header" tags="header hide-footer" position="479,11" size="100,100">{(unless: $pause is true)[(if: (random: 1,4) &gt; $lustpoint)[(set: $lust to it + 1)(if: $lust &gt; 20)[(set: $lust to 20)]]
+(after: time + $timer, 2s)[=$tsn[=$tsn[(link: &quot;&gt; Return.&quot;)[(set: $pause to false)(go-to: (history:)&#39;s last)]]]</tw-passagedata><tw-passagedata pid="16" name="header" tags="header hide-footer" position="479,11" size="100,100">{(unless: (passage:)&#39;s name is &quot;begin&quot;)[(unless: $pause is true or (history:)&#39;s last is &quot;status&quot; or (history:)&#39;s last is &quot;inventory&quot;)[(if: (random: 1,4) &gt; $lustpoint)[(set: $lust to it + 1)(if: $lust &gt; 20)[(set: $lust to 20)]]]
 
 ]
 
@@ -1835,7 +1835,7 @@ $tsn[=(set: $timer to 3s)You gingerly take a towel and try to clean yourself up.
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)As you stagger to your feet, you can&#39;t help but feel a little closer to your companion. You clean up a little bit, then both silently agree to get back to your journey.
 
 
-(after: time + $timer, 2s)[=$tsn[=(link: &quot;&gt; Keep moving&quot;)[(set: $pause to false)(set: $lust to it - (random: 8,13))(set: $messiness to it + 1)(set: $cuntloose to it + 1)(if: $pregnant is &quot;tentacle&quot;)[(set: $pregnant to &quot;meekboth&quot;)](else:)[(set: $pregnant to &quot;meek&quot;)](go-to: $meekback)]</tw-passagedata></tw-storydata>
+(after: time + $timer, 2s)[=$tsn[=(link: &quot;&gt; Keep moving&quot;)[(set: $pause to false)(set: $lust to 5)(set: $messiness to it + 1)(set: $cuntloose to it + 1)(if: $pregnant is &quot;tentacle&quot;)[(set: $pregnant to &quot;meekboth&quot;)](else:)[(set: $pregnant to &quot;meek&quot;)](go-to: $meekback)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
