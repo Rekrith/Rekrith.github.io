@@ -70,7 +70,7 @@ $grey[*Outsiders - someone like you, not native to the City and its gruesome atm
   ]
 ]}(if: (saved-games:) contains &quot;Slot A&quot;)[ / {(link:&quot;Load&quot;)[(load-game:&quot;Slot A&quot;)]}] / {(link:&quot;Restart&quot;)[(reload:)]}
 
-&lt;/center&gt;</tw-passagedata><tw-passagedata pid="3" name="inventory" tags="hide-footer" position="31.666666666666668,531.6666666666667" size="200,100">$title[Inventory]
+&lt;/center&gt;</tw-passagedata><tw-passagedata pid="3" name="inventory" tags="hide-footer" position="31,531" size="200,100">$title[Inventory]
 (if: $inv&#39;s length &gt; 0)[$tsn[You check the things you&#39;re carrying. Running your paws over yourself, you find ... (joined:&quot;, &quot;, ...$inv).]](else:)[$tsn[For better or worse, you aren&#39;t carrying anything but the stripes on your back.(if: (random: 1,2) is 1)[ Meek tilts his head, looking up at you expectantly. You do know what you&#39;re doing, right?]]]
 |list)[](click: &quot;your keys&quot;)[(append: ?list)[
 $grey[(display: &quot;your keys&quot;)]]](click: &quot;some meat&quot;)[(append: ?list)[
@@ -295,7 +295,7 @@ $tsn[(link: &quot;&gt; Return.&quot;)[(set: $pause to false)(go-to: (history:)&#
 (if: (passage:)&#39;s tags&#39;s length &gt; 0)[
 (print: &quot;&lt;script&gt;$(&#39;html&#39;).addClass(&#39;&quot; + (joined:&quot; &quot;, ...(passage:)&#39;s tags) + &quot;&#39;\)&lt;/script&gt;&quot;)
 ]
-}</tw-passagedata><tw-passagedata pid="17" name="a mental note" tags="" position="32.666666666666664,642.6666666666667" size="100,100">A mental map of the way home. Without your EgoBracer, you have to find your way back manually!</tw-passagedata><tw-passagedata pid="18" name="the fly" tags="" position="1556,484" size="100,100">$title[Viviria - A Tall Building]
+}</tw-passagedata><tw-passagedata pid="17" name="a mental note" tags="" position="32,642" size="100,100">A mental map of the way home. Without your EgoBracer, you have to find your way back manually!</tw-passagedata><tw-passagedata pid="18" name="the fly" tags="" position="1556,484" size="100,100">$title[Viviria - A Tall Building]
 (if: 1 is 1)[$tsn[=(set: $timer to 3s)You climb down the building the same way you came, Meek riding piggyback on your shoulder.
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 6s)As you descend, that buzzing you heard earlier gets a little louder. And then **louder**. Danger sense tingling, you glance upwards just in time to see several dog-sized insects with long, translucent wings zipping straight towards you.
@@ -805,7 +805,7 @@ $tsn[=(set: $timer to 5s)You push back against the tentacles as hard as you can 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)Now and then, a vein-like tentacle twitches beneath the surface of his belly, making it clear that the little guy is still deeply impaled by the egg-laying tentacle.
 
 
-(after: time + $timer, 2s)[=$tsn[=[[&gt; Struggle free]]</tw-passagedata><tw-passagedata pid="49" name="&gt; Struggle free" tags="hide-footer" position="866.6666666666666,2859" size="100,100">$title[Old Laboratory - Pit]
+(after: time + $timer, 2s)[=$tsn[=[[&gt; Struggle free]]</tw-passagedata><tw-passagedata pid="49" name="&gt; Struggle free" tags="hide-footer" position="866,2859" size="100,100">$title[Old Laboratory - Pit]
 $tsn[=(set: $timer to 5s)You shakily try to get a hold of yourself, feeling the mounting pleasure wrack your head again. You give it a shake, then steel all of your not inconsiderable muscles.
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 3s)You try to wrench yourself free of the tentacles.
@@ -1015,7 +1015,7 @@ $tsn[=(set: $timer to 4s)You move forwards slowly, looking down to the ravel&#39
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)The ravel&#39;s cock throbs heavily and a copious jet of goopy precum splatters across your lips.(if: $lust &gt; 10)[ Your own dick twitches in response, feeling so achingly hard.]
 
 
-(after: time + $timer, 2s)[=$tsn[=[[&gt; Get in position-&gt;ravel2]]</tw-passagedata><tw-passagedata pid="60" name="avoidfeast" tags="hide-footer surrender" position="2358.333333333333,1196" size="100,100">$title[Gatehouse - The &quot;Feaster&quot;]
+(after: time + $timer, 2s)[=$tsn[=[[&gt; Get in position-&gt;ravel2]]</tw-passagedata><tw-passagedata pid="60" name="avoidfeast" tags="hide-footer surrender" position="2358,1196" size="100,100">$title[Gatehouse - The &quot;Feaster&quot;]
 (if: 1 is 1)[$tsn[=(set: $timer to 7s)(set: $inv to it - (a:&quot;some meat&quot;))You grab for the meat in your satchel, glad that you didn&#39;t throw it to the insects on the building. It might have led to your current predicament, but at least it gave you an option for distracting this beast here and now.(set: $feasterfuck to true)(set: $feasteroutcome to 1)
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 3s)You nod to Meek, then hurl the meat away into the darkness.
@@ -1162,7 +1162,7 @@ $tsn[=(set: $timer to 5.5s)(if: $clothed is true)[You&#39;re clothed. You&#39;ve
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)Excited for you.
 ]
 
-[[&gt; &quot;Oh fuck...&quot;-&gt;feaster4]]</tw-passagedata><tw-passagedata pid="69" name="feaster4" tags="hide-footer" position="2718,1180.6666666666667" size="100,100">$title[Gatehouse - The &quot;Feaster&quot;]
+[[&gt; &quot;Oh fuck...&quot;-&gt;feaster4]]</tw-passagedata><tw-passagedata pid="69" name="feaster4" tags="hide-footer" position="2718,1180" size="100,100">$title[Gatehouse - The &quot;Feaster&quot;]
 (set: $messiness to it + 1)(set: $feasteroutcome to 2)(if: $feasterfuck is &quot;anal&quot;)[$tsn[=(set: $timer to 5s)The &quot;feaster&quot; keeps humping in and out of you with eager, almost desperate thrusts. You can feel its squirming cock battering against your prostate and making it hard for you to keep your head on straight.(set: $lust to it + 5)$infested[ In the distance, you can see Meek watching you being fucked, jerking himself off with a dazed and hazy expression on his face.(set: $timer to it + 3s)]
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 6s)Suddenly, abruptly, you feel the &quot;feaster&quot; shove forward with all its infested strength. Its hips smack against yours and you feel dozens upon dozens of squirming things start to writhe against your ass through its flesh. It gives a breathless hiss, then slumps over your back like a puppet with its strings cut.
@@ -1649,7 +1649,7 @@ Birthing&#96;*&#96;
 
 
 
-[[&gt; Begin-&gt;The start]]</tw-passagedata><tw-passagedata pid="97" name="your keys" tags="" position="134.66666666666666,640.6666666666667" size="100,100">These are the keys to your front door. You need them to get back inside!</tw-passagedata><tw-passagedata pid="98" name="some meat" tags="" position="31.666666666666668,744.6666666666667" size="100,100">Some &#39;meat&#39;. What it&#39;s from isn&#39;t otherwise specified, and probably best not thought about, either.</tw-passagedata><tw-passagedata pid="99" name="a condom" tags="" position="134.66666666666666,744.6666666666667" size="100,100">A latex condom, taken from the Nameless. Its sturdiness is a little questionable.</tw-passagedata><tw-passagedata pid="100" name="horny" tags="hide-footer" position="345,173" size="100,100">{(set: $rand to (random:1,5))
+[[&gt; Begin-&gt;The start]]</tw-passagedata><tw-passagedata pid="97" name="your keys" tags="" position="134,640" size="100,100">These are the keys to your front door. You need them to get back inside!</tw-passagedata><tw-passagedata pid="98" name="some meat" tags="" position="31,744" size="100,100">Some &#39;meat&#39;. What it&#39;s from isn&#39;t otherwise specified, and probably best not thought about, either.</tw-passagedata><tw-passagedata pid="99" name="a condom" tags="" position="134,744" size="100,100">A latex condom, taken from the Nameless. Its sturdiness is a little questionable.</tw-passagedata><tw-passagedata pid="100" name="horny" tags="hide-footer" position="345,173" size="100,100">{(set: $rand to (random:1,5))
 (if: $rand is 1)[
 (if: $clothed is true)[You can feel your cock throbbing slowly under your clothing, demanding attention.
 ](else:)[Your cock throbs on display for the world around you, showcasing how horny you are.]
@@ -1715,7 +1715,7 @@ $tsn[$b[You feel so happy to see him infested, like you. You really shouldn&#39;
 
 
 (after: time + $timer, 2s)[=$tsn[=[[&gt; Go back to the entrance-&gt;&gt; Enter the gatehouse]]
-[[&gt; Approach the slyne at the gate-&gt;&gt; Approach the gate]]]</tw-passagedata><tw-passagedata pid="107" name="a spray bottle" tags="" position="29.666666666666668,849.6666666666667" size="100,100">This glass bottle contains a small amount of a roiling, off-yellow liquid. You were given it by the slyne at the gate.</tw-passagedata><tw-passagedata pid="108" name="sloach rinds" tags="" position="132.66666666666666,845.6666666666667" size="100,100">A package of stale-looking &#39;sloach rinds&#39;. If you even think of eating it, you know that Meek would never let you live it down.</tw-passagedata><tw-passagedata pid="109" name="a small key" tags="" position="29.666666666666668,955.6666666666667" size="100,100">A small, silvery key. An old tag on it mentions a &#39;laboratory office&#39;.</tw-passagedata><tw-passagedata pid="110" name="an old ledger" tags="" position="133.66666666666666,956.6666666666667" size="100,100">This is an old ledger with notes in it about the old laboratory&#39;s workings. You&#39;re not sure what to make of it(if: $inv contains &quot;a spray bottle&quot;)[, but the slyne at the gate seems to have an idea].</tw-passagedata><tw-passagedata pid="111" name="end" tags="hide-footer" position="3579,2718" size="100,100">$title[Home]
+[[&gt; Approach the slyne at the gate-&gt;&gt; Approach the gate]]]</tw-passagedata><tw-passagedata pid="107" name="a spray bottle" tags="" position="29,849" size="100,100">This glass bottle contains a small amount of a roiling, off-yellow liquid. You were given it by the slyne at the gate.</tw-passagedata><tw-passagedata pid="108" name="sloach rinds" tags="" position="132,845" size="100,100">A package of stale-looking &#39;sloach rinds&#39;. If you even think of eating it, you know that Meek would never let you live it down.</tw-passagedata><tw-passagedata pid="109" name="a small key" tags="" position="29,955" size="100,100">A small, silvery key. An old tag on it mentions a &#39;laboratory office&#39;.</tw-passagedata><tw-passagedata pid="110" name="an old ledger" tags="" position="133,956" size="100,100">This is an old ledger with notes in it about the old laboratory&#39;s workings. You&#39;re not sure what to make of it(if: $inv contains &quot;a spray bottle&quot;)[, but the slyne at the gate seems to have an idea].</tw-passagedata><tw-passagedata pid="111" name="end" tags="hide-footer" position="3579,2718" size="100,100">$title[Home]
 (if: $surrender &lt; 6)[$tsn[=(set: $timer to 6s)You and Meek retreat to your favourite spots and decide to curl up for the remainder of the day. While your moods might wane and wax, you&#39;ve had enough of an ordeal to sate you for the rest of the afternoon.
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 3s)Well, at least most of it.
@@ -1775,7 +1775,7 @@ $tsn[$b[You feel so happy to see him infested, like you. You really shouldn&#39;
 (colour: green)[(text-style: &quot;smear&quot;)[####•CONGRATULATIONS•]]{
 }(colour: green)[(text-style: &quot;smear&quot;)[####**THE END**]]{
 }(colour: red)[(text-style: &quot;smear&quot;)[####**•INFESTED•**]]
-(after: time + $timer, 2s)[=$tsn[=(if: (saved-games:) contains &quot;Slot A&quot;)[ / {(link:&quot;Load&quot;)[(load-game:&quot;Slot A&quot;)]} / ]{(link:&quot;New Game&quot;)[(reload:)]}&lt;/center&gt;]]</tw-passagedata><tw-passagedata pid="112" name="a heavy key" tags="" position="29.666666666666668,1059.6666666666667" size="100,100">This key seems to be made of a very dense metal. It looks like it could unlock something quite sturdy.</tw-passagedata><tw-passagedata pid="113" name="larvae5" tags="hide-footer" position="3216,2761" size="100,100">$title[Home - Bathroom]
+(after: time + $timer, 2s)[=$tsn[=(if: (saved-games:) contains &quot;Slot A&quot;)[ / {(link:&quot;Load&quot;)[(load-game:&quot;Slot A&quot;)]} / ]{(link:&quot;New Game&quot;)[(reload:)]}&lt;/center&gt;]]]</tw-passagedata><tw-passagedata pid="112" name="a heavy key" tags="" position="29,1059" size="100,100">This key seems to be made of a very dense metal. It looks like it could unlock something quite sturdy.</tw-passagedata><tw-passagedata pid="113" name="larvae5" tags="hide-footer" position="3216,2761" size="100,100">$title[Home - Bathroom]
 $tsn[=(set: $timer to 3s)You gingerly take a towel and try to clean yourself up.
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 4s)You&#39;re a little too sensitive to manage properly, but you still get the worst of the slime away - enough that you could leave the bathroom without dripping everywhere.
@@ -1783,7 +1783,7 @@ $tsn[=(set: $timer to 3s)You gingerly take a towel and try to clean yourself up.
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)(if: $infested is true)[Your head is thumping, and you can feel the burning, itching *need* to fuck already growing again. You know you need medicine, and soon. It&#39;s still waiting for you and Meek in the cabinet.](else:)[With your ordeal finally over, you shakily help Meek back to his feet, too, then begin to calm yourself. You&#39;re home again, safe and sound. You&#39;re alright.]
 
 
-(after: time + $timer, 2s)[=$tsn[=(if: $infested is true)[[[&gt; Get some medicine-&gt;medicine]]](else:)[[[&gt; Relax-&gt;end]]]</tw-passagedata><tw-passagedata pid="114" name="meekfuck" tags="hide-footer" position="182,363.3333333333333" size="100,100">$tsn[=(set: $timer to 4s)You sink down to all fours right where you are. You know what&#39;s about to happen. What you and Meek are about to do. (if: $pregnant is &quot;meek&quot; or $pregnant is &quot;meekboth&quot;)[*Again.*]
+(after: time + $timer, 2s)[=$tsn[=(if: $infested is true)[[[&gt; Get some medicine-&gt;medicine]]](else:)[[[&gt; Relax-&gt;end]]]</tw-passagedata><tw-passagedata pid="114" name="meekfuck" tags="hide-footer" position="182,363" size="100,100">$tsn[=(set: $timer to 4s)You sink down to all fours right where you are. You know what&#39;s about to happen. What you and Meek are about to do. (if: $pregnant is &quot;meek&quot; or $pregnant is &quot;meekboth&quot;)[*Again.*]
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 6.5s)The mere thought has your slit squeezing and your cock throbbing in the weasel-like outsider&#39;s grip. He seems to notice your sudden throb and gives your barbed cock a distinct squeeze that makes you groan.
 
@@ -1804,7 +1804,7 @@ $tsn[=(set: $timer to 3s)You gingerly take a towel and try to clean yourself up.
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 2s)Meek *pushes* inside you.
 
 
-(after: time + $timer, 2s)[=$tsn[=[[&gt; Let Meek fuck you-&gt;meek3]]</tw-passagedata><tw-passagedata pid="115" name="meek3" tags="hide-footer" position="260,474.99999999999994" size="100,100">$tsn[=(set: $timer to 8s)He&#39;s bigger than you (if: $pregnant is &quot;meek&quot; or $pregnant is &quot;meekboth&quot;)[recall](else:)[expect], his cock filling out your cunt with surprising thickness. His paws pull back on your hips until you feel your balls squash against his, his sheath kissing against your slit. You see *spots* as his heated, drippy cock (text-style: &quot;smear&quot;)[flexes] inside you.
+(after: time + $timer, 2s)[=$tsn[=[[&gt; Let Meek fuck you-&gt;meek3]]</tw-passagedata><tw-passagedata pid="115" name="meek3" tags="hide-footer" position="260,474" size="100,100">$tsn[=(set: $timer to 8s)He&#39;s bigger than you (if: $pregnant is &quot;meek&quot; or $pregnant is &quot;meekboth&quot;)[recall](else:)[expect], his cock filling out your cunt with surprising thickness. His paws pull back on your hips until you feel your balls squash against his, his sheath kissing against your slit. You see *spots* as his heated, drippy cock (text-style: &quot;smear&quot;)[flexes] inside you.
 
 (after: time + $timer, 2s)[=$tsn[=(set: $timer to 5s)Meek groans out in delight and simply stays there for a moment, letting you feel the smaller outsider throb and twitch deep within your $clean slit. When you squeeze around him, Meek moans and grinds against you.
 
