@@ -10,11 +10,9 @@
 	if (!isset($_COOKIE["nodd_clientID"])) {
 		$clientID = random_int(1, 99999999);
 		setcookie("nodd_clientID", $clientID, time() + (2 * 365 * 24 * 60 * 60));
-		echo 'Cookie set!';
 	} else {
 		//Oh! They already have a cookie.
 		$clientID = $_COOKIE["nodd_clientID"];
-		echo 'Already got a cookie!';
 	}
 	
 	//Get cum count
