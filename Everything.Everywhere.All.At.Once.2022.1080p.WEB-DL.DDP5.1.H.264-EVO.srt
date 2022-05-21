@@ -621,7 +621,7 @@ Becky: Hey guys...
 
 153
 00:09:18,041 --> 00:09:20,428
-Man: This is only $10. 
+Man: This is only $10.
 I thought you people were very good with math.
 
 154
@@ -1106,7 +1106,7 @@ Good... Good.
 
 270
 00:19:21,219 --> 00:19:23,422
-They don't know you and I 
+They don't know you and I
 are in this universe yet.
 
 271
@@ -1166,7 +1166,7 @@ searching for the one
 
 284
 00:19:46,737 --> 00:19:48,524
-who might be the match 
+who might be the match
 to this great evil
 
 285
@@ -1420,7 +1420,7 @@ What is "gross necklaces?"
 
 346
 00:21:54,071 --> 00:21:56,008
-Waymond: I <i>know</i> you have a lot 
+Waymond: I <i>know</i> you have a lot
 of things on your mind.
 
 347
@@ -1487,7 +1487,7 @@ don't let <i>anything</i> distract you from it
 
 362
 00:22:37,110 --> 00:22:38,547
-Auditor: Do you think 
+Auditor: Do you think
 this is funny?
 
 363
@@ -1526,7 +1526,7 @@ You will know when it is time to fight.
 
 371
 00:23:04,219 --> 00:23:06,313
-Auditor: You wanna redo... 
+Auditor: You wanna redo...
 You're gonna <i>resubmit?</i>
 
 372
@@ -1725,7 +1725,7 @@ Evelyn: YOU! Told me to do it!
 
 420
 00:26:23,735 --> 00:26:25,805
-You said I would know when 
+You said I would know when
 it is the time to fight!
 
 421
@@ -1787,7 +1787,7 @@ NOW you are here!
 
 435
 00:27:29,868 --> 00:27:31,844
-Evelyn: Stop confusing me, 
+Evelyn: Stop confusing me,
 coming and going
 
 436
@@ -1809,7 +1809,7 @@ Evelyn: Stop coming here!
 
 440
 00:27:35,868 --> 00:27:38,251
-Guard: Okay, folks. 
+Guard: Okay, folks.
 Everyone remain calm
 
 441
@@ -2096,7 +2096,7 @@ Jobu Tupaki: They might be close.
 
 509
 00:33:18,422 --> 00:33:19,626
-Becky: Is that where 
+Becky: Is that where
 your parents are?
 
 510
@@ -2326,12 +2326,12 @@ On my signal, try to blend in
 
 562
 00:35:35,334 --> 00:35:37,740
-Why don't you get YOU 
+Why don't you get YOU
 Evelyn to do this?
 
 563
 00:35:38,701 --> 00:35:39,748
-Alpha Waymond: 
+Alpha Waymond:
 My Evelyn is dead.
 
 564
@@ -2345,7 +2345,7 @@ OH MY GOD!
 
 566
 00:35:42,382 --> 00:35:42,767
-Alpha Waymond: 
+Alpha Waymond:
 OH MY GOD!
 
 567
@@ -2392,7 +2392,7 @@ want to kill me?!
 
 577
 00:36:06,154 --> 00:36:07,283
-Alpha Waymond: 
+Alpha Waymond:
 She's an omniversal being
 
 578
@@ -2413,7 +2413,7 @@ with no real motives or desires
 
 582
 00:36:14,834 --> 00:36:16,193
-Evelyn: You're just 
+Evelyn: You're just
 making up sounds!
 
 583
@@ -2431,7 +2431,7 @@ You said there are so many of them!
 
 586
 00:36:27,716 --> 00:36:29,142
-Maybe it's okay if 
+Maybe it's okay if
 we lose some
 
 587
@@ -2541,12 +2541,12 @@ is the Alpha Verse mission
 
 611
 00:37:27,529 --> 00:37:29,505
-To take us back to 
+To take us back to
 how it's supposed to be
 
 612
 00:37:30,849 --> 00:37:32,373
-But that begins with 
+But that begins with
 finding the one
 
 613
@@ -2559,7 +2559,7 @@ perverse shard of chaos
 
 615
 00:37:37,349 --> 00:37:38,349
-Evelyn: And you think 
+Evelyn: And you think
 it's <i>me?</i>
 
 616
@@ -2695,7 +2695,7 @@ Probability one in eight thousand
 
 648
 00:38:54,691 --> 00:38:56,965
-It's the strongest 
+It's the strongest
 jumping path we have.
 
 649
@@ -2736,7 +2736,7 @@ Is that... pro wrestling?
 
 658
 00:39:45,761 --> 00:39:47,144
-She's going for 
+She's going for
 a back breaker!
 
 659
@@ -2778,7 +2778,7 @@ Hello?
 
 668
 00:40:42,777 --> 00:40:43,418
-Alpha Waymond: 
+Alpha Waymond:
 Evelyn
 
 669
@@ -2822,7 +2822,7 @@ Okay, I'm locking in
 678
 00:41:19,316 --> 00:41:21,254
 Alpha Waymond:
-You're gonna have to profess 
+You're gonna have to profess
 your love to Dierdre
 
 679
@@ -2893,7 +2893,7 @@ the better
 
 695
 00:41:43,566 --> 00:41:46,753
-The stochastic pass algorithm's 
+The stochastic pass algorithm's
 fuelled by random actions
 
 696
@@ -3105,7 +3105,7 @@ Evelyn?
 
 747
 00:46:13,879 --> 00:46:16,245
-Evelyn: Oh, I'm so happy 
+Evelyn: Oh, I'm so happy
 to be here today
 
 748
@@ -3152,7 +3152,7 @@ Stay calm!
 
 758
 00:48:05,324 --> 00:48:07,668
-Your brain is under an 
+Your brain is under an
 incredible amount of stress
 
 759
@@ -3243,7 +3243,7 @@ What if I wanna go back?
 
 780
 00:49:04,230 --> 00:49:06,472
-What if I wanna go back 
+What if I wanna go back
 to the other universe?
 
 781
@@ -3274,7 +3274,7 @@ Listen.
 
 787
 00:49:16,215 --> 00:49:19,496
-You are only using the other worlds to 
+You are only using the other worlds to
 acquire special skills, you understand?
 
 788
@@ -3297,7 +3297,7 @@ Or far worse...
 
 792
 00:49:29,574 --> 00:49:30,879
-Evelyn: What can be 
+Evelyn: What can be
 worse than <i>death?</i>
 
 793
@@ -3492,7 +3492,7 @@ Jump to another combat universe!
 
 839
 00:52:29,333 --> 00:52:31,519
-Try peeing yourself, it's 
+Try peeing yourself, it's
 always a good jumping pattern!
 
 840
@@ -3641,7 +3641,7 @@ Waymond!
 
 875
 00:54:15,630 --> 00:54:17,669
-Jobu (tearing up): 
+Jobu (tearing up):
 You gonna make me walk through you?
 
 876
@@ -3731,7 +3731,7 @@ You're Juju Tubooty?
 
 897
 00:56:05,497 --> 00:56:07,606
-The great evil Waymond 
+The great evil Waymond
 was talking about is...
 
 898
@@ -3924,7 +3924,7 @@ She's off the damn map!
 
 944
 00:58:05,513 --> 00:58:08,669
-She appears to be in a universe 
+She appears to be in a universe
 where everyone has...
 
 945
@@ -3942,7 +3942,7 @@ I mean it just doesn't matter how many times I see it, I'm just so...
 
 948
 00:58:19,990 --> 00:58:22,482
-An evolutionary branch in the 
+An evolutionary branch in the
 anatomy of the human race?
 
 949
@@ -3998,7 +3998,7 @@ Of all the Evelyns I've seen...
 
 961
 00:59:11,052 --> 00:59:13,380
-...you're definitely one of 
+...you're definitely one of
 the more interesting ones.
 
 962
@@ -4150,7 +4150,7 @@ then all the
 
 998
 01:01:23,335 --> 01:01:26,346
-pain and guilt you feel for 
+pain and guilt you feel for
 making nothing of your life
 
 999
@@ -4381,7 +4381,7 @@ most people
 
 1053
 01:03:46,933 --> 01:03:50,347
-only have a few significant alternate 
+only have a few significant alternate
 life paths so close to them
 
 1054
@@ -4478,7 +4478,7 @@ Run!
 
 1076
 01:04:36,379 --> 01:04:38,191
-Watch these two here 
+Watch these two here
 while I deal with Jobu!
 
 1077
@@ -4728,7 +4728,7 @@ Evelyn
 
 1137
 01:06:41,670 --> 01:06:42,895
-Waymond: Don't worry, dada 
+Waymond: Don't worry, dada
 will get you out of this
 
 1138
@@ -5108,7 +5108,7 @@ against total chaos
 
 1227
 01:10:45,192 --> 01:10:48,887
-Be brave. This Evelyn is as 
+Be brave. This Evelyn is as
 stubborn as the others!
 
 1228
@@ -5320,7 +5320,7 @@ Oh, my god!
 
 1279
 01:15:40,653 --> 01:15:43,129
-Big-nose: Does my baby 
+Big-nose: Does my baby
 wanna go for a walk?
 
 1280
@@ -5337,7 +5337,7 @@ What is she doing?
 
 1283
 01:16:06,433 --> 01:16:07,796
-Waymond: I- I think when 
+Waymond: I- I think when
 she does something weird
 
 1284
@@ -5382,11 +5382,11 @@ Evelyn-
 
 1294
 01:16:55,411 --> 01:16:57,590
-If you don't step up I'm giving someone your shifts
+If you don't step up I'm giving some of your shifts to Chad
 
 1295
 01:17:02,044 --> 01:17:02,856
-[chef wink]
+Chad: [chef wink]
 
 1296
 01:18:05,661 --> 01:18:06,442
@@ -5613,7 +5613,7 @@ Reckless
 
 1349
 01:22:49,872 --> 01:22:52,458
-Your stupid plan to somehow 
+Your stupid plan to somehow
 save your daughter
 
 1350
@@ -5665,7 +5665,7 @@ that chance was kind enough
 
 1361
 01:23:27,075 --> 01:23:29,770
-to let us have these last 
+to let us have these last
 few moments together
 
 1362
@@ -5782,7 +5782,7 @@ Where's our daughter?
 
 1389
 01:25:49,632 --> 01:25:50,398
-Successful Waymond: 
+Successful Waymond:
 Daughter?
 
 1390
@@ -5795,7 +5795,7 @@ Raccoccoonie: <i>Culinarily!</i>
 
 1392
 01:26:07,382 --> 01:26:07,976
-Chef: <i>Culinarily!</i>
+Chef Chad: <i>Culinarily!</i>
 
 1393
 01:26:09,538 --> 01:26:12,312
@@ -5803,17 +5803,17 @@ Both: <i>Now we're cooking!</i>
 
 1394
 01:26:13,983 --> 01:26:14,725
-Chef: Oh
+Chad: Oh
 Raccoccoonie: <i>Why nobody's lucky</i>
 
 1395
 01:26:14,750 --> 01:26:15,991
-Chef: Raccoccoonie
+Chad: Raccoccoonie
 Raccoccoonie: <i>Why nobody's lucky</i>
 
 1396
 01:26:16,217 --> 01:26:17,460
-Chef: I don't know what I'd do without you.
+Chad: I don't know what I'd do without you.
 
 1397
 01:26:17,560 --> 01:26:18,670
@@ -5821,7 +5821,7 @@ Evelyn: <i>Raccoccoonie?</i>
 
 1398
 01:26:18,710 --> 01:26:20,835
-Chef: Yeah, we make a pretty good team
+Chad: Yeah, we make a pretty good team
 Raccoccoonie: <i>We're a family</i>
 
 1399
@@ -5834,7 +5834,7 @@ Raccoccoonie: Oh no
 
 1401
 01:26:26,561 --> 01:26:28,109
-Chef: You can't tell no one
+Chad: You can't tell no one
 
 1402
 01:26:28,233 --> 01:26:29,538
@@ -5850,7 +5850,7 @@ Get her. Get her!
 
 1405
 01:26:32,829 --> 01:26:34,054
-Chef: I'm begging you!
+Chad: I'm begging you!
 
 1406
 01:26:34,710 --> 01:26:36,390
@@ -5886,7 +5886,7 @@ Hot-dog Dierdre: What, it's not wrong-
 
 1414
 01:27:22,663 --> 01:27:24,952
-Actress Evelyn: I can think of 
+Actress Evelyn: I can think of
 whatever nonsense I want
 
 1415
@@ -5955,7 +5955,7 @@ Jobu: Hey Becky?
 
 1430
 01:28:54,758 --> 01:28:56,969
-Jobu: Can you go help my 
+Jobu: Can you go help my
 dad with the party?
 
 1431
@@ -5976,7 +5976,7 @@ Jobu: Thanks, babe.
 
 1435
 01:29:12,984 --> 01:29:14,227
-Jobu Tupaki: 
+Jobu Tupaki:
 You see it all, don't you?
 
 1436
@@ -5998,7 +5998,7 @@ of particles in a...
 
 1440
 01:29:38,149 --> 01:29:40,212
-Evelyn: I have no idea what 
+Evelyn: I have no idea what
 you are talking about
 
 1441
@@ -6049,7 +6049,7 @@ I'm the one you're looking for.
 
 1452
 01:30:13,112 --> 01:30:15,042
-I'm the one who's 
+I'm the one who's
 going to defeat you!
 
 1453
@@ -6422,7 +6422,7 @@ He's a <i>different generation!</i>
 1540
 01:33:12,931 --> 01:33:15,350
 Jobu Tupaki:
-No, you don't have to 
+No, you don't have to
 hide behind him anymore.
 
 1541
@@ -6435,7 +6435,7 @@ The Bagel
 
 1543
 01:33:18,562 --> 01:33:20,531
-will show you the 
+will show you the
 true nature of things
 
 1544
@@ -6724,19 +6724,19 @@ You have to vacate the premises
 
 1611
 01:37:09,968 --> 01:37:10,413
-Chef: What are you doing-
+Chad: What are you doing-
 
 1612
 01:37:10,438 --> 01:37:11,054
 No! <i>No!</i>
 
 1613
-01:37:11,827 --> 01:37:12,663
+01:37:11,827 --> 01:37:12,464
 What the--
 
 1614
-01:37:12,688 --> 01:37:14,023
-Raccoccoonie: I told you she
+01:37:12,489 --> 01:37:14,023
+Raccoccoonie: Chad I told you she
 couldn't be trusted!
 
 1615
@@ -6785,7 +6785,7 @@ just a lifetime of...
 
 1626
 01:38:01,953 --> 01:38:02,968
-Chef: No, master, no!
+Chad: No, master, no!
 
 1627
 01:38:03,054 --> 01:38:04,218
@@ -6793,7 +6793,7 @@ Jobu: Fractured moments...
 
 1628
 01:38:04,243 --> 01:38:05,359
-Chef: <i>Raccoccoonie!!</i>
+Chad: <i>Raccoccoonie!!</i>
 Jobu: Fractured moments...
 
 1629
@@ -6802,11 +6802,11 @@ Contradictions and confusion...
 
 1630
 01:38:09,000 --> 01:38:09,257
-Chef: Get off me!
+Chad: Get off me!
 
 1631
 01:38:09,282 --> 01:38:11,078
-Raccoccoonie: Don't forget about me
+Raccoccoonie: Chad, don't forget about me
 Chef: Get off me!
 
 1632
@@ -6839,1264 +6839,1273 @@ Evelyn: I've always hated this place...
 Waymond: Evelyn!
 
 1639
-01:38:42,093 --> 01:38:43,187
-Chef: <i>Raccoccoonie!</i>
+01:38:42,093 --> 01:38:42,819
+Chad: <i>Raccoccoonie!</i>
 
 1640
+01:38:42,844 --> 01:38:44,390
+Raccoccoonie: Chaaaad!
+
+1641
 01:42:11,898 --> 01:42:14,250
 Jobu Tupaki:
 You know why I actually built the bagel?
 
-1641
+1642
 01:42:15,750 --> 01:42:18,476
 It wasn't do "destroy everything"...
 
-1642
+1643
 01:42:19,687 --> 01:42:21,820
 It was to destroy myself.
 
-1643
+1644
 01:42:23,554 --> 01:42:24,960
 I wanted to see if I went in
 
-1644
+1645
 01:42:24,985 --> 01:42:27,000
 could I <i>finally</i> escape
 
-1645
+1646
 01:42:29,523 --> 01:42:31,242
 Like, actually die?
 
-1646
+1647
 01:42:34,461 --> 01:42:35,883
 At least this way...
 
-1647
+1648
 01:42:37,609 --> 01:42:39,172
 I don't have to do it alone.
 
-1648
+1649
 01:42:55,578 --> 01:42:56,906
 Diedre: Um, <i>excuse me</i>
 
-1649
+1650
 01:42:57,000 --> 01:42:58,406
 excuse me, Mr. Wang
 
-1650
+1651
 01:42:58,461 --> 01:43:00,621
 every person I know is going
 through a hard time
 
-1651
+1652
 01:43:00,645 --> 01:43:01,875
 it's a hard time
 
-1652
+1653
 01:43:02,218 --> 01:43:02,992
 Jobu: Evelyn
 
-1653
+1654
 01:43:06,765 --> 01:43:07,734
 Come back
 
-1654
+1655
 01:43:13,062 --> 01:43:14,859
 Evelyn: My silly husband...
 
-1655
+1656
 01:43:15,539 --> 01:43:17,453
 Probably making things <i>worse</i>
 
-1656
+1657
 01:43:18,828 --> 01:43:20,312
 Jobu Tupaki:
 Ignore it.
 
-1657
+1658
 01:43:21,140 --> 01:43:22,062
 [Diedre sighs]
 
-1658
+1659
 01:43:25,601 --> 01:43:27,226
 Diedre: Okay, you can let her go.
 
-1659
+1660
 01:43:29,195 --> 01:43:29,699
 You--
 
-1660
+1661
 01:43:29,723 --> 01:43:30,703
 Let her go.
 
-1661
+1662
 01:43:30,890 --> 01:43:31,398
 It's okay.
 
-1662
+1663
 01:43:32,328 --> 01:43:32,797
 Yes!
 
-1663
+1664
 01:43:35,351 --> 01:43:36,211
 Thank you.
 
-1664
+1665
 01:43:52,562 --> 01:43:53,203
 Evelyn: How?
 
-1665
+1666
 01:43:54,445 --> 01:43:55,507
 That's <i>impossible</i>
 
-1666
+1667
 01:43:55,532 --> 01:43:55,956
 Jobu: It's just a
 statistical inevitability
 That's <i>impossible</i>
 
-1667
+1668
 01:43:55,980 --> 01:43:57,546
 Jobu: It's just a
 statistical inevitability
 
-1668
+1669
 01:43:58,054 --> 01:43:59,390
 It's nothing special.
 
-1669
+1670
 01:44:08,531 --> 01:44:09,351
 Waymond: I don't know
 
-1670
+1671
 01:44:10,367 --> 01:44:11,406
 I just talked to her.
 
-1671
+1672
 01:44:53,187 --> 01:44:53,859
 Waymond: Please!
 
-1672
+1673
 01:44:58,601 --> 01:44:59,187
 Please!
 
-1673
+1674
 01:45:00,547 --> 01:45:01,359
 Can we--
 
-1674
+1675
 01:45:01,384 --> 01:45:02,711
 Can we just stop fighting?
 
-1675
+1676
 01:45:17,515 --> 01:45:19,968
 I know you're all
 fighting because you're <i>scared</i>
 
-1676
+1677
 01:45:20,265 --> 01:45:21,523
 and <i>confused</i>
 
-1677
+1678
 01:45:24,328 --> 01:45:25,828
 I'm confused, too!
 
-1678
+1679
 01:45:29,890 --> 01:45:30,664
 All day
 
-1679
+1680
 01:45:32,804 --> 01:45:34,953
 I don't know what
 the heck is going on
 
-1680
+1681
 01:45:36,343 --> 01:45:36,929
 But...
 
-1681
+1682
 01:45:37,348 --> 01:45:38,234
 Somehow...
 
-1682
+1683
 01:45:39,976 --> 01:45:42,133
 This feels like it's all my fault
 
-1683
+1684
 01:45:58,914 --> 01:45:59,984
 I don't know
 
-1684
+1685
 01:46:02,640 --> 01:46:04,289
 The only thing I do know
 
-1685
+1686
 01:46:05,500 --> 01:46:07,133
 is that we have to be kind
 
-1686
+1687
 01:46:13,273 --> 01:46:13,851
 Please
 
-1687
+1688
 01:46:14,922 --> 01:46:15,992
 Be kind?
 
-1688
+1689
 01:46:17,328 --> 01:46:19,968
 Especially when we don't
 know what's going on
 
-1689
+1690
 01:46:39,656 --> 01:46:40,672
 Jobu: Hey, Evelyn!
 
-1690
+1691
 01:46:42,672 --> 01:46:43,531
 Bagel?
 
-1691
+1692
 01:46:46,672 --> 01:46:47,375
 Alpha Gong-gong:
 Evelyn...
 
-1692
+1693
 01:46:51,734 --> 01:46:54,343
 Jobu Tupaki:
-You can still turn around 
+You can still turn around
 and avoid all this
 
-1693
+1694
 01:46:54,648 --> 01:46:55,429
 Waymond: <i>Please</i>
 
-1694
+1695
 01:46:56,883 --> 01:46:57,992
 Be kind
 
-1695
+1696
 01:47:01,242 --> 01:47:02,875
 Evelyn: It's too late, Waymond
 
-1696
+1697
 01:47:06,593 --> 01:47:07,836
 Waymond: Don't say that
 
-1697
+1698
 01:47:29,008 --> 01:47:30,015
 Did you see that?
 
-1698
+1699
 01:47:35,562 --> 01:47:36,648
 What song is this?
 
-1699
+1700
 01:47:41,148 --> 01:47:41,593
 Thanks!
 
-1700
+1701
 01:47:41,906 --> 01:47:42,843
 Thank you for coming!
 
-1701
+1702
 01:47:44,929 --> 01:47:45,836
 That's very funny!
 
-1702
+1703
 01:47:47,163 --> 01:47:48,648
 Yeah! That's it! Yeah!
 
-1703
+1704
 01:48:48,468 --> 01:48:49,586
 I'm sorry...
 
-1704
+1705
 01:49:20,914 --> 01:49:23,281
 Jobu Tupaki:
 Ooooh!
 
-1705
+1706
 01:49:24,718 --> 01:49:26,258
 So cute!
 
-1706
+1707
 01:49:28,234 --> 01:49:29,711
 C'mon, Evelyn.
 
-1707
+1708
 01:49:30,562 --> 01:49:31,758
 Come on.
 
-1708
+1709
 01:49:36,070 --> 01:49:36,890
 Oh.
 
-1709
+1710
 01:49:37,890 --> 01:49:38,765
 I get it.
 
-1710
+1711
 01:49:42,625 --> 01:49:44,328
 Feelin' a good thing.
 
-1711
+1712
 01:49:45,742 --> 01:49:47,023
 They got your hopes up.
 
-1712
+1713
 01:49:48,625 --> 01:49:50,664
 See, I'm here to save
 you some time.
 
-1713
+1714
 01:49:53,945 --> 01:49:55,211
 Eventually?
 
-1714
+1715
 01:49:58,773 --> 01:50:00,547
 That all just goes away.
 
-1715
+1716
 01:50:02,695 --> 01:50:04,008
 Now come on.
 
-1716
+1717
 01:50:35,226 --> 01:50:37,250
 I don't care if you come with me!
 
-1717
+1718
 01:50:37,890 --> 01:50:39,562
 Enjoy your life.
 
-1718
+1719
 01:50:59,468 --> 01:51:00,195
 Waymond: Evelyn!
 
-1719
+1720
 01:51:00,258 --> 01:51:00,679
 Evelyn!
 
-1720
+1721
 01:51:00,704 --> 01:51:01,203
 Please!
 
-1721
+1722
 01:51:02,015 --> 01:51:02,961
 No more!
 
-1722
+1723
 01:51:05,695 --> 01:51:07,320
 Evelyn: I don't want to hurt you
 
-1723
+1724
 01:51:14,375 --> 01:51:15,914
 Joy, come back with me!
 
-1724
+1725
 01:51:15,984 --> 01:51:16,484
 Joy!
 
-1725
+1726
 01:51:17,140 --> 01:51:17,664
 Joy!
 
-1726
+1727
 01:51:29,008 --> 01:51:29,941
 What did my
 
-1727
+1728
 01:51:29,965 --> 01:51:31,781
 silly husband say to you?
 
-1728
+1729
 01:51:33,851 --> 01:51:35,929
 Diedre: He told me
 about your situation
 
-1729
+1730
 01:51:37,914 --> 01:51:39,711
 I remembered when my husband...
 
-1730
+1731
 01:51:40,070 --> 01:51:41,109
 ...served me papers
 
-1731
+1732
 01:51:41,134 --> 01:51:43,214
 I drove his Kia Forte
 
-1732
+1733
 01:51:43,238 --> 01:51:44,687
 through my neighbour's kitchen
 
-1733
+1734
 01:51:45,211 --> 01:51:45,765
 Evelyn: Huh
 
-1734
+1735
 01:51:46,617 --> 01:51:48,015
 Diedre: You know what I say?
 
-1735
+1736
 01:51:48,726 --> 01:51:50,792
 It's cold, and unlovable
 
-1736
+1737
 01:51:50,816 --> 01:51:52,429
 bitches like us
 
-1737
+1738
 01:51:53,945 --> 01:51:55,406
 that make the world go round
 
-1738
+1739
 01:52:04,351 --> 01:52:06,000
 Hot-dog Evelyn:
 Don't stop playing
 
-1739
+1740
 01:52:06,570 --> 01:52:07,976
 Play something for me?
 
-1740
+1741
 01:52:14,211 --> 01:52:15,929
 [plays Clair de Lune]
 
-1741
+1742
 01:52:23,758 --> 01:52:25,039
 Evelyn: That's not true
 
-1742
+1743
 01:52:28,703 --> 01:52:31,257
 You're not unloveable
 
-1743
+1744
 01:52:32,164 --> 01:52:33,640
 Diedre: What are you
 talking about?
 
-1744
+1745
 01:52:34,062 --> 01:52:36,265
 Evelyn: There is <i>always</i>
 something to love!
 
-1745
+1746
 01:52:37,531 --> 01:52:40,422
 Even in a stupid, <i>stupid</i> universe
 
-1746
+1747
 01:52:40,554 --> 01:52:43,445
 where we have hot-dogs
 for fingers
 
-1747
+1748
 01:52:43,742 --> 01:52:46,125
 We get very good
 with our feet!
 
-1748
+1749
 01:53:10,054 --> 01:53:10,711
 Diedre: Okay
 
-1749
+1750
 01:53:12,117 --> 01:53:13,445
 <i>I feel nothing</i>
 
-1750
+1751
 01:53:14,593 --> 01:53:15,093
 I f-
 
-1751
+1752
 01:53:15,422 --> 01:53:16,398
 I feel...
 
-1752
+1753
 01:53:17,015 --> 01:53:17,515
 I...
 
-1753
+1754
 01:53:17,655 --> 01:53:18,679
 (sobbing) f-feel
 
-1754
+1755
 01:53:31,414 --> 01:53:33,179
 Alpha Gong-gong:
 Don't let her stop Jobu!
 
-1755
+1756
 01:53:33,609 --> 01:53:35,062
 Open fire!
 
-1756
+1757
 01:54:29,820 --> 01:54:31,711
 So <i>stupid!</i>
 
-1757
+1758
 01:54:48,414 --> 01:54:49,492
 Waymond: Evelyn...
 
-1758
+1759
 01:54:51,250 --> 01:54:52,508
 What are you doing?
 
-1759
+1760
 01:54:53,148 --> 01:54:54,054
 Evelyn: I'm learning
 
-1760
+1761
 01:54:54,079 --> 01:54:54,816
 to fight
 
-1761
+1762
 01:54:54,840 --> 01:54:56,265
 like you.
 
-1762
+1763
 01:55:38,242 --> 01:55:39,201
 Man: You know, Evelyn
 
-1763
+1764
 01:55:39,226 --> 01:55:43,116
 My wife used to wear that exact same
 perfume, god rest her soul?
 
-1764
+1765
 01:55:49,304 --> 01:55:50,593
 Evelyn: These are
 direct indications that
 
-1765
+1766
 01:55:50,618 --> 01:55:52,905
 there is impingement
 on the nervous system
 
-1766
+1767
 01:55:54,375 --> 01:55:55,402
 With a little bit of help
 
-1767
+1768
 01:55:55,426 --> 01:55:56,706
 we should be seeing things
 
-1768
+1769
 01:55:56,730 --> 01:55:58,148
 go nice and straight
 
-1769
+1770
 01:55:58,570 --> 01:55:59,281
 [healing necksnap]
 
-1770
+1771
 01:56:02,109 --> 01:56:03,386
 You might feel a little sore
 
-1771
+1772
 01:56:03,410 --> 01:56:05,125
 but everything is
 looking pretty good
 
-1772
+1773
 01:56:05,695 --> 01:56:06,664
 Man: Thank you
 
-1773
+1774
 01:56:11,952 --> 01:56:13,398
 Man: Clean up in there, alright?
 
-1774
+1775
 01:57:25,906 --> 01:57:27,695
-Chef: You took everything
+Chad: You took everything
 away from me
 
-1775
+1776
 01:57:28,164 --> 01:57:29,343
 Evelyn: I'm sorry
 
-1776
+1777
 01:57:30,851 --> 01:57:32,883
-Chef: Raccoccoonie taught
+Chad: Raccoccoonie taught
 me so much!
 
-1777
+1778
 01:57:34,023 --> 01:57:34,476
 I-
 
-1778
+1779
 01:57:34,812 --> 01:57:35,922
 I didn't even know
 
-1779
+1780
 01:57:36,070 --> 01:57:37,437
 How to boil an egg!
 
-1780
+1781
 01:57:38,078 --> 01:57:39,241
 He taught me how to
 
-1781
+1782
 01:57:39,266 --> 01:57:40,253
 spin it on
 
-1782
+1783
 01:57:40,277 --> 01:57:41,484
 a spatula!
 
-1783
+1784
+01:57:41,509 --> 01:57:43,586
+Raccoccoonie: Chaaaad!
+
+1785
 01:57:43,875 --> 01:57:45,429
 I'm useless alone
 
-1784
+1786
 01:57:47,140 --> 01:57:49,203
 Evelyn: We're all useless, alone
 
-1785
+1787
 01:57:49,898 --> 01:57:51,609
-It's a good thing 
+It's a good thing
 you're <i>not</i> alone
 
-1786
+1788
 01:57:55,937 --> 01:57:57,992
 Let's go rescue your silly raccoon
 
-1787
+1789
 01:58:53,062 --> 01:58:54,273
 Alpha Gong-gong:
 Get out of the way!
 
-1788
+1790
 01:59:09,992 --> 01:59:10,968
 Evelyn: Waymond!
 
-1789
+1791
 01:59:23,117 --> 01:59:24,015
 Jobu Tupaki:
 See?
 
-1790
+1792
 01:59:24,570 --> 01:59:25,792
 It's only a matter of time
 
-1791
+1793
 01:59:25,816 --> 01:59:27,663
 before everything
 balances itself back
 
-1792
+1794
 01:59:27,688 --> 01:59:28,961
 Evelyn: Come on, come on, go!
 before everything
 balances itself back
 
-1793
+1795
 01:59:29,234 --> 01:59:29,597
-Chef: I can't!
+Chad: I can't!
 
-1794
+1796
 01:59:29,621 --> 01:59:31,117
 I'm sorry, Raccoccoonie!
 
-1795
-01:59:31,234 --> 01:59:32,289
+1797
+01:59:31,234 --> 01:59:32,398
+Raccocoonie: Chaaad!
 I'm sorry...
 
-1796
+1798
 01:59:36,586 --> 01:59:37,515
 Alpha Gong-gong:
 Evelyn
 
-1797
+1799
 01:59:37,929 --> 01:59:39,273
 Let her go.
 
-1798
+1800
 02:00:21,812 --> 02:00:23,820
 Evelyn: But she turned out
 to be stubborn
 
-1799
+1801
 02:00:24,570 --> 02:00:25,586
 Aimless
 
-1800
+1802
 02:00:26,008 --> 02:00:26,968
 A mess
 
-1801
+1803
 02:00:27,984 --> 02:00:29,179
 Just like her mother.
 
-1802
+1804
 02:00:30,843 --> 02:00:31,929
 But now I see
 
-1803
+1805
 02:00:32,937 --> 02:00:35,015
 it's okay that she's a mess
 
-1804
+1806
 02:00:37,125 --> 02:00:38,984
 because just like me
 
-1805
+1807
 02:02:28,531 --> 02:02:30,335
 Jobu Tupaki:
 Well, maybe you win in this universe
 
-1806
+1808
 02:02:30,625 --> 02:02:31,758
 But in another?
 
-1807
+1809
 02:02:36,703 --> 02:02:37,441
 I...
 
-1808
+1810
 02:02:37,465 --> 02:02:38,214
 beat...
 
-1809
+1811
 02:02:38,238 --> 02:02:38,672
 you!
 
-1810
+1812
 02:02:41,640 --> 02:02:42,117
 Or...
 
-1811
+1813
 02:02:42,304 --> 02:02:42,859
 we...
 
-1812
+1814
 02:02:42,984 --> 02:02:43,453
 tie!
 
-1813
+1815
 02:02:48,054 --> 02:02:49,828
 Or we just...
 
-1814
+1816
 02:02:50,437 --> 02:02:51,726
 hang around.
 
-1815
+1817
 02:02:51,953 --> 02:02:52,875
 Evelyn: Okay, Joy
 
-1816
+1818
 02:02:53,265 --> 02:02:54,039
 Listen--
 
-1817
+1819
 02:02:55,336 --> 02:02:56,777
 Jobu: 'Cause it's
 all just a pointless
 
-1818
+1820
 02:02:56,801 --> 02:02:58,781
 swirling bucket of bullshit!
 
-1819
+1821
 02:03:02,125 --> 02:03:05,405
-That bagel is where we 
+That bagel is where we
 finally find peace, Evelyn
 
-1820
+1822
 02:03:09,148 --> 02:03:11,140
 Evelyn: Stop calling me
 
-1821
+1823
 02:03:11,179 --> 02:03:11,945
 Evelyn!
 
-1822
+1824
 02:03:24,218 --> 02:03:25,070
 I...
 
-1823
+1825
 02:03:25,695 --> 02:03:26,593
 am...
 
-1824
+1826
 02:03:27,914 --> 02:03:28,929
 your...
 
-1825
+1827
 02:03:30,578 --> 02:03:32,093
 mother!
 
-1826
+1828
 02:03:42,608 --> 02:03:43,389
 Apa?
 
-1827
+1829
 02:03:49,913 --> 02:03:51,202
 Jobu: Seriously?!
 
-1828
+1830
 02:03:51,514 --> 02:03:52,733
 Can you <i>please</i>
 
-1829
+1831
 02:03:52,889 --> 02:03:53,952
 just
 
-1830
+1832
 02:03:54,788 --> 02:03:55,913
 STOP!
 
-1831
+1833
 02:03:59,108 --> 02:03:59,764
 <i>Mom!</i>
 
-1832
+1834
 02:04:00,436 --> 02:04:01,264
 just-
 
-1833
+1835
 02:04:01,546 --> 02:04:02,530
 Just <i>stop!</i>
 
-1834
+1836
 02:04:03,967 --> 02:04:04,729
 Well good for you
 
-1835
+1837
 02:04:04,753 --> 02:04:06,014
 you're figuring your shit out
 
-1836
+1838
 02:04:08,108 --> 02:04:08,874
 That's
 
-1837
+1839
 02:04:08,899 --> 02:04:09,796
 great. I'm really
 
-1838
+1840
 02:04:09,905 --> 02:04:10,608
 <i>really</i>
 
-1839
+1841
 02:04:10,678 --> 02:04:11,819
 happy for you.
 
-1840
+1842
 02:04:13,663 --> 02:04:14,694
 But I-
 
-1841
+1843
 02:04:16,764 --> 02:04:18,327
 I'm <i>tired</i>
 
-1842
+1844
 02:04:20,913 --> 02:04:22,448
 I don't wanna hurt anymore and
 
-1843
+1845
 02:04:22,472 --> 02:04:24,874
 for some reason when
 I'm with you it just-
 
-1844
+1846
 02:04:27,217 --> 02:04:29,108
 it just hurts the both of us.
 
-1845
+1847
 02:04:33,272 --> 02:04:35,975
 So let's just go our separate ways, okay?
 
-1846
+1848
 02:04:38,077 --> 02:04:38,999
 Just let me
 
-1847
+1849
 02:04:39,288 --> 02:04:39,866
 <i>go</i>
 
-1848
+1850
 02:04:52,905 --> 02:04:53,514
 Evelyn: Okay.
 
-1849
+1851
 02:05:29,811 --> 02:05:30,569
 Wait.
 
-1850
+1852
 02:05:38,506 --> 02:05:39,624
 You <i>are</i> getting fat.
 
-1851
+1853
 02:05:40,108 --> 02:05:42,889
-And you never call me 
+And you never call me
 even though we have family plan.
 
-1852
+1854
 02:05:42,921 --> 02:05:43,288
 Joy: What.
 
-1853
+1855
 02:05:43,313 --> 02:05:44,280
 Evelyn: And it's free!
 
-1854
+1856
 02:05:44,491 --> 02:05:45,510
 You only visit
 
-1855
+1857
 02:05:45,534 --> 02:05:46,702
 when <i>you</i> need something!
 
-1856
+1858
 02:05:46,928 --> 02:05:47,999
 And you got a tattoo!
 
-1857
+1859
 02:05:48,024 --> 02:05:49,100
 And I don't care
 
-1858
+1860
 02:05:49,358 --> 02:05:51,022
 if it's supposed to
 represent our family
 
-1859
+1861
 02:05:51,085 --> 02:05:52,897
 you <i>know</i> I hate tattoos
 
-1860
+1862
 02:05:53,194 --> 02:05:53,624
 And-
 
-1861
+1863
 02:05:53,694 --> 02:05:55,538
 of all the places I could be?
 
-1862
+1864
 02:05:56,163 --> 02:05:57,671
-Why would I want 
+Why would I want
 to be here with you?
 
-1863
+1865
 02:05:58,452 --> 02:05:59,053
 Yes.
 
-1864
+1866
 02:05:59,538 --> 02:06:00,069
 You're right.
 
-1865
+1867
 02:06:00,725 --> 02:06:02,163
 It doesn't make sense!
 
-1866
+1868
 02:06:02,335 --> 02:06:02,999
 Waymond: Evelyn
 
-1867
+1869
 02:06:04,983 --> 02:06:06,131
 Joy: Let her finish!
 
-1868
+1870
 02:06:09,131 --> 02:06:10,514
 Evelyn: Maybe it's like you said
 
-1869
+1871
 02:06:11,772 --> 02:06:13,983
 Maybe there is something out there
 
-1870
+1872
 02:06:14,381 --> 02:06:16,022
 Some new discovery
 
-1871
+1873
 02:06:16,499 --> 02:06:17,713
 that will make us feel
 
-1872
+1874
 02:06:17,737 --> 02:06:20,296
 like even smaller pieces of shit
 
-1873
+1875
 02:06:21,983 --> 02:06:23,952
 Something that explains why
 
-1874
+1876
 02:06:24,952 --> 02:06:26,499
 you still went looking for me
 
-1875
+1877
 02:06:27,264 --> 02:06:28,819
 through all of this noise
 
-1876
+1878
 02:06:31,881 --> 02:06:32,639
 and why
 
-1877
+1879
 02:06:33,546 --> 02:06:34,655
 no matter what
 
-1878
+1880
 02:06:35,561 --> 02:06:37,694
 I still want to be here with you
 
-1879
+1881
 02:06:39,960 --> 02:06:41,702
 I will <i>always</i>
 
-1880
+1882
 02:06:43,569 --> 02:06:44,733
 <i>Always</i>
 
-1881
+1883
 02:06:45,944 --> 02:06:48,163
 want to be here with you.
 
-1882
+1884
 02:06:51,178 --> 02:06:52,467
 Joy: So what?
 
-1883
+1885
 02:06:56,327 --> 02:06:58,811
-Are you just gonna 
+Are you just gonna
 ignore everything else?
 
-1884
+1886
 02:07:00,256 --> 02:07:02,717
 You could be <i>anything, anywhere</i>
 
-1885
+1887
 02:07:07,397 --> 02:07:09,780
 Why not go somewhere where your
 
-1886
+1888
 02:07:13,264 --> 02:07:15,546
 where your daughter is more than just
 
-1887
+1889
 02:07:17,452 --> 02:07:18,342
 <i>this?</i>
 
-1888
+1890
 02:07:20,913 --> 02:07:22,374
 Here, all we get
 
-1889
+1891
 02:07:22,999 --> 02:07:24,381
 are a few
 
-1890
+1892
 02:07:25,303 --> 02:07:29,686
 specks of time where
 any of this actually makes any sense
 
-1891
+1893
 02:07:35,663 --> 02:07:37,116
 Evelyn: Then I will cherish
 
-1892
+1894
 02:07:38,342 --> 02:07:40,288
 these few specks of time
 
-1893
+1895
 02:07:48,475 --> 02:07:50,046
 Dierdre: Push the button
 
-1894
+1896
 02:07:50,796 --> 02:07:51,264
 There
 
-1895
+1897
 02:07:51,460 --> 02:07:52,421
 Down you go
 
-1896
+1898
 02:07:52,694 --> 02:07:53,788
 I feel like I'm fourteen...
 
-1897
+1899
 02:07:55,865 --> 02:07:56,561
 [laughs] Yeah
 
-1898
+1900
 02:08:02,178 --> 02:08:03,654
-Chef: I'm sorry, Raccoccoonie
+Chad: I'm sorry, Raccoccoonie
 
-1899
+1901
 02:08:03,772 --> 02:08:04,522
 I'm sor...
 
-1900
+1902
 02:08:05,592 --> 02:08:06,319
 What are you doing?
 
-1901
+1903
 02:08:06,397 --> 02:08:07,631
 Evelyn: Grab my hair!
 
-1902
-02:08:21,913 --> 02:08:23,350
+1904
+02:08:21,888 --> 02:08:23,350
 Becky: What did he say?
 
-1903
+1905
 02:09:36,811 --> 02:09:38,374
 Joy: So awkward...
 
-1904
+1906
 02:09:41,202 --> 02:09:42,444
 It's awkward, right?
 
-1905
+1907
 02:09:47,405 --> 02:09:49,530
 ...Do you still wanna do your party?
 
-1906
+1908
 02:09:50,975 --> 02:09:53,381
 Evelyn: We could do whatever we want.
 
-1907
+1909
 02:09:57,889 --> 02:09:59,006
 Nothing matters.
 
-1908
+1910
 02:10:12,944 --> 02:10:15,702
 Joy: Okay, we're definitely late now, guys.
 
-1909
+1911
 02:10:18,014 --> 02:10:19,522
 Do you have to bring <i>all</i> of these?
 
-1910
+1912
 02:10:19,719 --> 02:10:20,194
 Evelyn: Mmhm
 
-1911
+1913
 02:10:20,975 --> 02:10:22,553
 That needs to go in the back, too.
 
-1912
+1914
 02:10:24,233 --> 02:10:25,592
 Joy: Taxes suck.
 
-1913
+1915
 02:10:34,991 --> 02:10:36,631
-Waymond: Thank you 
+Waymond: Thank you
 for the ride, Becky!
 
-1914
+1916
 02:10:37,975 --> 02:10:38,467
 Joy: Hey
 
-1915
+1917
 02:10:39,374 --> 02:10:39,975
 Things okay?
 
-1916
+1918
 02:10:40,000 --> 02:10:40,990
 Becky: Mmhm. You got this, okay?
 
-1917
+1919
 02:10:41,015 --> 02:10:41,639
 Evelyn: Becky?
 Becky: Mmhm. You got this, okay?
 
-1918
+1920
 02:10:41,664 --> 02:10:42,413
 Evelyn: Becky?
 Joy: I'll call you after
 
-1919
+1921
 02:10:42,764 --> 02:10:43,983
-Evelyn: You need to 
+Evelyn: You need to
 grow your hair
 
-1920
+1922
 02:10:53,280 --> 02:10:54,194
 Joy: I'll call you later!
 
-1921
+1923
 02:11:01,397 --> 02:11:02,124
 I gotta pee.
 
-1922
+1924
 02:11:02,483 --> 02:11:02,960
 Hold on.
 
-1923
+1925
 02:11:02,985 --> 02:11:03,616
 Evelyn: Okay
 
-1924
+1926
 02:11:41,131 --> 02:11:41,944
 Diedre: Okay.
 
-1925
+1927
 02:11:42,491 --> 02:11:42,983
 Yes.
 
-1926
+1928
 02:11:43,671 --> 02:11:45,280
 I am happy to say
 
-1927
+1929
 02:11:45,413 --> 02:11:46,749
 I do think...
 
-1928
+1930
 02:11:47,163 --> 02:11:47,893
 Things are better.
 
-1929
+1931
 02:11:47,917 --> 02:11:48,577
 This is
 
-1930
+1932
 02:11:48,602 --> 02:11:50,421
 This is, uh, an improvement
 
-1931
+1933
 02:11:50,616 --> 02:11:51,436
 And I'm-
 
-1932
+1934
 02:11:51,461 --> 02:11:52,741
 I'm glad that you listened.
 
-1933
+1935
 02:11:52,766 --> 02:11:53,850
 But! We have a problem
 
-1934
+1936
 02:11:54,287 --> 02:11:56,514
-Because you listened, 
+Because you listened,
 but you didn't listen
 
-1935
+1937
 02:11:56,803 --> 02:11:58,921
 And that has to do with the
 Schedule Cs
 
-1936
+1938
 02:11:58,946 --> 02:11:59,546
 You see--
 
-1937
+1939
 02:12:12,111 --> 02:12:12,837
 Evelyn!
 
-1938
+1940
 02:12:12,862 --> 02:12:13,822
 Did you hear me?
 
-1939
+1941
 02:12:14,244 --> 02:12:14,775
 Evelyn: Sorry
 
-1940
+1942
 02:12:16,010 --> 02:12:16,947
 What did you say?
 
-1941
+1943
 02:12:35,177 --> 02:12:39,412
 Subtitles by Salrith
 
