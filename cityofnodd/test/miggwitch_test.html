@@ -1,0 +1,68 @@
+<html>
+	<style>
+		/*Here we write some CSS which just says a few things about how the 'animation' should be displayed!*/
+		/*.frame says "do this to things with the tag "class='frame'".*/
+		.frame {
+			/*We tell it that it should stay EXACTLY where we tell it (absolute), it should be in the TOP LEFT (0 pixels), we give it a height and width, and tell it that anything outside these limits shouldn't be displayed.*/
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:600px;
+			height:502px;
+			overflow:hidden;
+		}
+		/*This says, apply this to both the first and second bg images. We have two so it looks 'seamless' <3 As one scrolls out of sight, its copy scrolls into view.*/
+		.bg,
+		.bg2		{
+			/*Height = 1.5x the Miggwitch Carriage animation height (502 pixels)*/
+			height:753px;
+			/*Object-fit just says 'don't squash-resize the picture, crop out any excess instead'*/
+			object-fit:cover;
+			top:0px;
+			left:0px;
+			position:absolute;
+		}
+		.bg {
+			/*And, just to things tagged "class='bg'", run a little animation called 'move'.*/
+			animation: move 2s linear infinite;
+		}
+		.bg2 {
+			animation: move2 2s linear infinite;
+		}
+		.carriage {
+			position:absolute;
+			top:0px;
+			left:0px;
+		}
+		
+		/*Here we have the 'move' animation. It starts with the picture being lifted up a little (so we're not staring at the sky), then scrolls it left one full picture-width (-100% left)*/
+		@keyframes move {
+			0% {
+				transform: translate(0%,-40%);
+			}
+			100% {
+				transform: translate(-100%, -40%);
+			}
+		}
+		/*Meanwhile, the second move animation for our copy image moves it from one picture-width to the right... INTO view as the first picture vanishes. It's 99% and 1% instead of 100% and 0% so there's no little white pixel seam (a little overlap is good)*/
+		@keyframes move2 {
+			0% {
+				transform: translate(99%, -40%);
+			}
+			100% {
+				transform: translate(-1%, -40%);
+			}
+		}
+	</style>
+	<body>
+		/*We have our frame, that says 'don't display stuff bigger than me'*/
+		<div class="frame">
+			/*Our main background picture, we can swap this out for any other by changing the URL <3*/
+			<img src="carriage_morph_test.jpg" class="bg"/>
+			/*The copy to make the scroll look seamless!*/
+			<img src="carriage_morph_test.jpg" class="bg2" />
+			/*And the bouncing carriage animation on the top.*/
+			<img src="carriage_window_blank.gif" class="carriage"/>
+		</div>
+	</body>
+</html>

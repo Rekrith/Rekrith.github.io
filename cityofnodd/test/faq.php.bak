@@ -1,0 +1,204 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<title>The City of Nodd - FAQ</title> <!--The page title in the browser tab-->
+		<link rel="icon" href="https://nodd-arca.net/test/Site_Assets/icon.png"> <!--The icon in the browser tab!-->
+		<link rel="stylesheet" href="styles.css"> <!--Linking the stylesheets (that contain all the 'How to display this stuff' information)-->
+		<link rel="stylesheet" href="egobracer.css"> <!--Egobracer.css is for the top and bottom menus, to make it easier to put them into other
+ pages.-->
+		<link rel="stylesheet" href="faq.css">
+		<link href="jquery-ui/jquery-ui.css" rel="stylesheet"> <!--Jquery ui styles!-->
+	</head>
+	<body>
+		<div class="bg"> <!--This is just a container that holds the background picture. Styles.css has all the information!-->
+		</div>
+		
+		<!--**********************************************-->
+		
+		<div class="main" id="faq" style="margin-top:15vh;padding-bottom:15vh;width:80vw;padding-left:10vw;"> <center>
+			<img src="http://nodd-arca.net/test/Site_Assets/header_faq.png" style="padding-bottom:2vw;"/></center>
+			
+			<button class="faqordion">Lore</button>
+			<div class="faqPanel">
+				<button class="faqordionInner">"Is X possible in Nodd?" / "Are there any Y in Nodd?" / etc</button>
+				<div class="faqPanelInner">
+					There aren't any truly 'hard' rules in the Nodd lore. While there <b>are</b> many generalizations in the City of Nodd, there will almost always be exceptions, and these exceptions will often be interesting stories. Instead of asking 'is' something possible or 'are' there any of something, we invite you to imagine that the answer is 'yes' and then develop your idea around how that would work.
+				</div>
+				
+				<button class="faqordionInner">​How does a citizen acquire gloam?</button>
+				<div class="faqPanelInner">
+					Citizens automatically accumulate gloam after participating in chaotic events.The amount can be seen as a number via one's ego bracer or similar devices, and at any mage kiosk throughout the city. The energy is not stored within the ego bracer itself. Mage kiosks also allow a citizen to withdraw any numerical amount of gloam as material gloam in the form of a cartridge. These cartridges come in a number of shapes and sizes, and can be loaded into a variety of artifacts for casting spells. During a transaction, gloam is exchanged between persons based on intent - no gestures need to be made, and no gloam needs to be withdrawn into a cartridge.
+				</div>
+				
+				<button class="faqordionInner">​Is it possible for an insider to leave Nodd?</button>
+				<div class="faqPanelInner">
+					It is not currently thought to be possible for any creature, insider or outsider, to leave Nodd.
+				</div>
+				
+				<button class="faqordionInner">​Can a mage join more than one house?</button>
+				<div class="faqPanelInner">
+					While possible, it's unfeasible for a mage to be enrolled in two houses simultaneously, as most require full commitment to its beliefs and rituals. One would likely need to find some way to remain undetected by the other house, and would almost certainly be expelled (or worse) if discovered. 
+				</div>
+				
+				<button class="faqordionInner">​Is it feasible for my character to come in contact with a citygod?</button>
+				<div class="faqPanelInner">
+					While not likely, it's entirely possible for any citizen to be imprisoned and subjected to the practice known as "god-tending". During this punishment, the victim is forced into the citygod's private chambers, where they'll be used for anything the citygod desires.
+				</div>
+				
+				<button class="faqordionInner">​Is it possible for my existing OC to be an insider?</button>
+				<div class="faqPanelInner">
+					Absolutely. You're welcome to say your character originated in Nodd, even if they're not one of Nodd's species. They could be a chimera, or they could be of a recurring species in Nodd that's less common than the ones listed.
+				</div>
+			</div>
+			
+			<button class="faqordion">Development</button>
+			<div class="faqPanel">
+				<button class="faqordionInner">Which accounts should I follow to see more?</button>
+				<div class="faqPanelInner">
+					Cityofnodd on <a href="https://www.furaffinity.net/user/cityofnodd/" target="_blank">FurAffinity</a> and <a href="https://cityofnodd.sofurry.com/" target="_blank">SoFurry</a>, or the City of Nodd <a href="http://nodd-arca.net/invite.html" target="_blank">Discord server</a>. We are no longer on Twitter.
+				</div>
+				
+				<button class="faqordionInner">Will you be adding more species, items, locations, etc.?</button>
+				<div class="faqPanelInner">
+					Yes. In a very general sense, we hope to continue adding to the lore over time, both in fleshing out existing concepts and introducing new ones.
+				</div>
+				
+				<button class="faqordionInner">Can I help work on Nodd?</button>
+				<div class="faqPanelInner">
+					We're not currently looking for any more help on the project, but this may change. Let's find out.
+				</div>
+				
+				<button class="faqordionInner">Will you use my concept in the lore officially?</button>
+				<div class="faqPanelInner">
+					In general, no - but you are encouraged to develop and share it with the community.
+				</div>
+				
+				<button class="faqordionInner">Can my character be featured in an official art piece?</button>
+				<div class="faqPanelInner">
+					Possibly. We occasionally offer such opportunities to subscribers, and during special events - most of which are hosted on the Discord server. 
+				</div>
+			</div>
+			
+			<button class="faqordion">Usage</button>
+			<div class="faqPanel">
+				<button class="faqordionInner">Do I need to pay in order to use Nodd's concepts?</button>
+				<div class="faqPanelInner">
+					No, you're welcome to enjoy Nodd's lore without subscribing, purchasing, or adopting.
+				</div>
+				
+				<button class="faqordionInner">Can I RP as canon characters?</button>
+				<div class="faqPanelInner">
+					Feel free to RP whatever you like. If doing so on the official Nodd server do mind that most there will want to stick closely to the canon, however. 
+				</div>
+				
+				<button class="faqordionInner">Do I need to give you a cut when using your concepts commercially?</button>
+				<div class="faqPanelInner">
+					No, all we ask is that you credit City of Nodd when appropriate.
+				</div>
+				
+				<button class="faqordionInner">Do I need to earn my character's role by participating on the Discord server/subscribing?</button>
+				<div class="faqPanelInner">
+					No. You may play as a powerful character such as a Council member, cult leader, or godling without earning the right through server participation, being a moderator, or subscribing. Likewise, you are not obligated to RP events such as your character's induction - you may start your story wherever you please. 
+				</div>
+				
+				<button class="faqordionInner">​Can I depict my insider character outside of the Nodd setting?</button>
+				<div class="faqPanelInner">
+					Absolutely. While not necessarily canon, you're welcome to use your characters as you please.
+				</div>
+			</div>
+			
+		</div>
+		
+		<?php include('headfoot.php'); ?>
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="jquery-ui/jquery-ui.js"></script>
+		<script> 
+			
+			var acc = document.getElementsByClassName("faqordion");
+			var j;
+
+			for (j = 0; j < acc.length; j++) {
+			  acc[j].addEventListener("click", function() {
+				for (k = 0; k < acc.length; k++) {
+					acc[k].style.maxHeight = null;
+					acc[k].nextElementSibling.style.maxHeight = null;
+					acc[k].classList.remove("active");
+				  }
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				panel.style.maxHeight = panel.scrollHeight + "px"; 
+			  });
+			} 
+			
+			var accIn = document.getElementsByClassName("faqordionInner");
+			var l;
+
+			for (l = 0; l < accIn.length; l++) {
+			  accIn[l].addEventListener("click", function() {
+				for (m = 0; m < accIn.length; m++) {
+					accIn[m].style.maxHeight = null;
+					accIn[m].nextElementSibling.style.maxHeight = null;
+					accIn[m].nextElementSibling.style.marginTop = null;
+					accIn[m].nextElementSibling.style.marginBottom = null;
+					accIn[m].classList.remove("activeInner");
+				  }
+				this.classList.toggle("activeInner");
+				var panelIn = this.nextElementSibling;
+				panelIn.style.marginTop = 10 + "px";
+				panelIn.style.marginBottom = 10 + "px";
+				var parentHeightInbound = this.parentElement.scrollHeight;
+				panelIn.style.maxHeight = panelIn.scrollHeight + "px"; 
+				parentHeightInbound += panelIn.scrollHeight;
+				this.parentElement.style.maxHeight = parentHeightInbound + "px";
+				 
+			  });
+			} 
+			
+		
+			/******************************************/
+			$('#egoBracerBut').on('click', function(e) { //In the element named specifically "egoBracerBut", when someone clicks it, run this code.
+				$('.egoShell').toggleClass('egoButton_active'); //Find the things of the type .egoShell, and either add (or remove if they already have it) all the settings in the .css file for ".egoButton_active".
+			});
+			
+			/*******************Preload our images (borrowed code)**********************/
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image();
+					images[i].src = preload.arguments[i];
+				}
+			}
+			preload(
+				"Site_Assets/menu_media_hover.png",
+				"Site_Assets/menu_media_clicked.png",
+				"Site_Assets/menu_media_default.png",
+				"Site_Assets/menu_explore_hover.png",
+				"Site_Assets/menu_explore_clicked.png",
+				"Site_Assets/menu_explore_default.png",
+				"Site_Assets/menu_about_hover.png",
+				"Site_Assets/menu_about_clicked.png",
+				"Site_Assets/menu_about_default.png",
+				"Site_Assets/menu_news_hover.png",
+				"Site_Assets/menu_news_clicked.png",
+				"Site_Assets/menu_news_default.png",
+				"Site_Assets/menu_faq_hover.png",
+				"Site_Assets/menu_faq_clicked.png",
+				"Site_Assets/menu_faq_default.png",
+				"Site_Assets/menu_discord_hover.png",
+				"Site_Assets/menu_discord_clicked.png",
+				"Site_Assets/menu_discord_default.png",
+				"Site_Assets/menu_subscribe_hover.png",
+				"Site_Assets/menu_subscribe_clicked.png",
+				"Site_Assets/menu_subscribe_default.png",
+				"Site_Assets/menu_store_hover.png",
+				"Site_Assets/menu_store_clicked.png",
+				"Site_Assets/menu_store_default.png",
+				"Site_Assets/ui_egobracer.gif",
+				"Site_Assets/ui_topmenu_left.gif",
+				"Site_Assets/menu_tray.png",
+				"Site_Assets/topmenu_right.png"
+			);
+		</script>
+	</body>
+</html>

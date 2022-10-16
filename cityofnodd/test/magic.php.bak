@@ -1,0 +1,398 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<title>The City of Nodd - Magic</title> <!--The page title in the browser tab-->
+		<link rel="icon" href="https://nodd-arca.net/test/Site_Assets/icon.png"> <!--The icon in the browser tab!-->
+		<link rel="stylesheet" href="styles.css"> <!--Linking the stylesheets (that contain all the 'How to display this stuff' information)-->
+		<link rel="stylesheet" href="egobracer.css"> <!--Egobracer.css is for the top and bottom menus, to make it easier to put them into other
+ pages.-->
+		<link rel="stylesheet" href="toptabsMagic.css">
+		<link href="jquery-ui/jquery-ui.css" rel="stylesheet"> <!--Jquery ui styles!-->
+	</head>
+	<body>
+		<div class="bg"> <!--This is just a container that holds the background picture. Styles.css has all the information!-->
+		</div>
+		
+		<!--**********************************************-->
+		
+		<div class="main" id="magic"> <center>
+			<img src="Site_Assets/header_magic.png" class="headerImg"/></center>
+			
+			<div class="toptabBar">
+				<button class="topBarButton" style="border-bottom-width:0px;background-color:#446756;">Magic?</button>
+				<button class="topBarButton">Gloam</button>
+				<button class="topBarButton">Belief</button><!-- This is a very silly thing I've done, but it's "Induction " with a space to avoid a name overlap with ANOTHER thing on the website called "Induction" (without a space). I made a slight error in my future-proofing, whoops.-->
+				
+			</div>
+			<div class="toptabBar">
+				<button class="topBarButton">Artifacts</button>
+				<button class="topBarButton">Mages, Houses, and Cults</button>
+				<button class="topBarButton">Spells</button>
+			</div>
+						
+			<div class="tabContent" style="display:block;clear:left;">
+				<div id="Magic?" class="tab" style="display:block">
+					<div class="greenCenter">Magic… or madness?</div>
+					
+					<div class="greenCenter">It begins as a simple curiosity, and so quickly it becomes an insatiable hunger. You crave more, and there’s always more to be had. You stop working, eating and sleeping, but it ceases to matter. It just rewards you further, empowers you - nourishes some part of you that you never knew existed. Soon, it is the only part of you that exists at all.</div>
+					
+					<div class="greenCenter">It corrupts you, the chaos. You become one with it - a twisted brilliance others are helpless but to behold. Inevitably, it becomes more than what a single vessel can contain; you begin to corrupt these others, their fates sealed from the moment they tasted it.</div>
+					
+					<div class="greenCenter">But every mage knew this before ever casting their first spell. Just as you do now.</div>
+				</div>
+				
+				<div id="Gloam" class="tab" style="display:none">
+					<div class="magicTitle">Gloam</div>
+					
+					<div class="magicText">Chaotic energy - called gloam - is the primary energy source of Nodd; it is also often referred to colloquially as "magic" or “arcane energy”. Not only a weapon and utility for mages, it illuminates streets at night, powers technology, heats homes, and essentially makes up life in Nodd itself.</div>
+					
+					<div class="magicText">​Gloam is the only energy force known to alter "spellthreads". Threads are concepts that are woven together to create the perceptual fabric of Nodd's reality.</div>
+					
+					<div class="magicText">​A "spell", then, is a formula that directs gloam to change one thread to another. The energy is spent in this process, and the gloam degrades. In this form, it is a faintly luminescent teal haze for a short while after the energy has been spent. There is usually so little it can only be seen at night. The substance is then reabsorbed by the city through the Conduit - the immense and enigmatic structure at the top of the Council Spire.</div>
+					
+					<div class="magicText">The Conduit rejuvenates spent gloam, but can never produce more than is spent. The Council Spire has been built around this structure, and much of the building is dedicated to its harvesting, as well as redistributing the newly converted fuel. Raw, unspent gloam must be contained in a cartridge or specialized artifact or it will immediately disperse, causing a horrific explosion of random and chaotic changes to the current moment, often of a destructive nature. It has a bright, green glow to it until it is expended.</div>
+				</div>
+				
+				<div id="Belief" class="tab" style="display:none">
+					<div class="magicTitle">Belief</div>
+					
+					<div class="magicText">The more seamlessly the desired change can be integrated into the overall fabric of Nodd - the more believable it is - the easier the spell. The more phenomenal or unbelievable a spell's results, the more difficult it is to cast, and the more gloam it expends - because it must alter more threads in order for the end result to be achieved. Changing a raw steak to a cooked steak, for example, is far more achievable than changing a rock into a cooked steak - but both are possible with the right artifacts, sufficient gloam, and ideally the belief of anyone perceiving the event.</div>
+					
+					<div class="magicText">For this reason, mages seek prestige and attention, as any belief in their magic-use helps to manifest their spells. Likewise, mages in combat aim to cause their opponent and opposing audience to falter in their belief, thus making their spells less effective and predictable. Each house and cult has their own trademark approach to this. This also explains the superhero and villain personas taken on by a number of citizens - deeds of any kind only draw more recognition and thus more belief, further empowering the mage. Branding is also effective for this reason, so most mages try to enforce a recognizable aesthetic or symbol to evoke belief in their cause.</div>
+				</div>
+				
+				<div id="Artifacts" class="tab" style="display:none">
+					<div class="magicTitle">Artifacts</div>
+					
+					<div class="magicText">An artifact is something that parses a spell or spells in some way. The mind is technically an artifact, as are wands, staves, swords, vehicles, automatic doors, and toasters - anything that uses energy is, in fact, an artifact.</div>
+					
+					<div class="magicText">A toaster's only purpose would be to execute a spell that gradually changes the concept of a raw substance to a cooked one, in the confines of the space affected. There is no actual cooking happening in terms of physics, but to the user it would appear - and taste - the very same.</div>
+					
+					<div class="magicText">As belief is required in order for a spell to be successful, an artifact is usually designed accordingly. For example, a toaster doesn't absolutely need to be shaped like a toaster, but since it is, its user would then have no qualms with the perception of the bread turning to toast once it's inserted - making the usage of the device easier and more predictable to use, and more efficient. A user who has never seen a toaster operate may not have the same luck; likewise, a toaster with the shape and texture of a trout could still possibly get the job done, but only when powered with enough gloam to account for the reality of a trout producing toast - an absurdity in most contexts.</div>
+					
+					<div class="magicText">Gloam is also available in its raw form - usually contained within a cartridge - to be loaded into less disposable weapons or appliances. Homes usually have a gloam tank that is essentially a large cartridge to power spells throughout the building, such as lighting and climate control.</div>
+					
+					<div class="magicText">The mind's purpose in terms of gloam manipulation is not well understood. A highly successful mage - one who has been exposed to gloam use for a long time - hardly needs an artifact to direct energy, and some become so chaotic that they essentially become their own energy source as well, expending their own excess gloam. This is the case for all six of the citygods, who are kept locked away in their respective towers.</div>
+				</div>
+				
+				<div id="Mages, Houses, and Cults" class="tab" style="display:none">
+					<div class="magicTitle">Mages</div>
+					
+					<div class="magicText">Many citizens are mages to some degree, and many belong to one of the six houses, or to a cult.</div>
+					
+					<div class="magicText">A house or cult teaches a citizen to perform a defined set of spells, rituals, and beliefs. Mages use artifacts - such as staves, weapons, wands, censers, lanterns, etc. - to perform their spells.</div>
+					
+					<div class="magicText">Any mage, regardless of affiliation, can be a formidable opponent. Higher ranking mages deserve their prestige and respect - the more experience and belief a mage has, the more powerfully the magic reacts to their using it.</div>
+					
+					<div class="magicTitle">Houses and Cults</div>
+					
+					<div class="magicText">​Many mages seek the prestige and reliability of an education from one of the six official houses. Each house has two sects which differ in purpose, belief, and aesthetic. Hybrid mages are not unheard of, but mages are not able to enroll in multiple houses simultaneously. Houses tend to be rather patriotic, and quite hostile towards one another - particularly their opposing house.</div>
+					
+					<div class="magicText">For those who can't find what they're looking for, or for those who do not wish to be associated with the Council, cults are an option. Cults are unofficial, independent houses. Cults are not usually affiliated with other houses, and some are exclusive, competitive, or even aggressive and gang-like against other houses for status, territory, or media attention.</div>
+					
+					<div class="magicText">Nodd's regard for these types of mages varies wildly between individuals and establishments. An education from a cult does not tend to come with the same flavor of prestige and pomp as one from the official houses, but many consider a cult mage every bit as powerful, if not more so.</div>
+					
+					<div class="magicText">In addition, some mages prefer to be entirely house- and cult-agnostic. An agnostic mage is one who has chosen to approach magic their own way. Despite the challenges, an agnostic mage has the potential to be more powerful - or at least more unpredictable - than one whose skill set has been molded and perfected by organized education.</div>
+				</div>
+				
+				<div id="Spells" class="tab" style="display:none">
+				
+					<div style="text-align:center;font-style:italic;color:#cc0000;font-family:Futura, sans-serif;font-size:max(1em, 1vw);padding-top:6vh;padding-bottom:6vh;">This section contains violent and gross descriptions. Browse at your own risk.</div>
+				
+					<div class="magicTitle">Spells</div>
+					
+					<div class="magicText"><b>Aerate</b> - Air currents are directed towards the orifices of the target, bloating their insides.</div>
+					
+					<div class="magicText"><b>Agonize</b> - This spell inflicts great amounts of pain on the target. A manipulation of neurology, no wounds appear.</div>
+					
+					<div class="magicText"><b>Alter Fluids</b> - Transforms the target's body fluids or products into a substance of the caster's choosing.</div>
+					
+					<div class="magicText"><b>Amputate</b> - Leaves the target without arms or legs.</div>
+					
+					<div class="magicText"><b>Anguish</b> - This spell burdens the target with overwhelming sorrow and angst.</div>
+					
+					<div class="magicText"><b>Annotate</b> - Imbues a story poem with a curse that triggers upon reading. The writing itself determines the nature of the curse.</div>
+					
+					<div class="magicText"><b>Appetize</b> - This spell bestows upon the target an insatiable hunger for something of the caster's choosing.</div>
+					
+					<div class="magicText"><b>Aromatize</b> - Bestows upon the target a stink of the caster’s choosing. Cannot be showered off.</div>
+					
+					<div class="magicText"><b>Askesis</b> - Inflicts great amounts of pain on the caster in exchange for energy.</div>
+					
+					<div class="magicText"><b>Assess Artifact</b> - Identifies and reveals any curses on a given artifact.</div>
+					
+					<div class="magicText"><b>Aureole</b> - Summons circular, interspatial portals. A caster can create any number, designating which lead to which.</div>
+					
+					<div class="magicText"><b>Beguile</b> - The target of this spell will feel amenable and amorous towards the caster.</div>
+					
+					<div class="magicText"><b>Bemuse</b> - The target of this spell will feel unable to think or reason clearly.</div>
+					
+					<div class="magicText"><b>Benumb</b> - Reduces or removes the target’s ability to feel tactile sensation.</div>
+					
+					<div class="magicText"><b>Bestialize</b> - Temporarily transforms the victim into a feral version of themselves. The caster may choose to include a more animalistic cognition, or keep their target's mind intact for the duration.</div>
+					
+					<div class="magicText"><b>Bind</b> - Glowing magic tendrils wind around the target’s limbs, restraining them as desired.</div>
+					
+					<div class="magicText"><b>Blind</b> - Blinds the target.</div>
+					
+					<div class="magicText"><b>Coddle</b> - Causes the target to experience hindering if not immobilizing degrees of comfort and placidity.</div>
+					
+					<div class="magicText"><b>Cloying Cocoon</b> - Envelops the target in a slimy, translucent membrane.</div>
+					
+					<div class="magicText"><b>Confect</b> - Transforms the target into a dessert. The shape, color, and flavor of the dessert resembles the target's original appearance.</div>
+					
+					<div class="magicText"><b>Conjoin</b> - Joins the bodies of two targets.</div>
+					
+					<div class="magicText"><b>Commence Routine</b> - Forces the target into a daze in which they perform a repetitive, menial task.</div>
+					
+					<div class="magicText"><b>Corrupt</b> - Causes the target to undergo temporary corruption - they become bigger, more monstrous, and more powerful. Very costly to maintain.</div>
+					
+					<div class="magicText"><b>Darken</b> - The surrounding area's light dissipates - candles burn out, lights flicker off, windows darken.</div>
+					
+					<div class="magicText"><b>Declaw</b> - Removes claws and/or teeth from the target.</div>
+					
+					<div class="magicText"><b>Deliquesce</b> - The target melts into a steaming, bubbling pool of black ichor. This kills or destroys most targets.</div>
+					
+					<div class="magicText"><b>Desiccate</b> - Sucks the moisture out of the target, withering them into a husk</div>
+					
+					<div class="magicText"><b>Detect Heat</b> - Causes heat sources to glow for the caster. </div>
+					
+					<div class="magicText"><b>Diminish</b> - Shrinks the target's genitalia, breasts, muscle mass, or other attractive trait.</div>
+					
+					<div class="magicText"><b>Dim Wits</b> - Renders the target extremely stupid.</div>
+					
+					<div class="magicText"><b>Divulge</b> - Forces the target to tell the truth, or reveal a secret.</div>
+					
+					<div class="magicText"><b>Domesticate</b> - The target of this spell will feel fiercely obedient of the caster, and - if directed - fiercely protective.</div>
+					
+					<div class="magicText"><b>Endow</b> - Bestows the target with proportionately massive genitalia and/or breasts, as desired.</div>
+					
+					<div class="magicText"><b>Encase</b> - Surrounds the target with a clear substance that then solidifies into a hard sphere.</div>
+					
+					<div class="magicText"><b>Engorge</b> - Causes the target to take on excess weight, possibly to an immobilizing degree.</div>
+					
+					<div class="magicText"><b>Engross</b> - Forces the target to become fascinated with the desired object, experience, or idea.</div>
+					
+					<div class="magicText"><b>Ennui</b> - Renders the target apathetic and despondent.</div>
+					
+					<div class="magicText"><b>Epilate</b> - Instantaneously plucks all the fur, hair, or feathers from the target.</div>
+					
+					<div class="magicText"><b>Erogenous Glow</b> - Causes the target’s genitalia, anus, nipples, and mouth to emit a soft light.</div>
+					
+					<div class="magicText"><b>Expedite</b> - Causes the target to move very quickly. An excellent spell for mounts.</div>
+					
+					<div class="magicText"><b>Feed Soil</b> - The ground beneath the target softens, swallowing them up before resolidifying.</div>
+					
+					<div class="magicText"><b>Flatten</b> - Crushes the target into a thin puck.</div>
+					
+					<div class="magicText"><b>Flay</b> - Removes the skin from the target. Excellent for hunting.</div>
+					
+					<div class="magicText"><b>Fool’s Fate</b> - Causes the target to laugh themselves to death.</div>
+					
+					<div class="magicText"><b>Fornify</b> - Transforms the target into a piece of furniture or other fixture of the caster’s choosing.</div>
+					
+					<div class="magicText"><b>Gush</b> - Forces the target to become exceedingly productive in the desired fluid or product.</div>
+					
+					<div class="magicText"><b>Heat Sink</b> - Sucks the body heat from the target.</div>
+					
+					<div class="magicText"><b>Illustrate</b> - Breathes life into a painting or drawing.</div>
+					
+					<div class="magicText"><b>Immolate</b> - Raging flames pour forth from the caster, who can direct their movement and intensity. This spell is difficult to maintain for long.</div>
+					
+					<div class="magicText"><b>Instill Sapience</b> - Bestows intelligent thought and speech capabilities upon a beast, plant, or inanimate object until dismissed. Inanimate objects and plants also become animate. This is costly to maintain, particularly for inanimate objects.</div>
+					
+					<div class="magicText"><b>Impede</b> - Causes the target to move very slowly.</div>
+					
+					<div class="magicText"><b>Implant Thought</b> - Imparts a specific idea or belief into the target’s mind. They’re convinced the thought is their own.</div>
+					
+					<div class="magicText"><b>Invade Slumber</b> - Projects the caster into the target’s dream.</div>
+					
+					<div class="magicText"><b>Inveigle</b> - The target is persuaded by the caster. They don't suspect their decision was influenced until hours later.</div>
+					
+					<div class="magicText"><b>Jellify</b> - Transforms the target into a translucent, ooze-like version of themselves. This form is amorphous, and can reshape itself to some degree.</div>
+					
+					<div class="magicText"><b>Kindle Desire</b> - The target finds themselves with an insatiable fetish of the caster’s choosing.</div>
+					
+					<div class="magicText"><b>Living Salve</b> - A spell that manifests as an ooze that seeks out the target's wounds, knitting flesh and bone back together.</div>
+					
+					<div class="magicText"><b>Magnify</b> - Enlarges the target to the desired size.</div>
+					
+					<div class="magicText"><b>Maze Mind</b> - Traps the target in an illusory labyrinth of madness. The effect ends when the labyrinth is solved; if the target is killed by a creature or trap within the maze, they are only respawned within the maze to try again. The experience may feel centuries long to the target, when only seconds pass in Nodd.</div>
+					
+					<div class="magicText"><b>Mold Flesh</b> - Allows the caster to manipulate the target as though made of clay.</div>
+					
+					<div class="magicText"><b>Mortify</b> - Causes something embarrassing to happen to the target.</div>
+					
+					<div class="magicText"><b>Mucilage</b> - Fires a spray of tacky, glue like substance that smothers and binds the target. The substance is transparent and dries to a tough but stretchy rubber-like consistency in seconds. The material eventually becomes brittle and ineffective, usually within several hours.</div>
+					
+					<div class="magicText"><b>Mute</b> - The target will become unable to speak.</div>
+					
+					<div class="magicText"><b>Nauseate</b> - Causes waves of debilitating nausea to overwhelm the target.</div>
+					
+					<div class="magicText"><b>Nullify</b> - Leaves the target with a featureless groin. They retain a urethra and anus, but no genitalia.</div>
+					
+					<div class="magicText"><b>Peer</b> - Allows the caster to glance briefly forward in time.</div>
+					
+					<div class="magicText"><b>Pacify Furniture</b> - A spell that renders ambulant furniture temporarily non-aggressive.</div>
+					
+					<div class="magicText"><b>Petrify</b> - Turns the target to stone.</div>
+					
+					<div class="magicText"><b>Phantom Touch</b> - Summons ghostly blue hands, tongues, or genitalia to interact with the target.</div>
+					
+					<div class="magicText"><b>Phosphoresce</b> - Summons bioluminescent vegetation and insects to light the caster's way.</div>
+					
+					<div class="magicText"><b>Pluck Thought</b> - Removes a specific thought or belief from the target’s mind.</div>
+					
+					<div class="magicText"><b>Plushify</b> - Transforms the target into a plush version of themselves. Can be animate or inanimate, as the caster desires.</div>
+					
+					<div class="magicText"><b>Priapus</b> - Bestows upon the target an excessively engorged erection that will not subside for hours. Climaxing doesn't affect the spell.</div>
+					
+					<div class="magicText"><b>Project</b> - Summons a brief, intangible visualization of the target's current thoughts.</div>
+					
+					<div class="magicText"><b>Puppet</b> - Controls the target as though a marionette. Remotely responds to hand gestures.</div>
+					
+					<div class="magicText"><b>Purge</b> - Cleanses the body of all substances and toxins by inducing the caster to vomit up an arcane bile.</div>
+					
+					<div class="magicText"><b>Puzzle Box</b> - Generates and manifests a unique handheld puzzle based on the caster’s intellect. Disappears only when solved, granting the solver the gloam used to create it. The more difficult the puzzle, the more costly it is to make, and the more rewarding it is to solve.</div>
+					
+					<div class="magicText"><b>Quench</b> - All liquid is drawn from the nearby environment and forced into the target, bloating their insides.</div>
+					
+					<div class="magicText"><b>Quell</b> - The target of this spell will feel calm, subdued, and physically relaxed.</div>
+					
+					<div class="magicText"><b>Ravaging Roots</b> - Summons thick vines which embed themselves in the target’s every orifice.</div>
+					
+					<div class="magicText"><b>Reduce</b> - Shrinks the target to the desired size.</div>
+					
+					<div class="magicText"><b>Roil Guts</b> - Causes the target to become gaseous and/or defecate excessively.</div>
+					
+					<div class="magicText"><b>Rouse</b> - Leaves the target intensely aroused.</div>
+					
+					<div class="magicText"><b>Replicate</b> - Creates a clone of the target. The clone has its own separate awareness, and does not know it’s a clone.</div>
+					
+					<div class="magicText"><b>Serpentine Limb</b> - Changes a limb, tail, cock, or other appendage into an eyeless serpentine creature with a mouth. Sentient and animate; may or may not have teeth and a bad attitude.</div>
+					
+					<div class="magicText"><b>Shuffle</b> - Rearranges random, minor elements of the current situation. Often results in people swapping places, having different drinks in front of them, being in a different room, etc. </div>
+					
+					<div class="magicText"><b>Siphon Soul</b> - Draws the awareness from the target, rendering it a physical gas that can be contained, transferred, or destroyed.</div>
+					
+					<div class="magicText"><b>Somnolesce</b> - This spell puts the target to sleep.</div>
+					
+					<div class="magicText"><b>Sphere of Solitude</b> - This spell encloses the caster in a meditative pocket dimension, inaccessible by others unless dispelled.</div>
+					
+					<div class="magicText"><b>Starve</b> - Inflicts extreme hunger and thirst on the target.</div>
+					
+					<div class="magicText"><b>Steal Breath</b> - Sucks the breath from the target’s lungs, rendering them unable to breathe.</div>
+					
+					<div class="magicText"><b>Summon Swarm</b> - This spell calls forth a swarm of small, stinging or biting creatures that will pursue the target.</div>
+					
+					<div class="magicText"><b>Suspend</b> - This spell briefly pauses time for all but the caster.</div>
+					
+					<div class="magicText"><b>Supplant Shadow</b> - Assumes the role of the target’s shadow.</div>
+					
+					<div class="magicText"><b>Terrorize</b> - Manifests the target’s most feared imagery as an immersive illusion.</div>
+					
+					<div class="magicText"><b>Thirsty Tendrils</b> - Entangles the target in ravenous, leech-mouthed tentacles.</div>
+					
+					<div class="magicText"><b>Torrid Torrent</b> - A wave of heat pours forth from the caster’s artifact. Ranges from pleasurable to deadly, depending on intent and skill.</div>
+					
+					<div class="magicText"><b>Transfigure</b> - Changes the target's sex.</div>
+					
+					<div class="magicText"><b>Transmogrify</b> - Randomly changes the target's appearance. Possibilities include slight aesthetic differences, size or weight differences, changes to sex or species, or morphing into an inanimate object.</div>
+					
+					<div class="magicText"><b>Transmute</b> - Transforms the target into an inanimate object. Their cognition and senses remain intact.</div>
+					
+					<div class="magicText"><b>Transplant</b> - Swaps the target's mind with another.</div>
+					
+					<div class="magicText"><b>Udderance</b> - Endows the target with a fat, veiny udder with four teats. May replace genitalia as desired.</div>
+					
+					<div class="magicText"><b>Undo Carnage</b> - Reverses any and all destruction done in the immediate area during last few chimes.</div>
+					
+					<div class="magicText"><b>Unnerve</b> - Causes the target to falter in their confidence.</div>
+					
+					<div class="magicText"><b>Void Whisper</b> - Compels the target to kill themselves or another, as desired.</div>
+					
+					<div class="magicText"><b> Welcome Darkness</b> - A spell that induces a quick, painless, and peaceful death for the target.</div>
+					
+					<div class="magicText"><b>Wring Flesh</b> - Painfully twists the target’s limbs, torso, genitalia, or neck.</div>
+					
+					<div class="magicText" style="padding-top:2vh;text-align:center;"><b>A full list of spells can be found <a href="https://nodd-arca.net/arcanet/index.php?title=Spells" target="_blank">on the Arcanet.</a></b></div>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+		
+		<?php include('headfoot.php'); ?>
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="jquery-ui/jquery-ui.js"></script>
+		<script> 
+			
+			var tabList = document.getElementsByClassName("topBarButton");
+			var i;
+
+			for (i = 0; i < tabList.length; i++) {
+			  tabList[i].addEventListener("click", function() {
+				var x = document.getElementsByClassName("tab");
+				for (let j = 0; j < x.length; j++) {
+					x[j].style.display = "none";
+				} 
+				x = document.getElementsByClassName("topBarButton");
+				for (let k = 0; k < x.length; k++) {
+					x[k].style.borderBottomWidth = "2px";
+					x[k].style.backgroundColor = "#224534";
+				} 
+				this.style.borderBottomWidth = "0px";
+				this.style.backgroundColor = "#446756";
+				document.getElementById(this.innerHTML).style.display = "block";
+			  });
+			} 
+			
+		
+			/******************************************/
+			$('#egoBracerBut').on('click', function(e) { //In the element named specifically "egoBracerBut", when someone clicks it, run this code.
+				$('.egoShell').toggleClass('egoButton_active'); //Find the things of the type .egoShell, and either add (or remove if they already have it) all the settings in the .css file for ".egoButton_active".
+			});
+			
+			/*******************Preload our images (borrowed code)**********************/
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image();
+					images[i].src = preload.arguments[i];
+				}
+			}
+			preload(
+				"Site_Assets/menu_media_hover.png",
+				"Site_Assets/menu_media_clicked.png",
+				"Site_Assets/menu_media_default.png",
+				"Site_Assets/menu_explore_hover.png",
+				"Site_Assets/menu_explore_clicked.png",
+				"Site_Assets/menu_explore_default.png",
+				"Site_Assets/menu_about_hover.png",
+				"Site_Assets/menu_about_clicked.png",
+				"Site_Assets/menu_about_default.png",
+				"Site_Assets/menu_news_hover.png",
+				"Site_Assets/menu_news_clicked.png",
+				"Site_Assets/menu_news_default.png",
+				"Site_Assets/menu_faq_hover.png",
+				"Site_Assets/menu_faq_clicked.png",
+				"Site_Assets/menu_faq_default.png",
+				"Site_Assets/menu_discord_hover.png",
+				"Site_Assets/menu_discord_clicked.png",
+				"Site_Assets/menu_discord_default.png",
+				"Site_Assets/menu_subscribe_hover.png",
+				"Site_Assets/menu_subscribe_clicked.png",
+				"Site_Assets/menu_subscribe_default.png",
+				"Site_Assets/menu_store_hover.png",
+				"Site_Assets/menu_store_clicked.png",
+				"Site_Assets/menu_store_default.png",
+				"Site_Assets/ui_egobracer.gif",
+				"Site_Assets/ui_topmenu_left.gif",
+				"Site_Assets/menu_tray.png",
+				"Site_Assets/topmenu_right.png"
+			);
+		</script>
+	</body>
+</html>

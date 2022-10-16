@@ -1,0 +1,293 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<title>The City of Nodd - The City</title> <!--The page title in the browser tab-->
+		<link rel="icon" href="https://nodd-arca.net/test/Site_Assets/icon.png"> <!--The icon in the browser tab!-->
+		<link rel="stylesheet" href="styles.css"> <!--Linking the stylesheets (that contain all the 'How to display this stuff' information)-->
+		<link rel="stylesheet" href="egobracer.css"> <!--Egobracer.css is for the top and bottom menus, to make it easier to put them into other
+ pages.-->
+		<link rel="stylesheet" href="toptabsCity.css">
+		<link href="jquery-ui/jquery-ui.css" rel="stylesheet"> <!--Jquery ui styles!-->
+	</head>
+	<body>
+		<div class="bg"> <!--This is just a container that holds the background picture. Styles.css has all the information!-->
+		</div>
+		
+		<!--**********************************************-->
+		
+		<div class="main" id="city"> <center>
+			<img src="http://nodd-arca.net/test/Site_Assets/header_city.png" class="headerImg"/></center>
+			
+			<div class="toptabBar">
+				<button class="topBarButton" style="border-bottom-width:0px;background-color:#446756;">The Council</button>
+				<button class="topBarButton">The Courts</button>
+				<button class="topBarButton">Induction </button><!-- This is a very silly thing I've done, but it's "Induction " with a space to avoid a name overlap with ANOTHER thing on the website called "Induction" (without a space). I made a slight error in my future-proofing, whoops.-->
+				
+			</div>
+			<div class="toptabBar">
+				<button class="topBarButton">Ordinances</button>
+				<button class="topBarButton">Punishment</button>
+				<button class="topBarButton">The Arcanet</button>
+			</div>
+						
+			<div class="tabContent" style="display:block;clear:left;">
+				<div id="The Council" class="tab" style="display:block">
+					<div class="cityTitle">The Council of Nodd</div>
+					
+					<div class="citytext">The Council of Nodd is accepted by most to have been present as long as the city itself, and its origins are likewise unknown. This doesn’t stop citizens from having their own theories, which range from scientific theories to utter madness - some individuals regard the entity as a higher power capable of far more than just maintaining order. The secretive and often destructive nature of the Council does little in keeping these conspiracies at bay. </div>
+					
+					<div class="citytext">The Council of Nodd is made up of the major and minor council.</div>
+					
+					<div class="cityTitle">The Major Council</div>
+					
+					<div class="citytext">The major council is made up of the citygods and The Unseen Ones - a small group of anonymous figures who deal directly with the citygods. These unknown entities convey the collective will of the citygods to the minor council for enforcement.</div>
+					
+					<div class="citytext">Each citygod is an ancient and corrupted cityspeaker, considered the most powerful in their aspect of magic. Each also has a following - called a house - as a source of belief to sustain power.</div>
+					
+					<div class="citytext">Citygods receive treatment that falls between royalty and imprisonment. Generally restricted to their chambers but housed lavishly, their purpose is to assess the needs of the city, and to answer inquiries posed by the minor council.</div>
+					
+					<div class="cityGods">
+						<div class="cityGodContainer"><a href="https://nodd-arca.net/arcanet/index.php?title=Filo_Rooke"><img class="cityGodPortrait" src="http://nodd-arca.net/test/Site_Assets/portraitest_Filo.png" /></a>
+						<br>
+						Filo Rooke, of Psilysium</div>
+						<div class="cityGodContainer"><a href="https://nodd-arca.net/arcanet/index.php?title=Illa_Phasmere"><img class="cityGodPortrait" src="http://nodd-arca.net/test/Site_Assets/portraitest_Illa.png" /></a>
+						<br>
+						Illa Phasmere, of Umbrasia</div>
+						<div class="cityGodContainer"><a href="https://nodd-arca.net/arcanet/index.php?title=Mercian_Vetch"><img class="cityGodPortrait" src="http://nodd-arca.net/test/Site_Assets/portraitest_Mercian.png" /></a>
+						<br>
+						Mercian Vetch, of Vorn</div>
+						<div class="cityGodContainer"><a href="https://nodd-arca.net/arcanet/index.php?title=The_Mothertoad"><img class="cityGodPortrait" src="http://nodd-arca.net/test/Site_Assets/portraitest_Mothertoad.png" /></a>
+						<br>
+						The Mothertoad, of Viviria</div>
+						<div class="cityGodContainer"><a href="https://nodd-arca.net/arcanet/index.php?title=Quin_Aven"><img class="cityGodPortrait" src="http://nodd-arca.net/test/Site_Assets/portraitest_Quin.png" /></a>
+						<br>
+						Quin Aven, of Omnillian</div>
+						<div class="cityGodContainer"><a href="https://nodd-arca.net/arcanet/index.php?title=Pnura"><img class="cityGodPortrait" src="http://nodd-arca.net/test/Site_Assets/portraitest_Pnura.png" /></a>
+						<br>
+						Pnura, of Morphoria</div>
+					</div>
+					
+					<div class="cityTitle">The Minor Council</div>
+					
+					<div class="citytext">The minor council attempts to enact and enforce the will of the collective major council through rapidly-changing laws, announcements, and regulations.</div>
+					
+					<div class="citytext">The Minor Council also gives formal judgment on disputes between citizens or corporations. A court hearing may be requested by anyone, but most are ignored. In some cases, a citizen may even face punishment for requesting a court hearing over something deemed particularly petty or suspected of being anti-Council.</div>
+					
+					<div class="citytext">​The minor council and its attendants also oversee any Council-directed processes and establishments.</div>
+					
+					<div class="cityTitle">The Council Spire</div>
+					
+					<div class="citytext">​​The Council Spire is a large tower in the center of Nodd. It serves as the headquarters for the Council, as well as the residence of all members of the major council. Their respective houses connect to their quarters via heavily-guarded skybridges.</div>
+					
+					<div class="cityTitle">Council Attendants</div>
+					
+					<div class="citytext">​​Council attendants are given a variety of roles.</div>
+				</div>
+				
+				<div id="The Courts" class="tab" style="display:none">
+					<div class="cityTitle">The Courts</div>
+					
+					<div class="cityText">The minor council is made up of various organizations known as Courts.</div>
+					
+					<div class="cityText">The courts are sections of the Council Spire, and usually refer to the buildings through which citizens can access related services.</div>
+					
+					<div class="cityText">​<b>Court of Analysis</b> - Responsible for exploring and documenting the world and its magic.</div>
+					
+					<div class="cityText"><b>Court of Architecture</b> - Responsible for anything related to buildings, including housing. Organizes and enacts The Pruning.</div>
+					
+					<div class="cityText"><b>Court of Ceremony</b> - Responsible for any Council-organized events and ceremonies.</div>
+					
+					<div class="cityText"><b>Court of Discipline</b> - Deals with anything relating to The Underchambers, public punishment, and execution. All Council Pawns and Knights belong to the Court of Discipline.</div>
+					
+					<div class="cityText"><b>Court of Induction</b> - Ushers outsiders into the city and provides them with a brief invasive probing, both physical and mental, as well as an orientation seminar explaining the workings of Nodd. Often, a mage from the Court of Analysis will be on site, standing by to document new outsider species.</div>
+					
+					<div class="cityText"><b>Court of Information</b> - Responsible for all the Council’s bookkeeping. Contains information on all citizens, organizations, magic use, and almost everything else.</div>
+					
+					<div class="cityText"><b>Court of Medicine</b> - The Council's hospital.</div>
+					
+					<div class="cityText"><b>Court of Resurrection</b> - Responsible for reviving citizens. Also determines how many death allowances a citizen gets, based on information provided by the Court of Information.</div>
+					
+					<div class="cityText"><b>Court of Sanitation</b> - Responsible for keeping the city streets free of corpses and garbage - at least enough to allow passage.</div>
+				</div>
+				
+				<div id="Induction " class="tab" style="display:none">
+					<div class="cityTitle">Induction</div>
+					
+					<div class="cityText">COMING SOON</div>
+				</div>
+				
+				<div id="Ordinances" class="tab" style="display:none">
+					<div class="cityTitle">Ordinances</div>
+					
+					<div class="cityText">COMING SOON</div>
+				</div>
+				
+				<div id="Punishment" class="tab" style="display:none">
+				<div style="text-align:center;font-style:italic;color:#cc0000;font-family:Futura, sans-serif;font-size:max(1em, 1vw);padding-top:6vh;padding-bottom:6vh;">This section contains violent and gross descriptions. Browse at your own risk.</div>
+					<div class="cityText">Most punishmable crimes a citizen can commit are due to not generating enough chaos, or going against the Council in some way. Punishments and executions are performed day and night in The Amphitheater, and the public is encouraged to attend. A citizen can access a schedule of upcoming punishments and executions via their ego bracer, and attend whatever piques their interest.</div>
+					
+					<div class="cityText">Any spells used by a Council Reaper are likely to be of the highest caliber.</div>
+					
+					<div class="cityTitle">Beast Chaining</div>
+					
+					<div class="cityText">During beast-chaining, the victim is restrictively bound to a large, usually quadrupedal beast in some degrading or undesirable way. Often, the victim will have their mouth, genitals, or anus affixed to the creature’s anus or sheath.</div>
+					
+					<div class="cityTitle">Bestialization</div>
+					
+					<div class="cityText">During bestialization, the victim is forced into a feral form of themselves and left to fend for themselves in this form until death, losing all status as a sapient citizen. Once resurrected (if they are), they will revert to their original form.</div>
+					
+					<div class="cityTitle">Box Feeding</div>
+					
+					<div class="cityText">The torture known as box feeding refers to a victim being placed in a clear, coffin-sized container with a number of hungry vermin who will slowly eat them alive. The container is generally left in the street for all to enjoy.</div>
+					
+					<div class="cityTitle">The Bridle</div>
+					
+					<div class="cityText">The bridle refers to a torture method in which the victim is forced to wear a metal device around their head, ass, and/or groin. These devices are fitted with aureoles, which are magic interspatial portals. The other aureole will be stationed in a public area, where strangers can make whatever contribution they please - these contributions will then be forced into the mouth, vagina, ass, or urethra of the wearer.</div>
+					
+					<div class="cityTitle">The Cocoon</div>
+					
+					<div class="cityText">The cocoon refers to a form of torture in which the victim is held within the spell Cloying Cocoon and left to rot in their own excrement.</div>
+					
+					<div class="cityTitle">Dunking</div>
+					
+					<div class="cityText">During the practice of dunking, the victim is held above a vat via levitation or bondage, and repeatedly dunked in the substance below. This may be hot oil, freezing water, stinging insects, sewage, cum, or any other number of foul or painful things.</div>
+					
+					<div class="cityTitle">The Funnel</div>
+					
+					<div class="cityText">During the torture known as the funnel, the victim is bound to a platform with a large funnel forced between their jaws or into their anus or vagina. Citizens are then encouraged to make whatever liquid contributions they please.</div>
+					
+					<div class="cityTitle">God-Tending</div>
+					
+					<div class="cityText">A citizen sentenced to God-Tending is forced into the role of Council Fodder. These expendables are used by The Unseen Ones to tend to the citygods' various needs, such as feeding, bathing, and sexual needs. Council Fodder are almost always killed on the job, but not always.</div>
+					
+					<div class="cityTitle">Gorging</div>
+					
+					<div class="cityText">During gorging, the spells Appetize and Starve are cast on the victim, and they’re provided with an enormous pile of food they will then helplessly consume until they burst.</div>
+					
+					<div class="cityTitle">The Guillotine</div>
+					
+					<div class="cityText">Guillotines in Nodd have more than a single hole for the neck. Generally speaking, a victim is forced to place their limbs, tail, and genitalia into separate holes, which may be long to allow for several blades to cleave appendages into several pieces.</div>
+					
+					<div class="cityTitle">Inanimate Confinement</div>
+					
+					<div class="cityText">A victim subjected to inanimate confinement is forcibly transformed into an object for a designated period of time. The object is usually something degrading or unpleasant, and something that will then be used by citizens. Examples may include garbage cans, urinals, toilets, rugs, or similar items.</div>
+					
+					<div class="cityTitle">Mortification</div>
+					
+					<div class="cityText">During mortification, the victim is subjected to the spell Mortify, which causes something embarrassing to happen to the target. This is done in a highly public area.</div>
+					
+					<div class="cityTitle">The Pillory</div>
+					
+					<div class="cityText">The pillory refers to a wooden device for restraining the neck, wrists, and genitals. Often citizens will be encouraged to harass the victim in any way desirable.</div>
+					
+					<div class="cityTitle">Prickling</div>
+					
+					<div class="cityText">Prickling is a torture that involves the victim stripped nude and restrained spread-eagle, and then covered in prickledust. Prickledust is a powder that induces severe itching.</div>
+					
+					<div class="cityTitle">Shrinking</div>
+					
+					<div class="cityText">Shrinking refers to being reduced to between 1 and 4 inches tall and left to fend for oneself in this form until death. Many microcitizens are micro for this reason. Once resurrected (if they are), they will revert to their original form.</div>
+					
+					<div class="cityTitle">Slaughtering</div>
+					
+					<div class="cityText">When a citizen is sent to the Abbatoir as a form of punishment, it's known as slaughtering. Here, they'll be processed like any other piece of meat that enters the facility, and the resulting product will be sold to various shops and restaurants.</div>
+					
+					<div class="cityTitle">Splaying</div>
+					
+					<div class="cityText">Splaying is when a citizen's limbs are stretched taut between four posts, either by rope or spell. They're then left in the streets for usage by strangers.</div>
+					
+					<div class="cityTitle">The Tank</div>
+					
+					<div class="cityText">During the torture method known as the tank, the victim is placed in a clear, enclosed cylinder with an aureole (a magic portal) installed in the top. Through the portal, water, cum, waste, or another substance will slowly drain, filling the tank and eventually drowning the victim.
+					</div>
+					
+					<div class="cityText" style="padding-top:2vh;text-align:center;"><b>A full list of punishments can be found <a href="https://nodd-arca.net/arcanet/index.php?title=Punishments" target="_blank">on the Arcanet.</a></b></div>
+				</div>
+				
+				<div id="The Arcanet" class="tab" style="display:none">
+					<div class="cityTitle">The Arcanet</div>
+					
+					<div class="cityText">​The arcanet contains all information about the world made public by the Council - one can find information about species, weather, upcoming events, and more. Most shops and services have a public hologram that can be accessed when concentrated upon; these often begin to partially manifest when one passes by the associated establishment. These holograms contain basic information and often the option to purchase items or download free samples to one’s ego bracer.</div>
+					
+					<div class="cityText">The arcanet is also home to a number of solo and competitive games playable on one’s ego bracer. Almost all of them require gloam to play, and promise substantial winnings. These are an easy and convenient way to gamble away one's livelihood.</div>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+		
+		<?php include('headfoot.php'); ?>
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="jquery-ui/jquery-ui.js"></script>
+		<script> 
+			
+			var tabList = document.getElementsByClassName("topBarButton");
+			var i;
+
+			for (i = 0; i < tabList.length; i++) {
+			  tabList[i].addEventListener("click", function() {
+				var x = document.getElementsByClassName("tab");
+				for (let j = 0; j < x.length; j++) {
+					x[j].style.display = "none";
+				} 
+				x = document.getElementsByClassName("topBarButton");
+				for (let k = 0; k < x.length; k++) {
+					x[k].style.borderBottomWidth = "2px";
+					x[k].style.backgroundColor = "#224534";
+				} 
+				this.style.borderBottomWidth = "0px";
+				this.style.backgroundColor = "#446756";
+				document.getElementById(this.innerHTML).style.display = "block";
+				footPos();
+			  });
+			} 
+			
+		
+			/******************************************/
+			$('#egoBracerBut').on('click', function(e) { //In the element named specifically "egoBracerBut", when someone clicks it, run this code.
+				$('.egoShell').toggleClass('egoButton_active'); //Find the things of the type .egoShell, and either add (or remove if they already have it) all the settings in the .css file for ".egoButton_active".
+			});
+			
+			/*******************Preload our images (borrowed code)**********************/
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image();
+					images[i].src = preload.arguments[i];
+				}
+			}
+			preload(
+				"Site_Assets/menu_media_hover.png",
+				"Site_Assets/menu_media_clicked.png",
+				"Site_Assets/menu_media_default.png",
+				"Site_Assets/menu_explore_hover.png",
+				"Site_Assets/menu_explore_clicked.png",
+				"Site_Assets/menu_explore_default.png",
+				"Site_Assets/menu_about_hover.png",
+				"Site_Assets/menu_about_clicked.png",
+				"Site_Assets/menu_about_default.png",
+				"Site_Assets/menu_news_hover.png",
+				"Site_Assets/menu_news_clicked.png",
+				"Site_Assets/menu_news_default.png",
+				"Site_Assets/menu_faq_hover.png",
+				"Site_Assets/menu_faq_clicked.png",
+				"Site_Assets/menu_faq_default.png",
+				"Site_Assets/menu_discord_hover.png",
+				"Site_Assets/menu_discord_clicked.png",
+				"Site_Assets/menu_discord_default.png",
+				"Site_Assets/menu_subscribe_hover.png",
+				"Site_Assets/menu_subscribe_clicked.png",
+				"Site_Assets/menu_subscribe_default.png",
+				"Site_Assets/menu_store_hover.png",
+				"Site_Assets/menu_store_clicked.png",
+				"Site_Assets/menu_store_default.png",
+				"Site_Assets/ui_egobracer.gif",
+				"Site_Assets/ui_topmenu_left.gif",
+				"Site_Assets/menu_tray.png",
+				"Site_Assets/topmenu_right.png"
+			);
+		</script>
+	</body>
+</html>

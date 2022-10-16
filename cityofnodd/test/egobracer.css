@@ -6,43 +6,12 @@
 
 #egoBracerBut {
 	height: 6vw;
+	max-height: 115px;
 	background-size: cover;
 	border: none;
 	z-index: 3;
 	bottom: 0px;
 	pointer-events:auto;
-}
-#faqImg{
-	width: 121px;
-	height: 61px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
-#faqImg:hover {
-	content:url(Site_Assets/menu_faq_hover.png);
-}
-#faqImg:active {
-	content:url(Site_Assets/menu_faq_clicked.png);
-}
-#discordImg{
-	width: 140px;
-	height: 42px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
-#discordImg:hover {
-	content:url(Site_Assets/menu_discord_hover.png);
-}
-#discordImg:active {
-	content:url(Site_Assets/menu_discord_clicked.png);
-}
-#aboutBut {
-	height: 2.5vw;
-	position: absolute;
-	left: 22vw;
-	top: 0.5vw;
 }
 #aboutBut:hover {
 	content:url(Site_Assets/menu_about_hover.png);
@@ -50,23 +19,11 @@
 #aboutBut:active {
 	content:url(Site_Assets/menu_about_clicked.png);
 }
-#discordBut {
-	height: 2.5vw;
-	position: absolute;
-	left: 56vw;
-	top: 0.5vw;
-}
 #discordBut:hover {
 	content:url(Site_Assets/menu_discord_hover.png);
 }
 #discordBut:active {
 	content:url(Site_Assets/menu_discord_clicked.png);
-}
-#exploreBut {
-	height: 2.5vw;
-	position: absolute;
-	left: 12vw;
-	top: 0.5vw;
 }
 #exploreBut:hover {
 	content:url(Site_Assets/menu_explore_hover.png);
@@ -74,23 +31,11 @@
 #exploreBut:active {
 	content:url(Site_Assets/menu_explore_clicked.png);
 }
-#faqBut {
-	height: 2.5vw;
-	position: absolute;
-	left: 39vw;
-	top: 0.5vw;
-}
 #faqBut:hover {
 	content:url(Site_Assets/menu_faq_hover.png);
 }
 #faqBut:active {
 	content:url(Site_Assets/menu_faq_clicked.png);
-}
-#mediaBut {
-	height: 2.5vw;
-	position: absolute;
-	left: 47vw;
-	top: 0.5vw;
 }
 #mediaBut:hover {
 	content:url(Site_Assets/menu_media_hover.png);
@@ -98,35 +43,17 @@
 #mediaBut:active {
 	content:url(Site_Assets/menu_media_clicked.png);
 }
-#newsBut {
-	height: 2.5vw;
-	position: absolute;
-	left: 31vw;
-	top: 0.5vw;
-}
 #newsBut:hover {
 	content:url(Site_Assets/menu_news_hover.png);
 }
 #newsBut:active {
 	content:url(Site_Assets/menu_news_clicked.png);
 }
-#storeBut {
-	height: 2.5vw;
-	position: absolute;
-	left: 79vw;
-	top: 0.5vw;
-}
 #storeBut:hover {
 	content:url(Site_Assets/menu_store_hover.png);
 }
 #storeBut:active {
 	content:url(Site_Assets/menu_store_clicked.png);
-}
-#subscribeBut {
-	height: 2.5vw;
-	position: absolute;
-	left: 68vw;
-	top: 0.5vw;
 }
 #subscribeBut:hover {
 	content:url(Site_Assets/menu_subscribe_hover.png);
@@ -148,6 +75,7 @@
   position: fixed; /*This means its position is fixed on the page and will stay in position, scrolling with the window (as opposed to eventually scrolling out of view)*/
   bottom: 0px;
   height: 6vw;
+  max-height: 115px;
   pointer-events:none;
 }
 
@@ -155,7 +83,9 @@
   z-index: 0;
   bottom: 0px;
   height: 5vw;
+  max-height: 96px;
   width: 50vw;
+  max-width: 960px;
   margin-top: 0.75vw; /*We can define the spacing for specific sides, too.*/
   padding-top: 0vw;
   padding-bottom: 0vw;
@@ -171,6 +101,12 @@
   transform: translateX(-200%); /*By default, wherever it WOULD be, it then gets moved a huge amount to the left (and off-screen).*/
   opacity: 0; /*It's also invisible.*/
   pointer-events:none;
+}
+.slidymenu {
+	height:5vw;
+	max-height: 96px;
+	width:45vw;
+	max-width: 864px;
 }
 
 .egoButton_active {
@@ -243,6 +179,12 @@
 	text-decoration: none;
 }
 
+.butcontain {
+	position: absolute;
+	top: 0px;
+	left: 12vw;
+	padding-top: 0.5vw;
+}
 .topMenuClass {
 	position: fixed;
 	top: 0px;
@@ -252,4 +194,42 @@
 }
 .topBut {
 	pointer-events:auto;
+	height: 2.5vw;
+	max-height: 48px;
+	float:left;
+	top: 0.5vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+@media only screen and (min-width: 1920px) {
+	.butcontain {
+		left: 230px !important;
+		padding-top: 10px !important;
+	}
+	.topBut{
+		padding-left: 19px !important;
+		padding-right: 19px !important;
+	}
+	.arcanetLinksTop {
+		left: 192px !important;
+		top: 19px !important;
+		font-size: 24px !important;
+	}
+	.arcanetLinksBot {
+		left: 192px !important;
+		top: 58px !important;
+		font-size: 14px !important;
+	}	
+	.egoShell {
+	  margin-top: 14px;
+	  padding-left: 96px;
+	  padding-right: 38px;
+	  margin-right: 38px;
+	  border-top-right-radius:115px;
+	  border-bottom-right-radius:115px;
+	}
+	.egoButton_active {
+	  transform: translateX(-154px);
+	}
 }

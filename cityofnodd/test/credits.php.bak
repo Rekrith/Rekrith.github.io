@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<title>The City of Nodd - Credits</title> <!--The page title in the browser tab-->
+		<link rel="icon" href="https://nodd-arca.net/test/Site_Assets/icon.png"> <!--The icon in the browser tab!-->
+		<link rel="stylesheet" href="styles.css"> <!--Linking the stylesheets (that contain all the 'How to display this stuff' information)-->
+		<link rel="stylesheet" href="egobracer.css"> <!--Egobracer.css is for the top and bottom menus, to make it easier to put them into other pages.-->
+		<link href="jquery-ui/jquery-ui.css" rel="stylesheet"> <!--Jquery ui styles!-->
+	</head>
+	<body>
+		<div class="bg"> <!--This is just a container that holds the background picture. Styles.css has all the information!-->
+		</div>
+		
+		<!--**********************************************-->
+		
+		<div class="main" id="credits" style="margin-top:15vh;padding-bottom:15vh;"> <center>
+			<img src="http://nodd-arca.net/test/Site_Assets/header_credits.png" /></center>
+			
+			<!--Puck!-->
+			<div class="creditsLeft"><div class="creditsTitle">Slug / Puck / Filo</div>
+			<div class="creditsPronoun">they/them</div>
+			<div class="creditsInnerText">Artist, dreamer, and grandiose schemer of the City of Nodd world. They were the original font through which the setting took form and are responsible for the official art, concepts, design, and implementation of the City of Nodd setting.</div>
+			<div class="creditsInnerText">Puck has been working on the City of Nodd since as early as 2018, based on concepts and ideas that have been around for even longer. Their passions take them through numerous media and forms of artistic endeavors, leading to the wide variety of Noddish media that exist today. They struggle with some elements of socialising and tend to prefer contact indirectly, however are open to respectful messaging (though they cannot guarantee a response).<br><a href="https://www.furaffinity.net/user/slug" target="_blank">https://www.furaffinity.net/user/slug</a></div></div><div style="display:inline-block;padding-left:5vw;"><img src="http://nodd-arca.net/test/Site_Assets/puck_torturer.webp" style="width:max(15vw, 80%);height:auto;"/></div>
+			
+			<div style="display:block;" /> <!--It's a Sal spacer!-->
+			<!--Losian!-->
+			<div style="display:inline-block;padding-right:5vw;padding-left:22.5vw;padding-top:5vh;"><img src="http://nodd-arca.net/test/Site_Assets/losian.webp" style="width:max(15vw, 80%);height:auto;"/></div><div class="creditsRight"><div class="creditsTitle" style="text-align:right;">Losian</div>
+			<div class="creditsPronoun" style="text-align:right;">he/him</div>
+			<div class="creditsInnerText" style="text-align:right;">The first follower, sounding-board, and steady rock that helped bring the City of Nodd to first life. Losian has been responsible for concepts, writing, and overall management of the front-facing side of the project. His consistent work is responsible for ensuring that the captivating content that the bird behind the scenes produces makes it onto the web for others to enjoy.</div>
+			<div class="creditsInnerText" style="text-align:right;">Losian has been helping out with Puck's artistic exploits for many years, and is generally the most readily-available point of contact for all things Noddish. He is an avid gamer, hedonist, bead-weaver, and dancer (if you count Beat Saber). Losian's help has been invaluable in producing some of the often intense quantities of writing that go into the Noddules.<br><a href="https://www.furaffinity.net/user/losian" target="_blank">https://www.furaffinity.net/user/losian</a></div></div>
+			
+			<div style="display:block;" /> <!--It's a Sal spacer!-->
+			
+			<!--Salrith-->
+			<div class="creditsLeft"><div class="creditsTitle">Salrith</div>
+			<div class="creditsPronoun">they/them</div>
+			<div class="creditsInnerText">Salrith began supporting the development of the City of Nodd in early 2021, and has primarily assisted with writing and technical implementation.</div>
+			<div class="creditsInnerText">Salrith has a penchant for writing, but occasionally dabbles in other media.<br><a href="https://www.furaffinity.net/user/rekrith" target="_blank">https://www.furaffinity.net/user/rekrith</a></div></div><div style="display:inline-block;padding-left:5vw;"><img src="http://nodd-arca.net/test/Site_Assets/sal.webp" style="width:max(15vw, 80%);height:auto;padding-top:5vh;"/></div>
+			
+			<div style="display:block;" /> <!--It's a Sal spacer!-->
+
+			<div class="creditsText" style="padding-top:10vh;">All art and design is by <a href="https://www.furaffinity.net/user/slug" target="_blank">Slug</a> unless otherwise noted. Writing and concepts are the collaborative work of Slug, <a href="https://www.furaffinity.net/user/losian" target="_blank">Losian</a>, and <a href="https://www.furaffinity.net/user/rekrith" target="_blank">Salrith</a>.</div>
+
+			<div class="creditsText">Sounds are royalty-free. The Spotify playlist is unofficial and unaffiliated with Nodd, and I claim no ownership of any songs.</div>
+
+			<div class="creditsText">Thank you to Losian, Salrith, <a href="https://www.furaffinity.net/user/colocon1" target="_blank">Cade</a>, <a href="https://www.furaffinity.net/user/raidagu" target="_blank">Maji</a>, <a href="https://www.furaffinity.net/user/tealie" target="_blank">Tealie</a>, <a href="https://www.furaffinity.net/user/dragondraikk" target="_blank">Draikk</a>, and <a href="https://www.furaffinity.net/user/redscale" target="_blank">Sunaseth</a> for your help in moderating the Discord server, and for general help and support behind the scenes.</div>
+			
+​			<div class="creditsText">Thank you to my friends for taking the time to look things over prior to release, and for your excellence in general.</div>
+
+			<div class="creditsText">Thank you to my followers. I know I don't say much, but you motivate me to continue drawing and sharing my ideas. In particular, I'd like to thank those of you who have stuck around long enough to remember some of these concepts from long ago.</div>
+
+			<!--EDIT IMMORTAL TIER PEOPLE HERE!-->
+			<div class="creditsText">Thank you to my subscribers, and a special thank you to everyone in the Immortal tier:<br>
+			<b>Salrith, Cawbold, Cade, ZigfriedVB, PhoenixTril, Vosyl, Paradoxical Otter, S'Age the Wandering Librarian, Theta, Broccoli Stinkbutt, Draikk, Saint, Citrux, TehAngryXeno, BigPigMike, Ryo, Kryori, Bell_Boy, FungalDragon, Korynx, Pho, Urta.</b></div>
+			
+			<div class="creditsText">This project is dedicated to the furry fandom, and to anyone who has ever felt like a misfit. Thank you for existing.</div>
+			
+			<div class="creditsPronoun" style="padding-left:22.5vw;padding-top:2vh;">Inspiration</div>
+			
+			<div class="creditsText">My inspirations are many, but a few notable sources are The Dark Crystal, The Labyrinth, Dungeons & Dragons (particularly Planescape), Final Fantasy, Dark City, Hellraiser, Hitchhiker's Guide to the Galaxy, the works of Tim Burton, Dr. Seuss, HR Giger, H.P. Lovecraft, Hieronymous Bosch, Wayne Barlowe, and many more.</div>
+			
+			<div class="creditsText">I have many inspirations within the fandom as well. Thank you for sharing your creations with us.</div>
+		</div>
+		
+		<?php include('headfoot.php'); ?>
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="jquery-ui/jquery-ui.js"></script>
+		<script> 
+			/******************************************/
+			$('#egoBracerBut').on('click', function(e) { //In the element named specifically "egoBracerBut", when someone clicks it, run this code.
+				$('.egoShell').toggleClass('egoButton_active'); //Find the things of the type .egoShell, and either add (or remove if they already have it) all the settings in the .css file for ".egoButton_active".
+			});
+			
+			/*******************Preload our images (borrowed code)**********************/
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image();
+					images[i].src = preload.arguments[i];
+				}
+			}
+			preload(
+				"Site_Assets/menu_media_hover.png",
+				"Site_Assets/menu_media_clicked.png",
+				"Site_Assets/menu_media_default.png",
+				"Site_Assets/menu_explore_hover.png",
+				"Site_Assets/menu_explore_clicked.png",
+				"Site_Assets/menu_explore_default.png",
+				"Site_Assets/menu_about_hover.png",
+				"Site_Assets/menu_about_clicked.png",
+				"Site_Assets/menu_about_default.png",
+				"Site_Assets/menu_news_hover.png",
+				"Site_Assets/menu_news_clicked.png",
+				"Site_Assets/menu_news_default.png",
+				"Site_Assets/menu_faq_hover.png",
+				"Site_Assets/menu_faq_clicked.png",
+				"Site_Assets/menu_faq_default.png",
+				"Site_Assets/menu_discord_hover.png",
+				"Site_Assets/menu_discord_clicked.png",
+				"Site_Assets/menu_discord_default.png",
+				"Site_Assets/menu_subscribe_hover.png",
+				"Site_Assets/menu_subscribe_clicked.png",
+				"Site_Assets/menu_subscribe_default.png",
+				"Site_Assets/menu_store_hover.png",
+				"Site_Assets/menu_store_clicked.png",
+				"Site_Assets/menu_store_default.png",
+				"Site_Assets/ui_egobracer.gif",
+				"Site_Assets/ui_topmenu_left.gif",
+				"Site_Assets/menu_tray.png",
+				"Site_Assets/topmenu_right.png"
+			);
+		</script>
+	</body>
+</html>

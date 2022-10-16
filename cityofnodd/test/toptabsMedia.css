@@ -1,0 +1,63 @@
+#gallery {
+	margin-top:15vh;
+	padding-bottom:15vh;
+	width: 80vw;
+	padding-left:10vw;
+}
+
+.toptabBar {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-right: 0px;
+	padding-right: 4px;
+	margin-bottom: -4px;
+	margin-left: 0px;
+}
+
+.topBarButton {
+	background-color: #224534;
+	color: #6BFCC9;
+	cursor: pointer;
+	padding: 5px;
+	width: 13.33vw; /*This is the thing you want to be 80/#tabs ! Make sure to edit down the bottom under Media Query; make that one twice this number.*/
+	text-align: center;
+	border: solid;
+	border-bottom-width: 0px;
+	border-width: 2px;
+	border-color: #49DAA7;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	outline: none;
+	font-family: yarin;
+	font-size: max(1em, 1vw);
+	display: inline-block;
+	margin-right: -4px; /*To counter the problem of inline-blocks having gaps!*/
+}
+
+.tab {
+	background: rgba(0,59,67,0.3);
+	color: #ffffff;
+	font-family: Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	width: 80vw - 4px;
+	border: solid;
+	border-width: 2px;
+	border-top: none;
+	border-color: #49DAA7;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	outline: none;
+	height: auto;
+	min-height: 10vh;
+	padding-top: 2vh;
+	padding-bottom: 1vh;
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+@media screen and (max-width: 800px) {
+	.topBarButton {
+		width: 26.66vw;
+	}
+}

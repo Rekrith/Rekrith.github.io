@@ -1,0 +1,147 @@
+.skewcontainer {
+	margin-left: -10.92vh;
+	vertical-align: middle;
+	padding-bottom: 3vh;
+	margin-left: 1vw;
+}
+.skewframe {
+	transform: skewX(-20deg);
+	border-radius: 5px;
+	width: max(5vw, 80px);
+	height: 30vh;
+	overflow: hidden;
+    margin-top: 5vh;
+	border: 2px solid #2DC991;
+	display: inline-block;
+	transition: 0.3s;
+	z-index: 0;
+	vertical-align: middle;
+}
+.hoverframe {
+	width: max(10vw, 120px);
+	height: 35vh;
+	margin-left: -2.5vw;
+	margin-top: 2.5vh;
+}
+.artskew {
+	transform: skewX(20deg);
+	position: relative;
+	height: auto;
+	width: auto;
+	max-height: 80vh;
+	max-width: 90vw;
+}
+.deskew {
+	transform: skewX(0deg);
+}
+.bigframe {
+	transform: skewX(0deg);
+	width: 90vw !important;
+	height: 90vh !important;
+	border-radius: 5px;
+	overflow: hidden;
+	position: fixed;
+    border: 2px solid #2DC991;
+	/*margin-left: -20vw;*/
+	z-index: 100;
+	background-color: #000000;
+}
+.galtitle {
+	clear:left;
+	font-family: yarin-bld;
+	font-size: max(1em, 1vw);
+	padding-bottom: 0.5vh;
+}
+.galtext {
+	display: block;
+	padding-bottom: 0.5vh;
+	font-family: Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+}
+.skewframe .filth {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(100, 40, 0, 1);
+	text-align: center;
+	font-weight: bold;
+	line-height: 30vh;
+}
+.skewframe .gore {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(100, 0, 0, 1);
+	text-align: center;
+	font-weight: bold;
+	line-height: 30vh;
+}
+.skewframe .hoverWarn {
+	position: absolute;
+	top: 0;
+	left: 0.8vw;
+	width: 8vw;
+	height: 100%;
+	background: none;
+	text-align: center;
+	display: none;
+	white-space: normal;
+	padding-top: 18vh;
+	font-family: Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+}
+.galleryTitle {
+	font-family:yarin-bld;
+	font-size: max(1.5vw, 1.5em);
+}
+.galleryHeader {
+	font-family:yarin-bld;
+	font-size: max(2vw, 2em);
+}
+.galleryQuit {
+	color: #ffffff;
+	font-family:yarin-bld;
+	font-size: max(3vw, 3em);
+	position: absolute;
+	left: 90vw;
+	top: 85vh;
+	cursor: pointer;
+	z-index: 101;
+	display: none;
+}
+
+@media (max-aspect-ratio: 4/5) { /*Probably a mobile device*/
+	.skewframe {
+		width: max(10vw, 80px);
+		height: 15vh;
+	}
+	.hoverframe {
+		width: max(15vw, 120px);
+		height: 20vh;
+	}
+	.bigframe {
+		width: 80vw !important;
+		height: 80vh !important;
+	}
+	.artskew {
+		height: auto;
+		width: auto;
+		max-height: 70vh;
+		max-width: 80vw;
+	}
+	.skewframe .filth {
+		line-height: 15vh;
+	}	
+	.skewframe .gore {
+		line-height: 15vh;
+	}
+	.skewframe .hoverWarn {
+		padding-top: 9vh;
+		left: 1.2vw;
+		width: 12vw;
+	}
+}
