@@ -1,0 +1,428 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<title>The City of Nodd - Gallery</title> <!--The page title in the browser tab-->
+		<link rel="icon" href="Site_Assets/icon.png"> <!--The icon in the browser tab!-->
+		<link rel="stylesheet" href="styles.css"> <!--Linking the stylesheets (that contain all the 'How to display this stuff' information)-->
+		<link rel="stylesheet" href="egobracer.css"> <!--Egobracer.css is for the top and bottom menus, to make it easier to put them into other pages.-->
+		<link rel="stylesheet" href="gallery.css"> <!--I'm making a gallery.css to do some fancy lightbox stuff to try out <3-->
+		<link rel="stylesheet" href="toptabsMedia.css"> <!--Let's see if we can jam all our tab technology together!-->
+		<link href="jquery-ui/jquery-ui.css" rel="stylesheet"> <!--Jquery ui styles!-->
+	</head>
+	<body>
+		<div class="bg"> <!--This is just a container that holds the background picture. Styles.css has all the information!-->
+		</div>
+		
+		<div class="main" id="gallery" style="margin-top:15vh"><center>
+			<img src="Site_Assets/header_gallery.png" class="headerImg"/>
+			
+			<div style="display:block;padding-bottom:1vh;"></div> <!--It's a Sal spacer!-->
+			
+			
+			<!--TO PUCK AND LOSIAN: To add new tabs, it'll take a little bit of CSS jiggling (each tab should be 80/#tabs "vw" wide), but you can freely rename them. The only caveat is that the button text *must* be the same as the tab ID (case sensitive) down below.-->
+			<div class="toptabBar">
+				<button class="topBarButton" style="border-bottom-width:0px;background-color:#446756;">Citizens</button>
+				<button class="topBarButton">Flora and Fauna</button>
+				<button class="topBarButton">Places</button> <!--TO PUCK AND LOSIAN: You can freely rename these. To add more buttons, just copy and paste this line and change the text - but unless you change the topBarButton "width" property inside toptabsMedia.css to 80/#tabs (e.g. for four tabs, it'd be "20vw"), they'll look funky.-->
+			</div><!--
+			This here is a wonky space-fixing comment because of how inline-blocks display in browser. Don't mind it.
+			--><div class="toptabBar">
+				<button class="topBarButton">Items</button>
+				<button class="topBarButton">Scenes</button>
+				<button class="topBarButton">Sketches</button> <!--TO PUCK AND LOSIAN: This is a second 'set' of buttons - if the screen gets too thin, this second set will stack 'under' the first set! So it's mildly important to keep the sets so that there's the same number of buttons in each (at time of writing, there's 3 in each set)-->
+			</div>
+			
+			<div class="tabContent" style="display:block;clear:left;">
+			
+			
+				
+				<!--**************************PUCK AND LOSIAN EDIT/ADD TO GALLERY HERE********************-->
+			
+				<!--TO PUCK AND LOSIAN: This next div is the one you need to make sure the ID matches the button labels. They don't have to be in order, haha, but it's logically helpful if they are.-->
+				<div id="Citizens" class="tab" style="display:block">
+					<!--TO PUCK AND LOSIAN: This is the title text up top. Feel free to screw around and rename it as you please.-->
+					<div class="galleryTitle">Citizens</div>
+					<div class="skewcontainer">
+						<!--TO PUCK AND LOSIAN: To add a new image to the gallery, just copy/paste the entire skewframe div. So, from this next line to the comment that says END COPY HERE. Then just paste it after END COPY HERE, or wherever you'd like to insert it (at the end is good) and it'll be a new gallery entry!-->
+						<div class="skewframe">
+							<!--TO PUCK AND LOSIAN: Change this URL to point to the picture you want. It'll be 'the right size' automagically, fingers crossed.-->
+							<img class="artskew" src="https://static.wixstatic.com/media/ebefb2_0e223c7d87524ec6ab71900042a25fe1~mv2.jpg/v1/fit/w_1117,h_621,q_90/ebefb2_0e223c7d87524ec6ab71900042a25fe1~mv2.webp" />
+							<!--TO PUCK AND LOSIAN: Here you can change the title that'll appear when it's expanded.-->
+							<div class="galtitle">Wembil Cretch, the lift attendant</div>
+							<!--TO PUCK AND LOSIAN: Here you can add some text under the title. You can add more text by copy and pasting the line-->
+							<div class="galtext">He's quite handsome, isn't he?</div>
+							<div class="galtext">Extra textual!</div>
+							<!--TO PUCK AND LOSIAN: To give a spoiler overlay, just add the line below (you can swap class="filth" out for class="gore" if you like). Then the word inside the div will be the text that's printed on top.-->
+							<div class="filth">FILTH</div>
+							<!--TO PUCK AND LOSIAN: And this hoverWarn text is what will appear when someone moves their mouse over the top.-->
+							<div class="hoverWarn">CW: Wembil Cretch, the Lift Attendant!</div>
+						</div> 
+						<!--END COPY HERE-->
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">GORE TITLE TEXT</div>
+							<div class="galtext">GORE TEXT</div>
+							<div class="galtext">GORE TEXT</div>
+							<div class="gore">GORE</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<!--Here is another tab.-->
+				<div id="Flora and Fauna" class="tab" style="display:none">
+					<div class="galleryTitle">Beasts and Flora</div>
+					<div class="skewcontainer">
+					
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				
+				<!--And another one!-->
+				<div id="Places" class="tab" style="display:none">
+					<div class="galleryTitle">Places</div>
+					<div class="skewcontainer">
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--And another one!-->
+				<div id="Items" class="tab" style="display:none">
+					<div class="galleryTitle">Items</div>
+					<div class="skewcontainer">
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				
+				<!--And another one!-->
+				<div id="Scenes" class="tab" style="display:none">
+					<div class="galleryTitle">Scenes</div>
+					<div class="skewcontainer">
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				
+				<!--And another one!-->
+				<div id="Sketches" class="tab" style="display:none">
+					<div class="galleryTitle">Sketches</div>
+					<div class="skewcontainer">
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+						<div class="skewframe">
+							<img class="artskew" src="URL HERE" />
+							<div class="galtitle">TITLE TEXT</div>
+							<div class="galtext">TEXT</div>
+							<div class="galtext">TEXT</div>
+						</div>
+						
+					</div>
+				</div>
+				<!--**************************PUCK AND LOSIAN END EDIT/ADD TO GALLERY********************-->
+				
+				
+				
+				<!--TO PUCK AND LOSIAN: Venture beyond this point in the sourcefile if you like, but it's much less user friendly down below!-->
+			</div>
+			</center>
+		</div>
+		
+		<div class="galleryQuit" onClick="closePoi()">X</div>
+		
+		<?php include('headfoot.php'); ?>
+		
+		<div id="blackout" style="background-color:#000000;opacity:0.5;height:100vh;width:100vw;top:0;left:0;position:fixed;display:none;"></div>
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="jquery-ui/jquery-ui.js"></script>
+		<script> //Now we start the jQuery script 'zone' where all the scripts live that power a site. We also use // for comments now since we're in a Javascript zone.
+	  
+			var pois;
+			var poiID = 1;
+			var currentLoc = "";
+			var lastLoc = "induction";
+			var ref; //Something to track our modal!
+			
+			var oldX; //Where to return the popped out image to!
+			var oldY; //Second part of the coordinates.
+			var stage = 0; //A thing to toggle whether to 're-set' the position at the end of the movement!
+
+			
+			
+			/******************************************/
+			$('#egoBracerBut').on('click', function(e) { //In the element named specifically "egoBracerBut", when someone clicks it, run this code.
+				$('.egoShell').toggleClass('egoButton_active'); //Find the things of the type .egoShell, and either add (or remove if they already have it) all the settings in the .css file for ".egoButton_active".
+			});
+			
+			
+			var tabList = document.getElementsByClassName("topBarButton");
+			var i;
+
+			for (i = 0; i < tabList.length; i++) {
+			  tabList[i].addEventListener("click", function() {
+				var x = document.getElementsByClassName("tab");
+				for (let j = 0; j < x.length; j++) {
+					x[j].style.display = "none";
+				} 
+				x = document.getElementsByClassName("topBarButton");
+				for (let k = 0; k < x.length; k++) {
+					x[k].style.borderBottomWidth = "2px";
+					x[k].style.backgroundColor = "#224534";
+				} 
+				this.style.borderBottomWidth = "0px";
+				this.style.backgroundColor = "#446756";
+				document.getElementById(this.innerHTML).style.display = "block";
+				footPos();
+			  });
+			} 
+			
+			
+			/*********************These are our lightbox wedge-popup codes.*********************/
+			// Open the Modal
+			$(".skewframe").click(function() {
+				if ($(this).hasClass("bigframe") || stage != 0) { } else { //We have the stage != 0 check to stop multiple images going up at once and breaking the transitions.
+					stage = 1;
+					var posConverter = this.getBoundingClientRect();
+					oldX = posConverter.left;
+					oldY = posConverter.top;
+					$(this).css({"position":"fixed", "z-index":"100"});
+					$(this).attr("id", "activeGallery");
+					$(this).children(".filth").css("display","none");
+					$(this).children(".gore").css("display","none");
+					$(this).children(".hoverWarn").css("display", "none");
+					$(this).removeClass("hoverframe");
+					ref = $(this);
+					translate(this, ((document.documentElement.clientWidth / 2)-($(this).width()/2)), ((document.documentElement.clientHeight / 2))-($(this).height()/2));
+				}
+			});
+			function expandMe() {
+				ref.css({"transition":"1.0s", "float":"none"});
+				ref.addClass("bigframe");
+				ref.offset({top: $(window).height()*0.05 + $(window).scrollTop(), left: $(window).width()*0.00});
+				ref.children(".artskew").css("transition","1.0s");
+				ref.children(".artskew").addClass("deskew");
+				$("#blackout").css("display", "block");
+				$("html, body").css("overflow", "hidden");
+				$(".galleryQuit").css("display", "block");
+			}
+			function fixPos() {
+				stage = 0;
+				
+				$("#activeGallery").css({"position":"static"});
+				$("#activeGallery").attr("id","");
+			}
+			// Close the Modal
+			function closePoi() {
+				stage = 2;
+				ref.removeClass("bigframe");
+				$(".galleryQuit").css("display", "none");
+				ref.children(".artskew").removeClass("deskew");
+				$("#blackout").css("display", "none");
+				$("html, body").css("overflow", "visible");
+				translate(ref[0], oldX, oldY);
+				setTimeout(function() {
+					ref.css("transition","0.3s");
+					ref.children(".artskew").css("transition","0s");
+					ref.children(".filth").css("display","inline");
+					ref.children(".gore").css("display","inline");
+				}, 800);
+				
+				
+			}
+			
+			//Translation code (adapted from Sime Vidas)
+			function translate( elem, x, y ) {
+				var left = parseInt( css( elem, 'left' ), 10 ),
+					top = parseInt( css( elem, 'top' ), 10 ),
+					dx = left - x,
+					dy = top - y,
+					i = 1,
+					count = 10,
+					delay = 10;
+
+				function loop() {
+					if ( i >= count ) { 
+						if (stage == 2) {
+							setTimeout(fixPos, delay*50);
+						} else if (stage == 1) {
+							setTimeout(expandMe, delay*4);
+						}
+						return; 
+					}
+					i += 1;
+					elem.style.left = ( left - ( dx * i / count ) ).toFixed( 0 ) + 'px';
+					elem.style.top = ( top - ( dy * i / count ) ).toFixed( 0 ) + 'px';
+					setTimeout( loop, delay );
+				}
+
+				loop();
+			}
+
+			function css( element, property ) {
+				return window.getComputedStyle( element, null ).getPropertyValue( property );
+			}
+			
+			$(document).ready(function(){
+				$(document).bind('keydown', function(e) { 
+					if (e.which == 27) {
+						closePoi();
+					}
+				}); 
+			});
+			
+			/*******************Make our gallery thumbnails hoverable!******************/
+			$('.skewframe').mouseenter(function() {
+				if ($(this).hasClass("bigframe")) {
+				} else {
+					$(this).addClass("hoverframe");
+					$(this).children(".hoverWarn").css("display", "inline");
+				}
+			});
+			$('.skewframe').mouseleave(function() {
+				if ($(this).hasClass("bigframe")) {
+				} else {
+					$(this).removeClass("hoverframe");
+					$(this).children(".hoverWarn").css("display", "none");
+				}
+			});
+
+			/*******************Preload our images (borrowed code)**********************/
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image();
+					images[i].src = preload.arguments[i];
+				}
+			}
+			preload(
+				"Site_Assets/menu_media_hover.png",
+				"Site_Assets/menu_media_clicked.png",
+				"Site_Assets/menu_media_default.png",
+				"Site_Assets/menu_explore_hover.png",
+				"Site_Assets/menu_explore_clicked.png",
+				"Site_Assets/menu_explore_default.png",
+				"Site_Assets/menu_about_hover.png",
+				"Site_Assets/menu_about_clicked.png",
+				"Site_Assets/menu_about_default.png",
+				"Site_Assets/menu_news_hover.png",
+				"Site_Assets/menu_news_clicked.png",
+				"Site_Assets/menu_news_default.png",
+				"Site_Assets/menu_faq_hover.png",
+				"Site_Assets/menu_faq_clicked.png",
+				"Site_Assets/menu_faq_default.png",
+				"Site_Assets/menu_discord_hover.png",
+				"Site_Assets/menu_discord_clicked.png",
+				"Site_Assets/menu_discord_default.png",
+				"Site_Assets/menu_subscribe_hover.png",
+				"Site_Assets/menu_subscribe_clicked.png",
+				"Site_Assets/menu_subscribe_default.png",
+				"Site_Assets/menu_store_hover.png",
+				"Site_Assets/menu_store_clicked.png",
+				"Site_Assets/menu_store_default.png",
+				"Site_Assets/ui_egobracer.gif",
+				"Site_Assets/ui_topmenu_left.gif",
+				"Site_Assets/menu_tray.png",
+				"Site_Assets/topmenu_right.png"
+			);
+		</script>
+	</body>
+</html>

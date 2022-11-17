@@ -1,0 +1,652 @@
+body {
+  margin:0;
+  padding:0;
+  position: relative;
+}
+.bg {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: url("https://static.wixstatic.com/media/ebefb2_a5897854a86349d1b6fadb5ad79146fb~mv2_d_4000_3000_s_4_2.jpg/v1/fill/w_480,h_360,al_c,q_80,usm_0.66_1.00_0.01,blur_2/ebefb2_a5897854a86349d1b6fadb5ad79146fb~mv2_d_4000_3000_s_4_2.jpg") no-repeat center center fixed;
+	background-size: cover;
+	z-index: -100;
+}
+
+img[usemap] {
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}
+
+/**************The Home Page***************/
+#home {
+	width: 100vw;
+	overflow: none;
+}
+.homeBanner1 {
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	background-image: url("Site_Assets/psybackground.webp");
+	background-repeat: repeat-x;
+	background-color: #778787;
+	background-blend-mode: overlay;
+	top: 700px;
+	overflow: hidden;
+}
+.homeBanner2 {
+	position: absolute;
+	top: 1000px;
+	width: 100%;
+	height: 1300px;
+	overflow:hidden;
+}
+.newsContainer {
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 390px;
+	width: max(40%, 450px);
+	height: 600px;
+	left: 40%;
+	transform: translate(-50%, 0%);
+}
+.homeBanner3 {
+	position: absolute;
+	width: 100%;
+	height: 800px;
+	background-image: url("Site_Assets/psybackground.webp");
+	background-repeat: repeat;
+	background-color: #778787;
+	background-blend-mode: overlay;
+	top: 2300px;
+	overflow: hidden;
+}
+.homeLost {
+	position: absolute;
+	width: max(30%, 400px);
+	height: auto;
+	background: #000000;
+	top: 100px;
+	left: 50%;
+}
+.homeBg {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+}
+
+/**************The Explore Page***************/
+
+/*So the City of Nodd map needs to be inside a relative-positioned container so that the hovering things over it (tooltips, windows) can 'float' over it.*/
+.mapContainer {
+	position: relative;
+}
+.tipContainer {
+	position: absolute;
+	z-index: 1000; /*This is the hovering thing's z-index, set to an absurdly high value so it always draws on top.*/
+}
+
+.popups {
+	visibility: hidden;
+	height:0px;
+	overflow:hidden;
+}
+
+.main {
+	color: #ffffff;
+}
+
+/*Map Hovers*/
+.mapClick:focus {
+	outline-width: 0px;
+}
+.mapClick:hover {
+	stroke: #2bd87f;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+}
+.modal-content {
+  display: none;
+  position: relative;
+  margin: auto;
+  width: 100vh;
+  height:80vh;
+  top: 10vh;
+  z-index: 999;
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background-color: black;
+  opacity: 0.8;
+}
+.weatherContainer {
+	position: absolute;
+	height: 15vh;
+	width: 8vw;
+	left: 90vw;
+	top: 15vh;
+	pointer-events:none;
+}
+.weatherImg {
+	height: 15vh;
+	width: auto;
+	pointer-events: none;
+	background-color: rgba(0,122,122,0.5);
+	border-radius: 5px;
+}
+
+/* Next & previous buttons */
+.quit {
+  cursor: pointer;
+  position: absolute;
+  top: 20vh;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #2DC991;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 999999;
+  right: 16.5vw;
+  font-family: yarin-bld;
+}
+
+.umbPOIs,
+.vivPOIs,
+.vornPOIs,
+.psiPOIs,
+.morphPOIs,
+.omnPOIs,
+.empty,
+.poiShell,
+.outsideInnPOIs,
+.eggpluckPOIs,
+.inductionPOIs {
+	display: none;
+}
+
+#induction {
+	color: #2DC991;
+	font-family: yarin-bld;
+	cursor: default;
+	font-size: 5px;
+	stroke:#000000;
+	stroke-width:0.15px;
+	stroke-linecap:butt;
+	stroke-linejoin:miter;
+	stroke-opacity:1;
+}
+#poiWindow {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	z-index: 999;
+	left: 88vw;
+	top: 75vh;
+}
+
+
+/**************The About Page***************/
+.aboutText {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	padding-left: 20vw;
+	width: 60vw;
+	margin-top: 2vh;
+	line-height: 150%;
+}
+
+/**************The Rules Page***************/
+.rulesText {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	padding-left: 20vw;
+	width: 60vw;
+	margin-top: 2vh;
+	line-height: 150%;
+}
+.rulesTitle {
+	display:block;
+	font-family:Garamond, serif;
+	font-size: max(1.2em, 1.2vw);
+	padding-left: 20vw;
+	width: 60vw;
+	margin-top: 2vh;
+	line-height: 150%;
+	color: #49DAA7;
+}
+	
+/**************The Credits Page***************/
+.creditsLeft {
+	display: inline-block;
+	padding-left: 22.5vw;
+	vertical-align: top;
+}
+.creditsRight {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 0;
+	padding-right: 22.5vw;
+	vertical-align: top;
+}
+.creditsInnerText {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	width: 35vw;
+	margin-top: 2vh;
+	line-height: 150%;
+	white-space: normal;
+}
+.creditsTitle {
+	display:block;
+	font-family:Garamond, serif;
+	font-size: max(2em, 2vw);
+	width: 35vw;
+	margin-top: 2vh;
+	color: #49DAA7;
+}
+.creditsPronoun {
+	display:block;
+	font-family:Garamond, serif;
+	font-size: max(1.2em, 1.2vw);
+	width: 35vw;
+	line-height: 150%;
+	color: #49DAA7;
+}
+.creditsText {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	width: 55vw;
+	margin-top: 2vh;
+	padding-left: 22.5vw;
+	line-height: 150%;
+	white-space: normal;
+}
+#credits {
+	white-space: nowrap;
+} 
+
+/**************The World Page***************/
+.worldTitle {
+	font-family:Garamond, serif;
+	font-size: max(1.2em, 1.2vw);
+	margin-top: 2vh;
+	line-height: 150%;
+	color: #49DAA7;
+	padding-bottom: 10px;
+}
+.worldText {
+	line-height: 150%;
+	padding-bottom:10px;
+}
+.greenCenter {
+	color: #49DAA7;
+	line-height: 150%;
+	padding-bottom:10px;
+}
+
+/**************The City Page***************/
+.cityTitle {
+	font-family:Garamond, serif;
+	font-size: max(1.2em, 1.2vw);
+	margin-top: 2vh;
+	line-height: 150%;
+	color: #49DAA7;
+	padding-bottom: 10px;
+}
+.cityText {
+	line-height: 150%;
+	padding-bottom:10px;
+}
+.cityGods {
+	display: block;
+	width: 70vw;
+	padding-left: 5vw;
+	height: auto;
+}
+.cityGodContainer {
+	display: inline-block;
+	width: 10vw;
+	padding-right: 0vw;
+	height: auto;
+	text-align: center;
+	color: #49DAA7;
+	vertical-align: top;
+}
+.cityGodPortrait {
+	width: 10vw;
+}
+
+/**************The Magic Page***************/
+.magicTitle {
+	font-family:Garamond, serif;
+	font-size: max(1.2em, 1.2vw);
+	margin-top: 2vh;
+	line-height: 150%;
+	color: #49DAA7;
+	padding-bottom: 10px;
+}
+.magicText {
+	line-height: 150%;
+	padding-bottom:10px;
+}
+
+
+/**************The Sapients Page***************/
+.sapLeft {
+	display: inline-block;
+	padding-left: 22.5vw;
+	vertical-align: top;
+	padding-top: 2vh;
+	height: auto;
+}
+.sapRight {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 0;
+	padding-right: 22.5vw;
+	vertical-align: top;
+	padding-top: 2vh;
+	height: auto;
+}
+.sapInnerText {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	width: 35vw;
+	margin-top: 2vh;
+	line-height: 150%;
+	white-space: normal;
+}
+.sapTitle {
+	display:block;
+	font-family:Garamond, serif;
+	font-size: max(2em, 2vw);
+	width: 35vw;
+	margin-top: 2vh;
+	color: #49DAA7;
+}
+.sapVig {
+	font-style: italic;
+	color: #49DAA7;
+	padding-top: 1vh;
+}
+#sapients {
+	white-space: nowrap;
+	padding-bottom: 5vh;
+} 
+
+/**************The Flora/Fauna Page***************/
+.ffLeft {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 2vh;
+	height: auto;
+}
+.ffRight {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 0;
+	vertical-align: top;
+	padding-top: 2vh;
+	height: auto;
+}
+.ffInnerText {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	width: 40vw;
+	margin-top: 2vh;
+	line-height: 150%;
+	white-space: normal;
+}
+.ffTitle {
+	display:block;
+	font-family:Garamond, serif;
+	font-size: max(2em, 2vw);
+	width: 40vw;
+	margin-top: 2vh;
+	color: #49DAA7;
+}
+#florafauna {
+	white-space: nowrap;
+	padding-bottom: 5vh;
+} 
+
+/**************The Downloads Page***************/
+.downloadsText {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	width: 45vw;
+	margin-top: 2vh;
+	line-height: 150%;
+}
+.downloadsTitle {
+	display:block;
+	font-family:Garamond, serif;
+	font-size: max(1.2em, 1.2vw);
+	width: 45vw;
+	margin-top: 0vh;
+	line-height: 150%;
+	color: #49DAA7;
+}
+.downloadsThumb {
+	display:inline-block;
+	padding-left:20vw;
+	width: 15vw;
+}
+.downloadsContainer {
+	display:inline-block;
+	vertical-align: top;
+	width: 45vw;
+}
+
+/**************The Interactive Page***************/
+.interactTitle {
+	display:block;
+	font-family:Garamond, serif;
+	font-size: max(1.2em, 1.2vw);
+	padding-left: 20vw;
+	width: 60vw;
+	margin-top: 2vh;
+	line-height: 150%;
+	color: #49DAA7;
+}
+.interactText {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	padding-left: 20vw;
+	width: 60vw;
+	margin-top: 2vh;
+	line-height: 150%;
+}
+.interactLogo {
+	display: block;
+	padding-bottom: 3vh;
+}
+.interactContainer {
+	width: 60vw;
+	padding-left: 20vw;
+}
+.interactNoddule {
+	width: max(10vw, 120px);
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+	display: inline-block;
+	margin-right: -4px;
+	vertical-align: top;
+	padding-bottom: 5vh;
+}
+.interactImg {
+	width: max(10vw, 120px);
+	height: auto;
+	cursor: pointer;
+}
+.interactInnerTitle {
+	font-family:Futura, sans-serif;
+	font-size: max(1em, 1vw);
+	text-align: center;
+	font-weight: bold;
+	padding-top: 1vh;
+}
+.interactInnerText {
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	text-align: center;
+	padding-top: 1vh;
+}
+.interactCiti {
+	display: inline-block;
+	width: 20vw;
+	padding-right: 2.5vw;
+	padding-left: 2.5vw;
+	padding-top:5vh;
+	vertical-align: middle;
+}
+.interactCitiText {
+	display: inline-block;
+	width: 35vw;
+	margin-left: -4px;
+	font-family: Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	padding-top:5vh;
+	vertical-align: middle;
+}
+
+/**************The Library Page***************/
+.libLeft {
+	display: inline-block;
+	padding-left: 25vw;
+	vertical-align: top;
+	padding-top: 2vh;
+	height: auto;
+}
+.libRight {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 0;
+	padding-right: 25vw;
+	vertical-align: top;
+	padding-top: 2vh;
+	height: auto;
+}
+.libText,
+.libstats,
+.libCW {
+	display:block;
+	font-family:Futura, sans-serif;
+	font-size: max(0.8em, 0.8vw);
+	width: 35vw;
+	margin-top: 2vh;
+	line-height: 150%;
+	white-space: normal;
+}
+.libRightAlign {
+	text-align: right;
+}
+.libCW {
+	margin-top: 0vh;
+}
+.libTitle {
+	display:block;
+	font-family:Garamond, serif;
+	font-size: max(1.6em, 1.6vw);
+	width: 35vw;
+	margin-top: 2vh;
+	color: #49DAA7;
+}
+.libAuth {
+	font-style: italic;
+	color: #49DAA7;
+	padding-top: 1vh;
+}
+.libLeftImgCont {
+	display:inline-block;
+	padding-left:5vw;
+	padding-top:4vh;
+}
+.libRightImgCont {
+	display:inline-block;
+	padding-right:5vw;
+	padding-left:25vw;
+	padding-top:5vh;
+}
+.libLeftImg,
+.libRightImg {
+	width:max(10vw, 150px);
+	height:auto;
+}
+#library {
+	white-space: nowrap;
+	padding-bottom: 5vh;
+} 
+
+/**************Cross-page Technical***************/
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #49DAA7;
+}
+a:visited {
+	color: #27B885;
+}
+a:hover {
+	color: #6BFCC9;
+}
+hr.solid {
+  border-top: 2px solid #bbb;
+}
+.headerImg {
+	width: 30vw;
+	height: auto;
+	padding-bottom: 2vw;
+}
+#footer {
+   position:absolute;
+   height:20px;
+   width:290px;
+   color: #ffffff;
+   font-family: Futura, sans-serif;
+   font-size: 0.7em;
+   text-align: right;
+   margin-right: 10px;
+   font-style: italic;
+   font-weight: bold;
+   
+}
+@font-face {
+  font-family: yarin;
+  src: url(Site_Assets/yarin-reg.ttf);
+}
+@font-face {
+  font-family: yarin-bld;
+  src: url(Site_Assets/yarin-bold.ttf);
+}

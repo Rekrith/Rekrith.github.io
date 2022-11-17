@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+		<title>The City of Nodd - Sapients</title> <!--The page title in the browser tab-->
+		<link rel="icon" href="https://nodd-arca.net/test/Site_Assets/icon.png"> <!--The icon in the browser tab!-->
+		<link rel="stylesheet" href="styles.css"> <!--Linking the stylesheets (that contain all the 'How to display this stuff' information)-->
+		<link rel="stylesheet" href="egobracer.css"> <!--Egobracer.css is for the top and bottom menus, to make it easier to put them into other pages.-->
+		<link href="jquery-ui/jquery-ui.css" rel="stylesheet"> <!--Jquery ui styles!-->
+	</head>
+	<body>
+		<div class="bg"> <!--This is just a container that holds the background picture. Styles.css has all the information!-->
+		</div>
+		
+		<!--**********************************************-->
+		
+		<div class="main" id="sapients" style="margin-top:15vh;padding-bottom:15vh;"> <center>
+			<img src="Site_Assets/header_sapients.png" class="headerImg"/>
+			<br><br>
+			<span style="font-family:Futura, sans-serif;font-size:max(0.8em, 0.8vw);">More info can be found on the <a href="http://nodd-arca.net/arcanet" target="_blank">Arcanet</a>.</span></center>
+			
+			<div class="sapLeft">
+				<div class="sapTitle">Ravel</div>
+				<div class="sapVig">The snoodish ravel's beady eyes<br>
+				are sharpest wit's cruel-beaked disguise</div>
+				<div class="sapInnerText">Cackling, unhinged mystics of the mind, ravels have a close association with the <span style="color:#673575">House of Psilysium</span>. Standing head and shoulders over the average outsider, ravels are monstrous creatures rather similar to corvids. They have oily feathers and tend to take great pride in their dangling wattles, and are almost unable to leave a puzzle unsolved.</div>
+				<div class="sapInnerText">Getting answers out of the toothy beak of a ravel is often a lengthy endeavor, with no promise that one will even understand the bird's answer. While they have wings, they are relatively vestigial.</div>
+				<div class="sapInnerText">Ravels are known to be such avid problems that, in the event one is lacking a puzzle to solve, it will begin to take apart its environment in search of something to consider.</div>
+			</div><div style="display:inline-block;padding-left:5vw;padding-top:4vh;"><img src="http://nodd-arca.net/test/Site_Assets/cutout_ravel.webp" style="width:max(15vw, 80%);height:auto;"/></div>
+			
+			<div style="display:block;padding-bottom:5vh;"></div> <!--It's a Sal spacer!-->
+			
+			<div style="display:inline-block;padding-right:5vw;padding-left:22.5vw;padding-top:5vh;"><img src="http://nodd-arca.net/test/Site_Assets/nurk.webp" style="width:max(15vw, 80%);height:auto;"/></div>
+			<div class="sapRight">
+				<div class="sapTitle" style="text-align:right;">Nurk</div>
+				<div class="sapVig" style="text-align:right;"><i>They sneak and grasp while clutching tight<br>
+				with jealousy for quaint delights</i><br></div>
+				<div class="sapInnerText" style="text-align:right;">Small and anxious creatures by nature, nurks are equally known for their racial kleptomania and their unfortunate hygiene. Frequently disheveled and parasite-riddled, nurks are spurned by many of the City of Nodd's inhabitants as vermin or pests in their own right.</div>
+				<div class="sapInnerText" style="text-align:right;">Nurks have large and noduled noses, as well as rodent-like tails and ears. They are almost insatiable when it comes to sex regardless of gender, and frequently engage in it even in public. They are almost all possessed by a near-neurotic fixation with something, which usually manifests as a desperate urge to collect the item of their obsession.</div>
+				<div class="sapInnerText" style="text-align:right;">Because of this, nurks often have secret hoards - though usually they aren't of anything valuable to anybody except that nurk.</div>
+			</div>
+			
+			<div style="display:block;padding-bottom:5vh;"></div> <!--It's a Sal spacer!-->
+			
+			<div class="sapLeft">
+				<div class="sapTitle">Oggorus</div>
+				<div class="sapVig">Though never without retinue<br>
+				a loneliness still burns them through</div>
+				<div class="sapInnerText">Oggori, or "oggs", are slug-like, oozing creatures perpetually coated in slime. In districts well-populated by oggori, streets often need to be swept away of dried mucus left behind from their passing. They constantly secrete their muck from numerous poison glands all over their bodies, and also possess a stinger at the end of their tails that can inject their toxin.</div>
+				<div class="sapInnerText">The slime of an oggorus is frequently addicting and often mind-altering, causing feelings of euphoria, hallucinations, and eventually personality changes. One of the most famous oggori, <span style="color:#993300">Orpus Byle</span>, used his poison to grow the City's <a href="https://nodd-arca.net/arcanet/index.php?title=Cult_of_Byle">largest cult</a>.</div>
+				<div class="sapInnerText">Owing to their continuous production of psychoactive slime, most oggs are rarely ever lonely - however, the connections they have could be considered superficial. It is common to see an oggorus surrounded by sycophants or admirers, many of whom will often lick or tend to the oggorus.</div>
+			</div><div style="display:inline-block;padding-left:5vw;padding-top:4vh;"><img src="http://nodd-arca.net/test/Site_Assets/tempOggorus.png" style="width:max(15vw, 80%);height:auto;"/></div>
+			
+			<div style="display:block;padding-bottom:5vh;"></div> <!--It's a Sal spacer!-->
+			
+			<div style="display:inline-block;padding-right:5vw;padding-left:22.5vw;padding-top:5vh;"><img src="http://nodd-arca.net/test/Site_Assets/tempLehlt.png" style="width:max(15vw, 80%);height:auto;"/></div>
+			<div class="sapRight">
+				<div class="sapTitle" style="text-align:right;">Lehlt</div>
+				<div class="sapVig" style="text-align:right;">A pure, unbroken vanity<br>
+				to hide a shamed duality</div>
+				<div class="sapInnerText" style="text-align:right;">There are few dualities as pronounced in the City of Nodd as that of the lehlt. Goat-like creatures that stand a modest seven feet tall on average, lehlt are renowned for their embodiment of both beauty and ugliness.</div>
+				<div class="sapInnerText" style="text-align:right;">The more envied a lehlt is, the more beautiful they are. Conversely, the less envied a lehlt is, the more hideous they become. This is especially pronounced if a lehlt is scorned or humiliated. As such, almost every lehlt is at least somewhat vain or obsessed with others' perceptions of them.</div>
+				<div class="sapInnerText" style="text-align:right;">Lehlt with multiple functional genitalia are common within the species, with many becoming androgynously appealing. They have mellifluous and widely varied naming conventions, and frequently become entangled in agonizing social webs in order to avoid the gradual decay of their bodies into hideousness.</div>
+			</div>
+			
+			<div style="display:block;padding-bottom:5vh;"></div> <!--It's a Sal spacer!-->
+			
+			<div class="sapLeft">
+				<div class="sapTitle">Krudge</div>
+				<div class="sapVig">A soul so measured, careful, calm<br>
+				whose broken oath will never balm</div>
+				<div class="sapInnerText">Sturdy and reliable are the krudge, to whom a promise is utterly binding. They are equally capable of walking on two legs or all fours, and tend to look pronouncedly masculine regardless of gender.</div>
+				<div class="sapInnerText">Krudge have an unusual relationship with promises, and once they say that they will do something are helplessly bound to keep their word. A krudge who does not or cannot fulfil their obligations will grow increasingly agitated and eventually go mad or become corrupted. Because of this, krudge are often very careful with their words, and so are often seen as slow or even stupid.</div>
+				<div class="sapInnerText">Krudge are infamous for their inability to orgasm swiftly, often needing over a bell of stimulation to achieve climax. This makes them excellent lovers in theory, but in practice most are swiftly exhausted by them.</div>
+			</div><div style="display:inline-block;padding-left:5vw;padding-top:4vh;"><img src="http://nodd-arca.net/test/Site_Assets/tempKrudge.png" style="width:max(15vw, 80%);height:auto;"/></div>
+			
+			<div style="display:block;padding-bottom:5vh;"></div> <!--It's a Sal spacer!-->
+			
+			<div style="display:inline-block;padding-right:5vw;padding-left:22.5vw;padding-top:5vh;"><img src="http://nodd-arca.net/test/Site_Assets/tempPetrid.png" style="width:max(15vw, 80%);height:auto;"/></div>
+			<div class="sapRight">
+				<div class="sapTitle" style="text-align:right;">Petrid</div>
+				<div class="sapVig" style="text-align:right;">A watcher born from cherished home<br>
+				with beating heart beneath old stone</div>
+				<div class="sapInnerText" style="text-align:right;">Of all the insider species, petrids are the most closely tethered to a location. Petrids may be born naturally, or simply spawn from a building like a gargoyle come to life. In these cases, petrids will need to be cut from their building, which may leave them with missing limbs or features. Petrids who spawn this way are often emotionally attached to their places of origin, serving as protectors or caretakers.</div>
+				<div class="sapInnerText" style="text-align:right;">Petrids typically have tentacle-like head adornments in place of hair, and thick and leathery skin. They are capable of petrifying themselves, however, voluntarily turning to immutable stone for a time. Most petrids have names related to the buildings they or their parents spawned from.</div>
+				<div class="sapInnerText" style="text-align:right;">Most petrids grow patches of green or purple moss in place of hair, and often have quiet or just personalities. The moss of petrids that choose to permanently petrify is something of a commodity.</div>
+			</div>
+			
+			<div style="display:block;padding-bottom:5vh;"></div> <!--It's a Sal spacer!-->
+			
+			<div class="sapLeft">
+				<div class="sapTitle">Slyne</div>
+				<div class="sapVig">The ever hungry empty hole<br>
+				that feasts upon the suffered soul</div>
+				<div class="sapInnerText">Slyne are often considered a tragic case of the City's strange manifestations. Thin, rakish, and spindly in frame, they are entirely unable to draw sustenance from any form of food or drink, finding it tasteless like ash. The only way that the pale creatures are able to feed is by personally inflicting suffering on other living creatures, an act which infuses them with vitality.</div>
+				<div class="sapInnerText">Some slyne seek to avoid causing pain to others, wasting away themselves out of some form of guilt, but many learn to live with their physiological needs. They have vibrant, bright eyes and drab coloration elsewhere, and bleed black when injured.</div>
+				<div class="sapInnerText">Male and female slyne outwardsly differ only in that males have shoulder pauldrons. They are often treated as one of 'the problems' with the City due to their intrinsic link with suffering, and some will go so far as to murder slyne without remorse. Slyne are often very internally conflicted.</div>
+			</div><div style="display:inline-block;padding-left:5vw;padding-top:4vh;"><img src="http://nodd-arca.net/test/Site_Assets/tempSlyne.png" style="width:max(15vw, 80%);height:auto;"/></div>
+			
+			<div style="display:block;padding-bottom:5vh;"></div> <!--It's a Sal spacer!-->
+			
+			<div style="display:inline-block;padding-right:5vw;padding-left:22.5vw;padding-top:5vh;"><img src="http://nodd-arca.net/test/Site_Assets/tempIllwink.png" style="width:max(15vw, 80%);height:auto;"/></div>
+			<div class="sapRight">
+				<div class="sapTitle" style="text-align:right;">Illwink</div>
+				<div class="sapVig" style="text-align:right;">Behind black eyes do wishes gleam<br>
+				yet wishes oft should stay as dreams</div>
+				<div class="sapInnerText" style="text-align:right;">One of the rarer insider species to the City of Nodd, illwinks are uniquely close to corruption and gloam. One of the three distinct species without representation on the <a href="https://nodd-arca.net/arcanet/index.php?title=Citygods">Major Council</a>, illwinks boast a subtle influence all their own over the inhabitants of the City.</div>
+				<div class="sapInnerText" style="text-align:right;">Illwinks have a luminant and bulbous tailtip which is connected intrinsically to the magic of the City, and can be used to grant wishes. Having the ability to grant wishes make illwinks objects of fixation by many other citizens, who often seek to befriend, capture, or use them. Due to this, some unhappy illwinks often use their abilities to twist the desires of others as retribution.</div>
+				<div class="sapInnerText" style="text-align:right;">Illwinks are very small, often near-microcitizen sized by default, and get around almost entirely by flight. They are colorful and almost insect-like, and tend to be wary of others.</div>
+			</div>
+		</div>
+		
+		<?php include('headfoot.php'); ?>
+				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="jquery-ui/jquery-ui.js"></script>
+		<script> 
+			/******************************************/
+			$('#egoBracerBut').on('click', function(e) { //In the element named specifically "egoBracerBut", when someone clicks it, run this code.
+				$('.egoShell').toggleClass('egoButton_active'); //Find the things of the type .egoShell, and either add (or remove if they already have it) all the settings in the .css file for ".egoButton_active".
+			});
+			
+			/*******************Preload our images (borrowed code)**********************/
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image();
+					images[i].src = preload.arguments[i];
+				}
+			}
+			preload(
+				"Site_Assets/menu_media_hover.png",
+				"Site_Assets/menu_media_clicked.png",
+				"Site_Assets/menu_media_default.png",
+				"Site_Assets/menu_explore_hover.png",
+				"Site_Assets/menu_explore_clicked.png",
+				"Site_Assets/menu_explore_default.png",
+				"Site_Assets/menu_about_hover.png",
+				"Site_Assets/menu_about_clicked.png",
+				"Site_Assets/menu_about_default.png",
+				"Site_Assets/menu_news_hover.png",
+				"Site_Assets/menu_news_clicked.png",
+				"Site_Assets/menu_news_default.png",
+				"Site_Assets/menu_faq_hover.png",
+				"Site_Assets/menu_faq_clicked.png",
+				"Site_Assets/menu_faq_default.png",
+				"Site_Assets/menu_discord_hover.png",
+				"Site_Assets/menu_discord_clicked.png",
+				"Site_Assets/menu_discord_default.png",
+				"Site_Assets/menu_subscribe_hover.png",
+				"Site_Assets/menu_subscribe_clicked.png",
+				"Site_Assets/menu_subscribe_default.png",
+				"Site_Assets/menu_store_hover.png",
+				"Site_Assets/menu_store_clicked.png",
+				"Site_Assets/menu_store_default.png",
+				"Site_Assets/ui_egobracer.gif",
+				"Site_Assets/ui_topmenu_left.gif",
+				"Site_Assets/menu_tray.png",
+				"Site_Assets/topmenu_right.png"
+			);
+		</script>
+	</body>
+</html>

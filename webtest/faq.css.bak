@@ -1,0 +1,69 @@
+ /* Style the buttons that are used to open and close the accordion panel */
+.faqordion {
+  background-color: #224534;
+  color: #6BFCC9;
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 15px;
+  width: 100%;
+  text-align: left;
+  border: solid;
+  border-width: 2px;
+  border-color: #49DAA7;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s;
+  font-family: yarin;
+  font-size: max(1.4em, 2vw);
+}
+
+.faqordionInner {
+  background: rgba(22, 24, 26, 0.5);
+  backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+  color: #49DAA7;
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-family: Futura, sans-serif;
+  font-size: max(1.1em, 1.2vw);
+  font-weight: bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .faqordion:hover {
+  background-color: #335645;
+}
+.activeInner, .faqordionInner:hover {
+  background: rgba(44, 46, 48, 0.5);
+  backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.faqPanel {
+  padding: 0 30px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: Futura, sans-serif;
+  font-size: max(1em, 0.9vw);
+} 
+
+.faqPanelInner {
+  padding: 0px 30px;
+  background: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: Futura, sans-serif;
+  font-size: max(0.8em, 0.9vw);
+} 

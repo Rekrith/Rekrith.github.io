@@ -1,0 +1,235 @@
+
+
+
+/* NAMED THINGS */
+
+
+#egoBracerBut {
+	height: 6vw;
+	max-height: 115px;
+	background-size: cover;
+	border: none;
+	z-index: 3;
+	bottom: 0px;
+	pointer-events:auto;
+}
+#aboutBut:hover {
+	content:url(Site_Assets/menu_about_hover.png);
+}
+#aboutBut:active {
+	content:url(Site_Assets/menu_about_clicked.png);
+}
+#discordBut:hover {
+	content:url(Site_Assets/menu_discord_hover.png);
+}
+#discordBut:active {
+	content:url(Site_Assets/menu_discord_clicked.png);
+}
+#exploreBut:hover {
+	content:url(Site_Assets/menu_explore_hover.png);
+}
+#exploreBut:active {
+	content:url(Site_Assets/menu_explore_clicked.png);
+}
+#faqBut:hover {
+	content:url(Site_Assets/menu_faq_hover.png);
+}
+#faqBut:active {
+	content:url(Site_Assets/menu_faq_clicked.png);
+}
+#mediaBut:hover {
+	content:url(Site_Assets/menu_media_hover.png);
+}
+#mediaBut:active {
+	content:url(Site_Assets/menu_media_clicked.png);
+}
+#newsBut:hover {
+	content:url(Site_Assets/menu_news_hover.png);
+}
+#newsBut:active {
+	content:url(Site_Assets/menu_news_clicked.png);
+}
+#storeBut:hover {
+	content:url(Site_Assets/menu_store_hover.png);
+}
+#storeBut:active {
+	content:url(Site_Assets/menu_store_clicked.png);
+}
+#subscribeBut:hover {
+	content:url(Site_Assets/menu_subscribe_hover.png);
+}
+#subscribeBut:active {
+	content:url(Site_Assets/menu_subscribe_clicked.png);
+}
+
+
+
+
+
+
+.egobracer { /*Apply to everything with the class="egobracer" in the HTML*/
+  display: flex; /*Unsure - seems to be 'this type can change/be animated'.*/
+  justify-content: left; 
+  align-items: left;
+  overflow: visible; /*If things go outside the borders of the container, display them anyway! Let them roam free.*/
+  position: fixed; /*This means its position is fixed on the page and will stay in position, scrolling with the window (as opposed to eventually scrolling out of view)*/
+  bottom: 0px;
+  height: 6vw;
+  max-height: 115px;
+  pointer-events:none;
+}
+
+.egoShell {
+  z-index: 0;
+  bottom: 0px;
+  height: 5vw;
+  max-height: 96px;
+  width: 50vw;
+  max-width: 960px;
+  margin-top: 0.75vw; /*We can define the spacing for specific sides, too.*/
+  padding-top: 0vw;
+  padding-bottom: 0vw;
+  padding-left: 5vw;
+  padding-right: 2vw;
+  margin-right: 2vw;
+  position: relative;
+  border-top-right-radius:6vw; /*This makes a kind of curved corner. It's visually nice.*/
+  border-bottom-right-radius:6vw; /*But to make an entire side, you need two corners!*/
+  /*--| animation |--*/
+  transition: 0.5s; /*If any anymations happen like Transforms, they take 0.5s*/
+  transform-origin: left center; /*They also are defined relative to the object's left centre.*/
+  transform: translateX(-200%); /*By default, wherever it WOULD be, it then gets moved a huge amount to the left (and off-screen).*/
+  opacity: 0; /*It's also invisible.*/
+  pointer-events:none;
+}
+.slidymenu {
+	height:5vw;
+	max-height: 96px;
+	width:45vw;
+	max-width: 864px;
+}
+
+.egoButton_active {
+  transform: translateX(-8vw); /*When we apply this tag to the .egoShell class, it will slide (over transition number of seconds) to be -40px offset to the left (instead of, say, -200%)*/
+  opacity: 1; /*We'll also make it visible again!*/
+  pointer-events:auto;
+}
+
+@font-face {
+  font-family: yarin;
+  src: url(Site_Assets/yarin-reg.ttf);
+}
+@font-face {
+  font-family: yarin-bld;
+  src: url(Site_Assets/yarin-bold.ttf);
+}
+
+.arcanetLinksTop {
+	display: inline-block;
+	position: absolute;
+	left: 10vw;
+	top: 1vw;
+	color: #2DC991;
+	font-family: yarin-bld;
+	font-size: 1.25vw;
+}
+.arcanetLinksTop a:link{
+	color: #2DC991;
+	text-decoration: none;
+}
+.arcanetLinksTop a:visited{
+	color: #2DC991;
+	text-decoration: none;
+}
+.arcanetLinksTop a:hover{
+	text-shadow: 0 0 5px #009933;
+	text-decoration: none;
+}
+.arcanetLinksTop a:active{
+	color: #365344;
+	text-shadow: 0 0 0px #000000;
+	text-decoration: none;
+}
+
+.arcanetLinksBot {
+	display: inline-block;
+	position: absolute;
+	left: 10vw;
+	top: 3vw;
+	color: #1CB880;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 0.75vw;
+}
+.arcanetLinksBot a:link{
+	color: #1CB880;
+	text-decoration: none;
+}
+.arcanetLinksBot a:visited{
+	color: #1CB880;
+	text-decoration: none;
+}
+.arcanetLinksBot a:hover{
+	text-shadow: 0 0 5px #009933;
+	text-decoration: none;
+}
+.arcanetLinksBot a:active{
+	color: #365344;
+	text-shadow: 0 0 0px #000000;
+	text-decoration: none;
+}
+
+.butcontain {
+	position: absolute;
+	top: 0px;
+	left: 12vw;
+	padding-top: 0.5vw;
+}
+.topMenuClass {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	pointer-events: none;
+}
+.topBut {
+	pointer-events:auto;
+	height: 2.5vw;
+	max-height: 48px;
+	float:left;
+	top: 0.5vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+@media only screen and (min-width: 1920px) {
+	.butcontain {
+		left: 230px !important;
+		padding-top: 10px !important;
+	}
+	.topBut{
+		padding-left: 19px !important;
+		padding-right: 19px !important;
+	}
+	.arcanetLinksTop {
+		left: 192px !important;
+		top: 19px !important;
+		font-size: 24px !important;
+	}
+	.arcanetLinksBot {
+		left: 192px !important;
+		top: 58px !important;
+		font-size: 14px !important;
+	}	
+	.egoShell {
+	  margin-top: 14px;
+	  padding-left: 96px;
+	  padding-right: 38px;
+	  margin-right: 38px;
+	  border-top-right-radius:115px;
+	  border-bottom-right-radius:115px;
+	}
+	.egoButton_active {
+	  transform: translateX(-154px);
+	}
+}
