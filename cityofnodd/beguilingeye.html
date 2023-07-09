@@ -820,7 +820,7 @@ $tsn[You pick up the pair of Voyeur Glasses labeled as &#39;blank&#39;. Sith nod
 (after: time + $timer, 200)[=$tsn[The slyne attendant offers you a sly, knowing smile, before gesturing to the display case. $sithcol[*&quot;There is no rush, of course. You may experience any of these ones as many times as you like before you choose.&quot;*]](set: $blank to true)(set: $timer to 2s)
 
 
-(after: time + $timer, 200)[=$tsn[[[&gt; There *are* a lot of options...-&gt;Lobby]]]</tw-passagedata><tw-passagedata pid="62" name="buy" tags="salrith" position="2043,54" size="100,100">(text-colour: #02d987)[$head[The Beguiling Eye]]
+(after: time + $timer, 200)[=$tsn[[[&gt; There *are* a lot of options...-&gt;Lobby]]]</tw-passagedata><tw-passagedata pid="62" name="buy" tags="salrith" position="2050,50" size="100,100">(text-colour: #02d987)[$head[The Beguiling Eye]]
 (set: $views to 0)(if: $kudzu is true)[(set: $views to $views + 1)](if: $splayed is true)[(set: $views to $views + 1)](if: $funnel is true)[(set: $views to $views + 1)](if: $addleworm is true)[(set: $views to $views + 1)](if: $aeolia is true)[(set: $views to $views + 1)]&lt;!--This counts up how many Glasses were viewed...--&gt;(if: $views is 0 and $blank is true)[$tsn[$sithcol[*&quot;Ah, you are not interested in viewing any of our Glasses?&quot;*] Sith asks, her eyeridges lifting in surprise. She clears her throat quickly, though, and smiles to you.]](else-if: $views is 5)[$tsn[$sithcol[*&quot;Such a bold explorer of others&#39; exsssperiences,&quot;*] Sith rasps with a coy smile, as if in full approval of your viewings.]](else-if: $views is 1)[$tsn[$sithco[*&quot;Only one? It must have left quite an impression,&quot;*] Sith hiss-chuckles, nodding her head to you.]](else:)[$tsn[$sithcol[*&quot;The Chosen One&#39;s mind is made up? Sssith is pleased to be of assistance,&quot;*] the slyne says.]](set: $timer to 5s)
 
 (after: $timer, 200)[=$tsn[Sith steps up to the display case and gingerly runs her slender fingers along each of the Voyeur Glasses in turn.](set: $timer to 3s)
@@ -863,7 +863,7 @@ $tsn[Whichever it may be, you certainly won&#39;t forget the &#39;&#39;*Beguilin
 
 
 
-(after: time + $timer, 200)[=(t8n: &quot;dissolve&quot;)+(transition-time: 3s)[(text-colour: #02d987)+(css: &quot;font-size: 150%;&quot;)+(text-style: &quot;smear&quot;)[End]]</tw-passagedata><tw-passagedata pid="65" name="startup" tags="startup" position="25,250" size="100,100">(set: $brugcol to (color: #9944aa))(set: $sithcol to (color: #6666aa))(set: $head to (size: 1.5))(set: $lc to (color: #cc2233))(set: $pc to (colour: #6666cc))</tw-passagedata></tw-storydata>
+(after: time + $timer, 200)[=(t8n: &quot;dissolve&quot;)+(transition-time: 3s)[(text-colour: #02d987)+(css: &quot;font-size: 150%;&quot;)+(text-style: &quot;smear&quot;)[End]]</tw-passagedata><tw-passagedata pid="65" name="startup" tags="startup" position="25,250" size="100,100">(set: $brugcol to (color: #9944aa))(set: $sithcol to (color: #6666aa))(set: $head to (size: 1.5))(set: $lc to (color: #cc2233))(set: $pc to (colour: #6666cc))(set: $bruggone to false)</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
